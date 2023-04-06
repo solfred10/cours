@@ -1,0 +1,50 @@
+@testcolor:#f6f6f6 ;
+@border-size:1px;
+@border-coeff:6;
+
+
+		.rounded1 {
+		-mor-border-radius :5px; /*pour safari*/
+		-webkit-border-radius :5px; /*pour google*/
+		-o-border-radius :5px; /*pour opera*/
+		}
+		
+		.rounded2(@radius:5px) {
+		-mor-border-radius :@radius; /*pour safari*/
+		-webkit-border-radius :@radius; /*pour google*/
+		-o-border-radius :@radius; /*pour opera*/
+		
+		
+		}
+
+		.rounded3(@radius) {
+		-mor-border-radius :@radius; /*pour safari*/
+		-webkit-border-radius :@radius; /*pour google*/
+		-o-border-radius :@radius; /*pour opera*/
+		}
+
+		body {
+		color:@testcolor;
+		}
+
+
+		.divBleu {
+			width:200px;
+			height:200px;	
+			background-color:#0000ff;
+			.rounded2(5px) ;		
+		}
+		
+		.divRouge {
+			width:200px;
+			height:200px;	
+			background:#000;			
+			border: @border-size*@border-coeff solid #ff0000  ;			
+			.gris { color:@testcolor}	
+		}
+		
+		.divVerte {
+			width:200px;
+			height:200px;				
+			border: @border-size*@border-coeff solid #000  ;						
+		}

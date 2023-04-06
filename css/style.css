@@ -1,0 +1,100 @@
+.header {
+	background:url('../images/header.png');	
+	cursor:pointer ;
+	height:259px;	
+}
+
+.texteGras {
+	font-weight:bold;
+}
+
+.texteItalic {
+	font-style:italic;
+}
+
+.titleCenter {
+	text-align:center ;
+}
+
+.texteRouge {
+	color:#ff0000;
+}
+
+.textBleu {
+	color:#0000ff
+}
+
+.MT20 {
+	margin-top:20px;
+}
+
+.MB50 {
+	margin-bottom:50px;
+}
+
+.padding20 {
+	padding:20px;
+}
+
+.margin20 {
+	margin:20px;
+}
+
+.MB50 {
+	margin-bottom:50px;
+}
+
+.borderGrey {
+	border: 1px solid grey;
+}
+
+.button {
+	background-color: #008000;
+	color:#fff;	
+	border-radius: 12px;
+	margin-top :10px;
+	padding:10px;
+	border:none;
+}
+
+.button:hover {
+	background-color: #fff;
+	border:1px solid #008000;
+	color:#008000 ;	
+}
+
+.buttonTest {
+	background-color: #grey;
+	color:#000;	
+	opacity: 0.8;
+	border-radius: 12px;
+	margin-top :10px;	
+	width:75px;
+	height:30px;
+	Font-size:12px;
+}
+
+.titre {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.bouton {
+	background-color:#008000 ;
+	border-radius:25px;
+	border:none;
+	padding:10px;
+}
+
+/*
+ol.sommaire {
+  counter-reset: sommaire;               
+  list-style-type: none;
+}
+
+ol.sommaire2 > li.sommaire::before {
+  counter-increment: sommaire;            
+  content: counters(sommaire,".") " ";    
+                                         
+}
+*/

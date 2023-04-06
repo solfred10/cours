@@ -1,0 +1,306 @@
+.row h3, .row h5{
+	margin-top:50px;
+}
+
+#conteneur1 {
+	display:flex;
+	background-color:#666 ;
+	height:200px;
+}
+
+.element1 {
+	background-color:#0000ff ;
+	color:#fff
+}
+
+.element2 {
+	background-color:#fff ;
+}
+
+.element3 {
+	background-color:#ff0000 ;
+}
+
+.element4 {
+	background-color:#0000ff ;
+	color:#fff;
+	height:100px;
+}
+
+.element5 {
+	background-color:#fff ;
+	height:100px;
+}
+
+.element6 {
+	background-color:#ff0000 ;
+	height:100px;
+}
+
+#conteneur2 {
+	display:flex;
+	flex-direction:row-reverse;
+	background-color:#666 ;
+	height:200px;
+}
+
+#conteneur3 {
+	display:flex;
+	flex-direction:column;
+	background-color:#666 ;
+	height:200px;
+}
+
+#conteneur4 {
+	display:flex;
+	flex-direction:column-reverse;
+	background-color:#666 ;
+	height:200px;
+}
+
+#conteneur5 {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	background-color:#666 ;
+	height:200px;
+}
+
+#conteneur6 {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	background-color:#666 ;
+	height:200px;
+}
+
+#conteneur7 {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap-reverse;
+	background-color:#666 ;
+	height:200px;
+}
+
+#conteneur8 {
+	display:flex;
+	justify-content:center;
+	background-color:#666 ;
+	height:200px;
+}
+
+#conteneur9 {
+	display:flex;
+	justify-content:flex-end;
+	background-color:#666 ;
+	height:200px;
+}
+
+#conteneur10 {
+	display:flex;
+	justify-content:space-between;
+	background-color:#666 ;
+	height:200px;
+}
+
+#conteneur11 {
+	display:flex;
+	justify-content:space-around;
+	background-color:#666 ;
+	height:200px;
+}
+
+#conteneur12 {
+	display:flex;
+	justify-content:center;
+	align-items:flex-start ;
+	background-color:#666 ;
+	height:200px;
+}
+
+#conteneur13 {
+	display:flex;
+	justify-content:center;
+	align-items:center ;
+	background-color:#666 ;
+	height:200px;
+}
+
+#conteneur14 {
+	display:flex;
+	justify-content:center;
+	align-items:flex-end ;
+	background-color:#666 ;
+	height:200px;
+}
+
+#conteneur15 {
+	display:flex;
+	justify-content:center;
+	align-items:stretch ;
+	background-color:#666 ;
+	height:200px;
+}
+
+#conteneur16 {
+	display:flex;
+	justify-content:center;
+	align-items:baseline  ;
+	background-color:#666 ;
+	height:200px;
+}
+
+#multiColonne1 {
+	column-count: 3;
+	border:1px solid #ff0000;	
+}
+
+#multiColonne2 {
+	column-width: 100px;	
+	border:1px solid #ff0000;	
+}
+
+#multiColonne3 {
+	column-width: 100px;	
+	column-gap: 100px;	
+	border:1px solid #ff0000;	
+}
+
+#multiColonne4 {
+	column-count: 5;	
+	column-rule: 1px solid #0000ff;	
+	column-fill : balance ;
+	border:1px solid #ff0000;	
+	height:300px;
+}
+
+#divTransformation {
+	height:50px;
+	width:150px ;
+	background-color:#ff0000 ;	
+}
+
+#divTransformation2 {
+	height:25px;
+	width:50px ;
+	background-color:#ff0000 ;	
+}
+
+#divTransformation3 {
+	height:50px;
+	width:100px ;
+	background-color:#ff0000 ;	
+}
+
+.rotation45centerLeft {
+	transform:rotate(45deg) ;
+	transform-origin: center center;	
+}
+
+.rotation45topLeft {
+	transform:rotate(90deg);
+	transform-origin: top left;
+}
+
+.rotation45centerRight {
+	transform:rotate(-45deg) ;
+	transform-origin: center ;	
+}
+
+.rotation45topRight {
+	transform:rotate(-90deg);
+	transform-origin: bottom right;
+}
+
+.translation20px10y {
+	transform:translate(20px,10px) ;	
+}
+
+.translation30px20y {
+	transform:translate(-30px,-20px) ;	
+}
+
+.echelle2Fois2 {
+	transform:scale(2,2) ;	
+}
+
+.echelle2Fois1 {
+	transform:scale(2,1) ;	
+}
+
+.echelle2Moins2 {
+	transform:scale(0.5,0.5) ;	
+}
+
+.echelle2Moins1 {
+	transform:scale(1,0.5) ;	
+}
+
+.inclinaison15X {
+	transform: skew(15deg,0);	
+}
+
+.inclinaison15Y {
+	transform:skew(0,15deg) ;	
+}
+
+#divTransformation4 {
+	height:40px;
+	width:60px ;
+	background-color:#ff0000 ;		
+	position:absolute;
+	top:30px ;
+	left:70px;
+	transition-property: transform;
+	transition-duration: 20s;
+	transition-delay: 0s;
+}
+#divTransformation4:hover {
+	transform: rotate(45deg);
+	transform-origin:center ;
+}
+
+#divTransformation5 {
+	height:80px;
+	width:120px ;
+	background-color:#ff0000 ;		
+	position:absolute;
+	transition-property: transform, opacity, width, height;
+	transition-duration: 3s;
+	transition-delay: 0s;
+}
+#divTransformation5:hover {
+	/* transform: translate(140px,60px);	 */
+	opacity:0.1;
+	width:10px;
+	height:10px
+}
+
+#divTransformation6 {
+	height:20px;
+	width:20px ;
+	background-color:#ff0000 ;		
+	position:absolute;
+	transition-property: left;
+	transition-duration: 10s;
+	transition-delay: 0s;
+}
+#divTransformation6:hover {
+	left:180px;
+}
+
+#divTransformation7 {
+	height:20px;
+	width:20px ;
+	background-color:#0000ff ;		
+	position:absolute;
+	top:120px;
+	left:80px;
+	opacity:0.5;
+	transition: transform 2s, opacity 5s;	
+}
+#divTransformation7:hover {
+	transform:scale(2,2);
+	opacity:1;
+}
+

@@ -1,0 +1,30 @@
+.rounded1 {
+  -mor-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+body {
+  color: yellow;
+}
+.divBleu {
+  width: 200px;
+  height: 200px;
+  background-color: #0000ff;
+  -mor-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.divRouge {
+  width: 200px;
+  height: 200px;
+  background: #000;
+  border: 6px solid #ff0000;
+}
+.divRouge .gris {
+  color: yellow;
+}
+.divVerte {
+  width: 200px;
+  height: 200px;
+  border: 6px solid #f00 00;
+}
