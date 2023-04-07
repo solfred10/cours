@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="../../css/style.css" rel="stylesheet">
+
+	<title>JQUERY - Manipuler le DOM</title>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="row MT20">	
+			<div class="col-xl-12 titre">	
+				<img src="../../images/icones/iconeJquery.png">
+			</div>
+		</div>		
+
+		<div class="row MT20">	
+			<div class="col-xl-12 titre">	
+				<h1>MANIPULER LE DOM</h1>
+			</div>
+		</div>	
+		
+		<div class="row MT20">	
+			<div class="col-xl-3">	
+				<h3>Écrire dans une div<br>(avec html)</h3>	
+				<div id="ecrireDivHTML" class="borderGrey" >
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nam ullam exercitationem ex ea eligendi 
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonEcrireDivHTML">Écrire</button>					
+				</div>
+			</div>
+
+			<div class="col-xl-3">	
+				<h3>Écrire dans une div<br>(avec text)</h3>	
+				<div id="ecrireDivText" class="borderGrey" >
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nam ullam exercitationem ex ea eligendi 
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonEcrireDivText">Écrire</button>					
+				</div>
+			</div>
+
+			<div class="col-xl-3">	
+				<h3>Écrire dans un<br>input text</h3>	
+				<div>
+					<input type="text" value="" name="" id ="ecrireInput" placeholder="placeholder" style="width:250px">
+				</div>
+				<div class="titre" style="margin-top:75px">						
+					<button class="button" id="buttonEcrireInput">Écrire</button>					
+				</div>
+			</div>			
+
+			<div class="col-xl-3">	
+				<h3>Écrire dans<br>un textarea</h3>	
+				<div>
+					<textarea id="textareaAddText" cols="25" rows="4">-</textarea>
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonEcrireTextarea">Écrire</button>					
+				</div>
+			</div>			
+		</div>
+		
+		<hr>
+
+		<div class="row MT20">	
+			<div class="col-xl-3">	
+				<h3>Ajouter d'un élément après</h3>	
+				<div id="divAddAppend" class="borderGrey" >
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nam ullam exercitationem ex ea eligendi 
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonAddAppend">Masquer</button>					
+				</div>
+			</div>
+
+			<div class="col-xl-3">	
+				<h3>Ajouter d'un élément avant</h3>	
+				<div id="divAddPrepend" class="borderGrey" >
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nam ullam exercitationem ex ea eligendi 
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonAddPrepend">Masquer</button>					
+				</div>
+			</div>
+
+			<div class="col-xl-3">	
+				<h3>Ajouter d'un élément après</h3>	
+				<div id="divAddAfter" class="borderGrey" >
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nam ullam exercitationem ex ea eligendi 
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonAddAfter">Masquer</button>					
+				</div>
+			</div>
+
+			<div class="col-xl-3">	
+				<h3>Ajouter d'un élément avant</h3>	
+				<div id="divAddBefore" class="borderGrey" >
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nam ullam exercitationem ex ea eligendi 
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonAddBefore">Masquer</button>					
+				</div>
+			</div>			
+		</div>
+
+		<hr>
+
+		<div class="row MT20">	
+			<div class="col-xl-6">					
+				<h3>Supprimer un élément</h3>	
+				<div class="borderGrey" >
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nam ullam exercitationem ex ea eligendi 					
+				</div>
+				<p id="pRemove" class="texteGras">Paragraphe à supprimer</p>
+							
+				<div class="titre">						
+					<button class="button" id="buttonRemoveParagraphe">Supprimer le paragraphe</button>					
+				</div>
+			</div>
+
+			<div class="col-xl-6">					
+				<h3>Supprimer les enfants d'un élément</h3>	
+				<div id="divRemoveChild" class="borderGrey" >
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nam ullam exercitationem ex ea eligendi 					
+					<p>Paragraphe 1 à supprimer</p>
+					<p>Paragraphe 2 à supprimer</p>
+				</div>							
+				<div class="titre">						
+					<button class="button" id="buttonRemoveChild">Supprimer le paragraphe</button>					
+				</div>
+			</div>
+			 
+		</div>
+
+	</div>	
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../../js/fonctionsJS.js"></script>
+
+</body>
+
+</html>

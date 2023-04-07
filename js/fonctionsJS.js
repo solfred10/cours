@@ -205,14 +205,6 @@ $(function(){
 		contents.css("color","#0000ff");		
 	});
 
-	/*$("#each").on("click",function(){
-		var elementCoche = $(":input:checked") ;		
-		elementCoche.each(function () {
-			alert($(this).val());
-			console.log("Valeur : "+$(this).val());		
-		})		
-	});*/
-
 	$("#masquer").click(function()
 		{
 			$("#divClassique").hide();
@@ -301,8 +293,56 @@ $(function(){
 		console.log("Animate droite");	
 		$("#divAnimateDroite").animate({width: '250px'});
 	});
+
+	$("#buttonEcrireDivHTML").click(function() {
+		$("#ecrireDivHTML").html("<b>Hello world</b>") ;
+	});
+
+	$("#buttonEcrireDivText").click(function() {
+		$("#ecrireDivText").text("<b>Hello world</b>") ;
+	});
 	
+	$("#buttonEcrireInput").click(function() {
+		$("#ecrireInput").val("91") ;
+	});
 	
+	$("#buttonEcrireTextarea").click(function() {
+		$("#textareaAddText").val("Hello word! Hello word! Hello word! Hello word! Hello word! Hello word! ") ;
+	});
+	
+	$("#buttonAddAppend").click(function(){
+		console.log("Ajout d'un paragraphe à la fin d'une div");
+		$("#divAddAppend").append("<p><b>Hello word</b></p>")
+	});
+
+	$("#buttonAddPrepend").click(function(){
+		console.log("Ajout d'un paragraphe au début d'une div");
+		$("#divAddPrepend").prepend("<p><b>Hello word</b></p>")
+	});
+
+	$("#buttonAddAfter").click(function(){
+		console.log("Ajout d'un paragraphe à la fin d'une div");
+		$("#divAddAfter").after("<p><b>Hello word</b></p>")
+	});
+
+	$("#buttonAddBefore").click(function(){
+		console.log("Ajout d'un paragraphe au début d'une div");
+		$("#divAddBefore").before("<p><b>Hello word</b></p>")
+	});
+
+	$("#buttonRemoveParagraphe").click(function(){
+		console.log("Suppression de l'élément sélectionner");
+		$("#pRemove").remove()
+	});
+
+	$("#buttonRemoveChild").click(function(){
+		console.log("Suppression des enfants de l'élément selectionné. La div existe encore");
+		$("#divRemoveChild").empty()
+	});
+
+
+
+
 	$("#each").on("click",function(){
 		var elementCocheCheckbox = $(":input[type='checkbox']:checked") ;		
 		elementCocheCheckbox.each(function () {
@@ -310,6 +350,14 @@ $(function(){
 			console.log("Valeur : "+$(this).val());		
 		})		
 	});
+
+		/*$("#each").on("click",function(){
+		var elementCoche = $(":input:checked") ;		
+		elementCoche.each(function () {
+			alert($(this).val());
+			console.log("Valeur : "+$(this).val());		
+		})		
+	});*/
 
 	
 })
