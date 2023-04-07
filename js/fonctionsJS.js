@@ -213,6 +213,96 @@ $(function(){
 		})		
 	});*/
 
+	$("#masquer").click(function()
+		{
+			$("#divClassique").hide();
+		}
+	);
+
+	$("#afficher").click(function()
+		{
+			$("#divClassique").show();
+		}
+	);
+
+	$("#buttonToggle").click(function()
+		{
+			$("#divToggle").toggle();
+			var message = $("#buttonToggle").html();
+			if(message == "Masquer") {				
+				$("#buttonToggle").html("Afficher") ;
+			}
+			else {				
+				$("#buttonToggle").html("Masquer") ;
+			}		
+		}
+	);
+
+	$("#buttonFadeIn").click(function()
+	{
+		console.log("fadeIn");	
+		$("#divFadeInOut").fadeIn(2000);
+	});
+
+	
+	$("#buttonFadeOut").click(function()
+	{
+		console.log("fadeOut");	
+		$("#divFadeInOut").fadeOut(2000);
+	});
+
+	$("#buttonFadeToggle").click(function()
+		{
+			$("#divFadeToggle").fadeToggle(1000);
+			var message = $("#buttonFadeToggle").html();
+			if(message == "Masquer") {				
+				$("#buttonFadeToggle").html("Afficher") ;
+			}
+			else {				
+				$("#buttonFadeToggle").html("Masquer") ;
+			}		
+		}
+	);
+
+	$("#buttonSlideDown").click(function()
+	{
+		console.log("SlideDown");	
+		$("#divSlideDownUp").slideDown(2000);
+	});
+
+	
+	$("#buttonSlideUp").click(function()
+	{
+		console.log("SlideUp");	
+		$("#divSlideDownUp").slideUp(2000);
+	});
+
+	$("#buttonSlideToggle").click(function()
+		{
+			$("#divSlideToggle").slideToggle(1000);
+			var message = $("#buttonSlideToggle").html();
+			if(message == "Masquer") {				
+				$("#buttonSlideToggle").html("Afficher") ;
+			}
+			else {				
+				$("#buttonSlideToggle").html("Masquer") ;
+			}		
+		}
+	);
+
+	$("#buttonAnimateBas").click(function()
+	{
+		console.log("Animate bas");	
+		$("#divAnimateBas").animate({height:'100px'})
+	});
+
+	$("#buttonAnimateDroite").click(function()
+	{
+		console.log("Animate droite");	
+		$("#divAnimateDroite").animate({width: '250px'});
+	});
+	
+	
 	$("#each").on("click",function(){
 		var elementCocheCheckbox = $(":input[type='checkbox']:checked") ;		
 		elementCocheCheckbox.each(function () {
