@@ -340,7 +340,225 @@ $(function(){
 		$("#divRemoveChild").empty()
 	});
 
+	$("#boutonDimension").click(function() {	
+		console.log("dimension :");	
+		var largeur = $("#divDimension").width();		
+		var hauteur = $("#divDimension").height();		
+		$("#divEcriture").html("<b>Largeur : "+largeur+"<br />Hauteur : "+hauteur+"</b>") ;
+	});
 
+	$("#boutonDimensionInner").click(function() {		
+		var largeur = $("#divDimensionInner").innerWidth();		
+		var hauteur = $("#divDimensionInner").innerHeight();		
+		$("#divEcritureInner").html("<b>Largeur : "+largeur+"<br />Hauteur : "+hauteur+"</b>") ;
+	});
+
+	$("#boutonDimensionOuter").click(function() {		
+		var largeur = $("#divDimensionOuter").outerWidth();		
+		var hauteur = $("#divDimensionOuter").outerHeight();		
+		$("#divEcritureOuter").html("<b>Largeur : "+largeur+"<br />Hauteur : "+hauteur+"</b>") ;
+	});
+
+	$("#boutonPosition").click(function() {	
+		console.log("Top :");
+		var positionDivTop = $("#divPosition").position().top;			
+		var positionDivLeft = $("#divPosition").position().left;				
+		$("#divEcriturePosition").html("<b>haut : "+positionDivTop+"<br>"+"Gauche : "+positionDivLeft+"</b><br>") ;
+	});
+
+	$("#boutonPositionOffset").click(function() {	
+		var offsetTop = $("#divPositionOffset").offset().top;			
+		var offsetLeft = $("#divPositionOffset").offset().left;				
+		$("#divEcriturePositionOffset").html("<b>haut : "+offsetTop+"<br>"+"Gauche : "+offsetLeft+"</b><br>") ;
+	});
+
+	$("#buttonText1").click(function() {					
+		valeur=$("#prenom").val();
+		console.log(valeur);
+		$("#divText1").html("<b>"+valeur+"</b>") ;
+	});
+
+	$("#buttonText2").click(function() {	
+		valeurAffiche = "" ;				
+		valeur=$("#recupValeur2 input:text");
+		valeur.each(function() {		
+			valeurAffiche += $(this).val()+" ";				
+		})
+		console.log("valeur :" +valeurAffiche);
+		$("#divText2").html("<b>"+valeurAffiche+"</b>") ;
+	});
+
+	$("#buttonText3").click(function() {	
+		valeurAffiche = "" ;				
+		valeur=$("#recupValeur3 input[type=text]");
+		valeur.each(function() {		
+			valeurAffiche += $(this).val()+" ";				
+		})
+		console.log(valeurAffiche);
+		$("#divText3").html("<b>"+valeurAffiche+"</b>") ;
+	});
+
+	$("#buttonText4").click(function() {	
+		valeurAffiche = "" ;				
+		valeur=$("#recupValeur4 [type=text]");
+		valeur.each(function() {		
+			valeurAffiche += $(this).val()+" ";				
+		})
+		console.log(valeurAffiche);
+		$("#divText4").html("<b>"+valeurAffiche+"</b>") ;
+	});
+
+	//bouton radio
+	$("#buttonRadio1").click(function() {	
+		valeurAffiche = "" ;					
+		valeur=$("#recupValeurRadio1 input[type=radio]");
+		valeur.each(function() {
+			valeurAffiche+=$(this).attr("id");
+		})		
+		console.log(valeurAffiche);
+		$("#divRadio1").html("<b>"+valeurAffiche+"</b>") ;
+	});
+
+	$("#buttonRadio2").click(function() {					
+		valeurAffiche = "" ;	
+		valeur=$("#recupValeurRadio2 [type=radio]");
+		valeur.each(function() {
+			valeurAffiche+=$(this).attr("id");
+		})		
+		console.log(valeurAffiche);
+		$("#divRadio2").html("<b>"+valeurAffiche+"</b>") ;
+	});
+
+	$("#buttonRadio3").click(function() {					
+		valeurAffiche = "" ;	
+		valeur=$("#recupValeurRadio3 input:radio");
+		valeur.each(function() {
+			valeurAffiche+=$(this).attr("id");
+		})		
+		console.log(valeurAffiche);
+		$("#divRadio3").html("<b>"+valeurAffiche+"</b>") ;
+	});	
+	//fin bvouton radio
+
+	//bouton radio coché
+	$("#buttonRadio4").click(function() {	
+		valeurAffiche = "" ;					
+		valeur=$("#recupValeurRadio4 input[type=radio]:checked");
+		valeur.each(function() {
+			valeurAffiche+=$(this).attr("id");
+		})		
+		console.log(valeurAffiche);
+		$("#divRadio4").html("<b>"+valeurAffiche+"</b>") ;
+	});
+
+	$("#buttonRadio5").click(function() {					
+		valeurAffiche = "" ;	
+		valeur=$("#recupValeurRadio5 [type=radio]:checked");
+		valeur.each(function() {
+			valeurAffiche+=$(this).attr("id");
+		})		
+		console.log(valeurAffiche);
+		$("#divRadio5").html("<b>"+valeurAffiche+"</b>") ;
+	});
+
+	$("#buttonRadio6").click(function() {					
+		valeurAffiche = "" ;	
+		valeur=$("#recupValeurRadio6 input:radio:checked");
+		valeur.each(function() {
+			valeurAffiche+=$(this).attr("id");
+		})		
+		console.log(valeurAffiche);
+		$("#divRadio6").html("<b>"+valeurAffiche+"</b>") ;
+	});	
+	//fin bouton radio coché
+
+	//Vérifier si un bouton radio coché
+	$("#buttonRadio7").click(function() {			
+		valeur= $("#element19").prop("checked") ;;		
+		console.log(valeur);
+		$("#divRadio7").html("<b>"+valeur+"</b>") ;
+	});
+	//fin
+
+	//Cocher un bouton radio
+	$("#buttonRadio8").click(function() {			
+		valeur= $("#element23").prop("checked",true) ;;		
+	});
+	//fin
+
+	//Désactiver un bouton radio
+	$("#buttonRadio9").click(function() {			
+		valeur= $("#element27").prop("disabled",true) ;;		
+	});
+	//fin
+
+
+
+	$("#buttonSelect").click(function() {			
+		valeur=$("#paysSelect").val();
+		$("#divSelect").html("<b>"+valeur+"</b>") ;
+	});
+
+	$("#buttonMultiSelect").click(function() {			
+		valeur=$("#paysMultiSelect").val();
+		$("#divMultiSelect").html("<b>"+valeur+"</b>") ;
+	});
+
+	$("#buttonRadio").click(function() {			
+		valeur=$("input[type='radio']:checked").attr("id");
+		$("#divRadio").html("<b>"+valeur+"</b>") ;
+	});
+
+	$("#buttonCheckbox").click(function() {		
+		var retour = [] ;	
+		valeur=$("input[type='checkbox']:checked");
+		valeur.each(function() {			
+			retour.push($(this).attr("id"));					
+		});		
+		$("#divCheckbox").html("<b>"+retour+"</b> ") ;			
+	});
+
+	$("#buttonTextarea").click(function() {			
+		valeur=$("#lorem").val();
+		$("#divTextarea").html("<b>"+valeur+"</b>") ;
+	});
+
+	$("#buttonLink1").click(function() {			
+		valeur=$("#lien1").attr("href");
+		$("#divLink1").html("<b>"+valeur+"</b>") ;
+	});
+
+	$("#buttonLink2").click(function() {			
+		valeur=$("#lien2").attr("href","https://www.free.fr");
+		var link2= $("#lien2").attr("href") ;
+		$("#divLink2").html("<b>Nouveau lien : <a href='"+link2+"'>"+link2+"</a></b>") ;
+	});
+
+	$("#buttonImage1").click(function() {			
+		valeur=$("#image1").attr("src");
+		$("#divImage1").html("<b>"+valeur+"</b>") ;
+	});
+
+	$("#buttonImage2").click(function() {			
+		valeur=$("#image2").attr("src","../../images/icones/iconeCSS.png");
+		var image2= $("#image2").attr("src") ;
+		$("#divImage2").html("<b>Nouveau lien : "+image2+"</b>") ;
+	});
+
+	$("#buttonImage3").click(function() {	
+		console.log("suppression width");		
+		$("#image3").removeAttr("width");		
+	});
+
+	$("#buttonImage4").click(function() {			
+		$("#image4").attr("height","50px").attr("width","50px");		
+	});
+
+	
+	
+			
+	
+	
 
 
 	$("#each").on("click",function(){

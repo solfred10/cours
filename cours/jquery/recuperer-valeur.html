@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="../../css/style.css" rel="stylesheet">
+
+	<title>JQUERY - Récupérer les valeurs</title>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="row MT20">	
+			<div class="col-xl-12 titre">	
+				<img src="../../images/icones/iconeJquery.png">
+			</div>
+		</div>		
+
+		<div class="row MT20">	
+			<div class="col-xl-12 titre">	
+				<h1>RÉCUPÉRER LES VALEURS</h1>
+			</div>
+		</div>	
+		
+		<div class="row MT20">	 
+			<div class="col-xl-3 titre">	
+				<h3>Champ de saisie</h3>	
+				<div>
+					<input type="text" name="prenom" value="Frédéric" id="prenom"/>
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonText1">Récupérer</button>					
+				</div>
+				<div id="divText1">
+
+				</div>
+			</div>
+
+			<div class="col-xl-3 titre" id="recupValeur2">	
+				<h3>Champ de saisie</h3>	
+				<div>
+					<input type="text" name="nom" value="SOL" id="nom"/>
+					<input type="text" name="prenom" value="Frédéric" id="prenom"/>
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonText2">Récupérer</button>					
+				</div>
+				<div id="divText2">
+
+				</div>
+			</div>
+
+			<div class="col-xl-3 titre" id="recupValeur3">	
+				<h3>Champ de saisie</h3>	
+				<div>
+					<input type="text" name="nom" value="SOL" id="nom"/>
+					<input type="text" name="prenom" value="Frédéric" id="prenom"/>
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonText3">Récupérer</button>					
+				</div>
+				<div id="divText3">
+
+				</div>
+			</div>
+
+			<div class="col-xl-3 titre" id="recupValeur4">	
+				<h3>Champ de saisie</h3>	
+				<div>
+					<input type="text" name="nom" value="SOL" id="nom"/>
+					<input type="text" name="prenom" value="Frédéric" id="prenom"/>
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonText4">Récupérer</button>					
+				</div>
+				<div id="divText4">
+
+				</div>
+			</div>
+		</div>	
+
+		<hr>
+
+		<!--Bouton radio-->
+		<div class="row MT20">	 
+			<div class="col-xl-3 titre" id="recupValeurRadio1">	
+				<h3>Radio Méthode 1</h3>					
+				<label for="element1">
+					<input type="radio" id="element1"  name="element1">element1
+				</label>
+				<label for="element2">
+					<input type="radio" id="element2" name="element1">element2
+				</label>
+				<label for="element3">
+					<input type="radio" id="element3" name="element1">element3
+				</label>	
+				
+				<div class="titre">						
+					<button class="button" id="buttonRadio1">Récupérer</button>					
+				</div>
+				<div id="divRadio1">
+
+				</div>
+			</div>
+
+			<div class="col-xl-3 titre" id="recupValeurRadio2">	
+				<h3>Radio Méthode 2</h3>					
+				<label for="element4">
+					<input type="radio" id="element4"  name="element4">element4
+				</label>
+				<label for="element5">
+					<input type="radio" id="element5" name="element4">element5
+				</label>
+				<label for="element6">
+					<input type="radio" id="element6" name="element4">element6
+				</label>					
+				<div class="titre">						
+					<button class="button" id="buttonRadio2">Récupérer</button>					
+				</div>
+				<div id="divRadio2">
+
+				</div>
+			</div>
+
+			<div class="col-xl-3 titre" id="recupValeurRadio3">	
+				<h3>Radio Méthode 3</h3>					
+				<label for="element7">
+					<input type="radio" id="element7"  name="element7">element7
+				</label>
+				<label for="element8">
+					<input type="radio" id="element8" name="element7">element8
+				</label>
+				<label for="element9">
+					<input type="radio" id="element9" name="element7">element9
+				</label>					
+				<div class="titre">						
+					<button class="button" id="buttonRadio3">Récupérer</button>					
+				</div>
+				<div id="divRadio3">
+
+				</div>
+			</div>		 
+		</div>	
+
+		<hr>
+
+		<!-- Bouton checkbox coché -->
+		<div class="row MT20">	 
+			<div class="col-xl-3 titre" id="recupValeurRadio4">	
+				<h3>Radio coché Méthode 1</h3>					
+				<label for="element10">
+					<input type="radio" id="element10"  name="element11">element10
+				</label>
+				<label for="element11">
+					<input type="radio" id="element11" name="element11">element11
+				</label>
+				<label for="element12">
+					<input type="radio" id="element12" name="element11">element12
+				</label>	
+				
+				<div class="titre">						
+					<button class="button" id="buttonRadio4">Récupérer</button>					
+				</div>
+				<div id="divRadio4">
+
+				</div>
+			</div>
+
+			<div class="col-xl-3 titre" id="recupValeurRadio5">	
+				<h3>Radio coché Méthode 2</h3>					
+				<label for="element13">
+					<input type="radio" id="element13"  name="element13">element13
+				</label>
+				<label for="element14">
+					<input type="radio" id="element14" name="element13">element14
+				</label>
+				<label for="element15">
+					<input type="radio" id="element15" name="element13">element15
+				</label>					
+				<div class="titre">						
+					<button class="button" id="buttonRadio5">Récupérer</button>					
+				</div>
+				<div id="divRadio5">
+
+				</div>
+			</div>
+
+			<div class="col-xl-3 titre" id="recupValeurRadio6">	
+				<h3>Radio coché Méthode 3</h3>					
+				<label for="element16">
+					<input type="radio" id="element16"  name="element16">element16
+				</label>
+				<label for="element17">
+					<input type="radio" id="element17" name="element16">element17
+				</label>
+				<label for="element18">
+					<input type="radio" id="element18" name="element16">element18
+				</label>					
+				<div class="titre">						
+					<button class="button" id="buttonRadio6">Récupérer</button>					
+				</div>
+				<div id="divRadio6">
+
+				</div>
+			</div>		 
+		</div>	
+
+		<hr>
+
+		<div class="row MT20">	 
+			<div class="col-xl-12 titre">	
+				<h1>checkbox</h1>
+			</div>
+		</div>		
+		
+		<hr>
+
+		<div class="row MT20">	 			
+			<div class="col-xl-3 titre" id="recupValeurRadio7">	
+				<h3>Vérifier si une élément 19 est coché</h3>					
+				<label for="element19">
+					<input type="radio" id="element19"  name="element19">element19
+				</label>
+				<label for="element20">
+					<input type="radio" id="element20" name="element19">element20
+				</label>
+				<label for="element21">
+					<input type="radio" id="element21" name="element19">element21
+				</label>					
+				<div class="titre">						
+					<button class="button" id="buttonRadio7">Récupérer</button>					
+				</div>
+				<div id="divRadio7">
+
+				</div>
+			</div>	
+			
+			<div class="col-xl-3 titre" id="recupValeurRadio8">	
+				<h3>Cocher l'élément 23</h3>					
+				<label for="element19">
+					<input type="radio" id="element22"  name="element19">element22
+				</label>
+				<label for="element20">
+					<input type="radio" id="element23" name="element19">element23
+				</label>
+				<label for="element21">
+					<input type="radio" id="element24" name="element19">element24
+				</label>					
+				<div class="titre">						
+					<button class="button" id="buttonRadio8">Récupérer</button>					
+				</div>				
+			</div>
+			
+			<div class="col-xl-3 titre" id="recupValeurRadio9">	
+				<h3>Désactiver l'élément 27</h3>					
+				<label for="element25">
+					<input type="radio" id="element25"  name="element25">element25
+				</label>
+				<label for="element26">
+					<input type="radio" id="element26" name="element25">element26
+				</label>
+				<label for="element27">
+					<input type="radio" id="element27" name="element25">element27
+				</label>					
+				<div class="titre">						
+					<button class="button" id="buttonRadio9">Récupérer</button>					
+				</div>				
+			</div>
+		</div>		
+
+		<hr>
+
+		<div class="row MT20">	 
+			<div class="col-xl-12 titre">	
+				<h1>checkbox</h1>
+			</div>
+		</div>		
+		
+		<hr>
+		
+		<div class="row MT20">	 
+			<div class="col-xl-4 titre">	
+				<h3>Select</h3>	
+				<div>
+					<select id="paysSelect">
+						<option value="-">-</option>
+						<option value="France">France</option>
+						<option value="Espagne">Espagne</option>
+						<option value="Italie">Italie</option>
+					</select>
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonSelect">Récupérer</button>					
+				</div>
+				<div id="divSelect">
+
+				</div>
+			</div>
+			<div class="col-xl-4 titre">	
+				<h3>Multi Select</h3>	
+				<div>
+					<select id="paysMultiSelect" multiple>
+						<option value="France">France</option>
+						<option value="Espagne">Espagne</option>
+						<option value="Italie">Italie</option>
+					</select>
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonMultiSelect">Récupérer</button>					
+				</div>
+				<div id="divMultiSelect">
+
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+		<div class="row MT20">	
+			<div class="col-xl-4 titre">	
+				<h3>Radio</h3>
+				<div>
+					<label for="element1">
+						<input type="radio" id="element1"  name="element1">element1
+					</label>
+					<label for="element2">
+						<input type="radio" id="element2" name="element1">element2</option>
+					</label>
+					<label for="element3">
+						<input type="radio" id="element3" name="element1">element3</option>
+					</label>					
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonRadio">Récupérer</button>					
+				</div>
+				<div id="divRadio">
+
+				</div>
+			</div>
+			<div class="col-xl-4 titre">	
+				<h3>Checkbox</h3>
+				<div>
+					<label for="element4">
+						<input type="checkbox" id="element4" name="element4">element4</option>
+					</label>
+					<label for="element5">
+						<input type="checkbox" id="element5" name="element5">element5</option>
+					</label>
+					<label for="element6">
+						<input type="checkbox" id="element6" name="element6">element6</option>
+					</label>					
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonCheckbox">Récupérer</button>					
+				</div>
+				<div id="divCheckbox">
+
+				</div>
+			</div>
+			<div class="col-xl-4 titre">	
+				<h3>textarea</h3>
+				<div>
+					<textarea id="lorem">Lorem ipsum dolor sit amet</textarea>
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonTextarea">Récupérer</button>					
+				</div>
+				<div id="divTextarea">
+
+				</div>
+			</div>
+		</div>
+
+		<div class="row MT20">	
+			<div class="row MT20">	
+				<div class="col-xl-3 titre">	
+					<h3>Récuperer URL</h3>
+					<div>
+						<a href="http://www.fred-sol.fr" id="lien1">fred-sol.fr</a>				
+					</div>
+					<div class="titre">						
+						<button class="button" id="buttonLink1">Récupérer</button>					
+					</div>
+					<div id="divLink1">
+	
+					</div>
+				</div>
+				
+				<div class="col-xl-3 titre">	
+					<h3>Modifier URL</h3>
+					<div>
+						<a href="http://www.fred-sol.fr" id="lien2">fred-sol.fr</a>				
+					</div>
+					<div class="titre">						
+						<button class="button" id="buttonLink2">Récupérer</button>					
+					</div>
+					<div id="divLink2">
+	
+					</div>			
+				</div>
+	
+				<div class="col-xl-3 titre">	
+					<h3>Récuperer src images</h3>
+					<div>
+						<img src="../../images/icones/iconeJquery.png" width="100px" id="image1">
+					</div>
+					<div class="titre">						
+						<button class="button" id="buttonImage1">Récupérer</button>					
+					</div>
+					<div id="divImage1">
+	
+					</div>
+				</div>
+
+				<div class="col-xl-3 titre">	
+					<h3>Modifier src<br> images</h3>
+					<div>
+						<img src="../../images/icones/iconeJquery.png" width="100px" id="image2">
+					</div>
+					<div class="titre">						
+						<button class="button" id="buttonImage2">Changer</button>					
+					</div>
+					<div id="divImage2">
+	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row MT20">	
+			<div class="row MT20">	
+								
+				<div class="col-xl-3 titre">	
+					<h3>Supprimer attribut (width)</h3>
+					<div>
+						<img src="../../images/icones/iconeJquery.png" width="100px" height="" id="image3">
+					</div>
+					<div class="titre">						
+						<button class="button" id="buttonImage3">Récupérer</button>					
+					</div>
+					
+				</div>
+
+				<div class="col-xl-3 titre">	
+					<h3>Ajouter attribut (height et width)</h3>
+					<div>
+						<img src="../../images/icones/iconeJquery.png" id="image4">
+					</div>
+					<div class="titre">						
+						<button class="button" id="buttonImage4">Récupérer</button>					
+					</div>
+					
+				</div>
+
+				
+			</div>
+		</div>
+
+		<hr>
+
+		
+		
+		
+		
+		
+		 
+
+	</div>	
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../../js/fonctionsJS.js"></script>
+
+</body>
+
+</html>

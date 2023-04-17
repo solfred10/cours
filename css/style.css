@@ -90,6 +90,12 @@
 	padding:10px;
 }
 
+.divDimension {
+	width:300px;
+	height:200px;	
+	padding:20px;
+}
+
 /*
 ol.sommaire {
   counter-reset: sommaire;               
