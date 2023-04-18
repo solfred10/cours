@@ -554,8 +554,58 @@ $(function(){
 		$("#image4").attr("height","50px").attr("width","50px");		
 	});
 
+	//Bouton ajout class
+	$("#buttonAddClass").click(function() {
+		$("#addClass").addClass("texteRouge");
+	})
+	//fin
+
+	//Bouton remove class
+	$("#buttonRemoveClass").click(function() {
+		$("#removeClass").removeClass("texteRouge");
+	})
+	//fin
+
+	//Bouton toggle class
+	$("#buttonToggleClass").click(function() {
+		$("#toggleClass").toggleClass("texteRouge");
+	})
+	//fin
+
+	//Liste des classes
+	$("#buttonListeClass").click(function() {
+		listeClass= $("#listClass").attr("class");
+		console.log(listeClass);
+		$("#divListClass").html("<b>"+listeClass+"</b>") ;
+	})
+	//fin
 	
+	//Valeur d'une propriété CSS
+	$("#buttonPropertyClass").click(function() {
+		propertyClass= $("#propertyClass").css("border-style");		
+		$("#divPropertyClass").html("<b>Type de bordure : "+propertyClass+"</b>") ;		
+	})
+	//fin
+
+	//Modifier la valeur d'une propriété CSS
+	$("#buttonChangePropertyClass").click(function() {
+		propertyClass= $("#changePropertyClass").css("color","blue");				
+	})
+	//fin
 	
+	//Ne contient pas une classe classe
+	$("#buttonHasClassNo").click(function() {
+		contient= $("#hasClassNo").hasClass("texteRouge");		
+		$("#divHasClassNo").html("<b>"+contient+"</b>") ;
+	})
+	//fin
+
+	//Contient une classe classe
+	$("#buttonHasClassYes").click(function() {
+		contient= $("#hasClassYes").hasClass("texteRouge");		
+		$("#divHasClassYes").html("<b>"+contient+"</b>") ;
+	})
+	//fin
 			
 	
 	
