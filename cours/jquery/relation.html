@@ -15,7 +15,9 @@
 	<div class="container">
 		<div class="row MT20">	
 			<div class="col-xl-12 titre">	
-				<img src="../../images/icones/iconeJquery.png">
+				<a href="accueil.html">
+					<img src="../../images/icones/iconeJquery.png">
+				</a>
 			</div>
 		</div>		
 
@@ -79,6 +81,187 @@
 			</div>
 		</div>
 
+		<hr>
+
+		<div class="row MT20">	
+			<div class="col-xl-3">		
+				<h3>siblings() renvoie tous les éléments frères (les éléments de même niveau) de l'élément sélectionné</h3>	
+				<ul>ul (parent)  
+					<li>li (the previous sibling of "start")</li>
+					<li>li (the previous sibling of "start")</li>
+					<li class="start">li (sibling)</li>
+					<li>li (the next sibling of "start")</li>
+					<li>li (the next sibling of "start")</li>
+				</ul>   
+				<div class="titre">						
+					<button class="button" id="buttonSibling">Sélectionner les frères de Start</button>
+				</div>				 
+			</div>	
+
+			<div class="col-xl-3">	
+				<h3>next() renvoie l'élément frère suivant de l'élément sélectionné</h3>
+				<ul>ul (parent)  
+					<li>li (sibling)</li>
+					<li>li (sibling)</li>
+					<li id="startNext">li (sibling with class name "start")</li>
+					<li>li (the next sibling of li with class name "start")</li>
+					<li>li (sibling)</li>
+				</ul>   
+				<div class="titre">						
+					<button class="button" id="buttonNext">Sélectionner</button>
+				</div>
+			</div>	
+
+			<div class="col-xl-3">	
+				<h3>nextAll() renvoie tous les éléments frères suivants de l'élément sélectionné</h3>
+				<ul>ul (parent)  
+					<li>li (sibling)</li>
+					<li>li (sibling)</li>
+					<li id="startNextAll">li (sibling with class name "start")</li>
+					<li>li (the next sibling of li with class name "start")</li>
+					<li>li (the next sibling of li with class name "start")</li>
+					<li>li (the next sibling of li with class name "start")</li>					
+				</ul>   
+				<div class="titre">						
+					<button class="button" id="buttonNextAll">Sélectionner</button>
+				</div>
+			</div>		
+
+			<div class="col-xl-3">	
+				<h3>nextUntil() renvoie tous les éléments frères suivants entre le sélecteur et stop .</h3>
+				<ul>ul (parent)  
+					<li>li (sibling)</li>
+					<li>li (sibling)</li>
+					<li id="startNextUntil">li (sibling with class name "start")</li>
+					<li>li (the next sibling of li with class name "start")</li>
+					<li>li (the next sibling of li with class name "start")</li>
+					<li>li (the next sibling of li with class name "start")</li>
+					<li id="stopNextUntil">li (sibling with class name "stop")</li>
+				</ul>  
+				<div class="titre">						
+					<button class="button" id="buttonNextUntil">Sélectionner</button>
+				</div>
+			</div>	
+		</div>
+
+		<hr>
+
+		<!-- Frères précédants -->
+		<div class="row MT20">	
+			<div class="col-xl-3">		
+				<h3>siblings() renvoie tous les éléments frères (les éléments de même niveau) de l'élément sélectionné</h3>	
+				<ul>ul (parent)  
+					<li>li (the previous sibling of "start")</li>
+					<li>li (the previous sibling of "start")</li>
+					<li class="start">li (sibling)</li>
+					<li>li (the next sibling of "start")</li>
+					<li>li (the next sibling of "start")</li>
+				</ul>   
+				<div class="titre">						
+					<button class="button" id="buttonSibling">Sélectionner les frères de Start</button>
+				</div>				 
+			</div>	
+
+			<div class="col-xl-3">	
+				<h3>prev() renvoie l'élément frère précédent de l'élément sélectionné</h3>
+				<ul>ul (parent)  
+					<li>li (sibling)</li>
+					<li>li (sibling)</li>
+					<li id="startPrev">li (sibling with class name "start")</li>
+					<li>li (the next sibling of li with class name "start")</li>
+					<li>li (sibling)</li>
+				</ul>   
+				<div class="titre">						
+					<button class="button" id="buttonPrev">Sélectionner</button>
+				</div>
+			</div>	
+
+			<div class="col-xl-3">	
+				<h3>prevAll() renvoie tous les éléments frères précédents de l'élément sélectionné.</h3>
+				<ul>ul (parent)  
+					<li>li (sibling)</li>
+					<li>li (sibling)</li>
+					<li>li (sibling)</li>
+					<li id="startPrevAll">li (sibling with class name "start")</li>
+					<li>li (the next sibling of li with class name "start")</li>
+					<li>li (the next sibling of li with class name "start")</li>
+					<li>li (the next sibling of li with class name "start")</li>					
+				</ul>   
+				<div class="titre">						
+					<button class="button" id="buttonPrevAll">Sélectionner</button>
+				</div>
+			</div>		
+
+			<div class="col-xl-3">	
+				<h3>prevUntil() renvoie tous les éléments frères précédents entre le sélecteur et stop</h3>
+				<ul>ul (parent)  
+					<li id="stopPrevUntil">li (sibling with class name "stop")</li>
+					<li>li (sibling)</li>
+					<li>li (sibling)</li>
+					<li id="startPrevUntil">li (sibling with class name "start")</li>
+					<li>li (the next sibling of li with class name "start")</li>
+					<li>li (the next sibling of li with class name "start")</li>
+					<li>li (the next sibling of li with class name "start")</li>
+					
+				</ul>  
+				<div class="titre">						
+					<button class="button" id="buttonPrevUntil">Sélectionner</button>
+				</div>
+			</div>	
+		</div>
+
+		<hr>
+
+		<div class="row MT20">	
+			<div class="col-xl-3">	
+				<h3>parent() renvoie l'élément parent direct de l'élément sélectionné</h3>
+				<div>div (great-grandparent)
+					<ul>ul (grandparent)  
+					  <li>li (direct parent)
+						<span>span</span>
+					  </li>
+					</ul>   
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonParent">Sélectionner le parent de span</button>
+				</div>
+			</div>	
+
+			<div class="col-xl-3" id="divParents">	
+				<h3>parents() renvoie tous les éléments ancêtres de l'élément sélectionné.</h3>
+				<div>div (great-grandparent)
+					<ul>ul (grandparent)  
+					  <li>li (direct parent)
+						<span id="spanParents">span</span>
+					  </li>
+					</ul>   
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonParents">Sélectionner le parent de span</button>
+				</div>
+			</div>	
+
+			<div class="col-xl-3" id="divParentsUntil">	
+				<h3>parentsUntil() renvoie tous les éléments ancêtres entre le sélecteur et stop </h3>
+				<div>div (great-grandparent)
+					<ul>ul (grandparent)  
+					  <li>li (direct parent)
+						<span id="spanParentsUntil">span</span>
+					  </li>
+					</ul>   
+				</div>
+				<div class="titre">						
+					<button class="button" id="buttonParentsUntil">Sélectionner le parent de span</button>
+				</div>
+			</div>
+		</div>	
+		
+		<hr>
+
+		<iv class="row MT20">	
+			
+		</div>	
+		
 		<hr>
 
 		<div class="row MT20">	
@@ -312,9 +495,80 @@
 		</div>
 
 		<hr>
+
+		<div class="row MT20">	
+			<div class="col-xl-4" id="divFind">	
+				<h3>find() renvoie les éléments descendants (enfants, petits-enfants,...) de l'élément sélectionné</h3>					
+				<ul id="ulFind">ul (direct parent)  
+					<li>li 
+					  <span>span 1 </span>
+					</li>
+					<li>
+						li <i>pas span</i>						
+					</li>
+					  <li>li 
+						<span>span 2</span>
+					  </li>
+				</ul>		
+				<div class="titre">						
+					<button  class="button" id="buttonFind">Sélectionner tous les span desc</button>
+				</div>	
+			</div>
+					
+			<div class="col-xl-4" id="divChildren">	
+				<h3>children() renvoie tous les enfants directs de l'élément sélectionné</h3>					
+				<ul id="ulChildren">ul (direct parent)  
+					<li>li 
+					  <span>span 1 </span>
+					</li>
+					<li>
+						li <i>pas span</i>						
+					</li>
+					  <li>li 
+						<span>span 2</span>
+					  </li>
+				</ul>		
+				<div class="titre">						
+					<button  class="button" id="buttonChildren">Sélectionner tous les span desc</button>
+				</div>	
+			</div>
+
+			<div class="col-xl-4" id="divNbElement">	
+				<h3>Nombre d'éléments</h3>					
+				<ul id="ulLength">ul (direct parent)  
+					<li>li 
+					  <span>span 1 </span>
+					</li>
+					<li>
+						li <i>pas span</i>						
+					</li>
+					  <li>li 
+						<span>span 2</span>
+					  </li>
+				</ul>		
+				<ul id="ulLength">ul (direct parent)  
+					<li>li 
+					  <span>span 1 </span>
+					</li>
+					<li>
+						li <i>pas span</i>						
+					</li>
+					  <li>li 
+						<span>span 2</span>
+					  </li>
+				</ul>	
+				<div class="titre">						
+					<button  class="button" id="buttonLength">Sélectionner tous les span desc</button>
+				</div>
+				<div class="titre" id="divWriteNbElement">											
+				</div>	
+			</div>
+		</div>
+
+		<hr>
 		
 		<div class="row MT20">	
-			<div class="col-xl-4" id="elementSuivantTous">	
+			<div class="col-xl-3" id="elementSuivantTous">	
 				<h3>Tous les élements p suivants de même niveau</h3>					
 				<p>élément 1</p>
 				<p>élément 2</p>
@@ -327,7 +581,7 @@
 				</div>	
 			</div>							
 			
-			<div class="col-xl-4" id="elementSuivantUnique">	
+			<div class="col-xl-3" id="elementSuivantUnique">	
 				<h3>Premier élement p suivant de même niveau</h3>					
 				<p>élément 1</p>
 				<p>élément 2</p>
@@ -339,6 +593,9 @@
 					<button class="button">Sélectionner</button>
 				</div>	
 			</div>	
+		</div>	
+
+		
 
 			<p style="display:inline-block">élément p suivant 1</p>
 			<p>élément p suivant 2</p>

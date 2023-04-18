@@ -101,6 +101,56 @@ $(function(){
 		dernierDescendant.css("color","#0000ff");			
 	});
 
+	//sibling
+	$("#buttonSibling").click(function(){
+		$("li.start").siblings().css("color","blue");			
+	});	
+
+	//parent()
+	$("#buttonParent").click(function(){
+		$("span").parent().css("color","blue");			
+	});	
+
+	//parents()
+	$("#buttonParents").click(function(){
+		$("#spanParents").parents().css("color","blue");			
+	});	
+
+	//parentsUntil()
+	$("#buttonParentsUntil").click(function(){
+		$("#spanParentsUntil").parents("#divParentsUntil").css("color","blue");			
+	});	
+
+	//Next
+	$("#buttonNext").click(function(){
+		$("#startNext").next().css("color","blue");			
+	});	
+
+	//NextAll
+	$("#buttonNextAll").click(function(){
+		$("#startNextAll").nextAll().css("color","blue");			
+	});	
+
+	//NextUntil
+	$("#buttonNextUntil").click(function(){
+		$("#startNextUntil").nextUntil("#stopNextUntil").css("color","blue");			
+	});	
+
+	//prev
+	$("#buttonPrev").click(function(){
+		$("#startPrev").prev().css("color","blue");			
+	});	
+
+	//PrevAll
+	$("#buttonPrevAll").click(function(){
+		$("#startPrevAll").prevAll().css("color","blue");			
+	});	
+
+	//NextUntil
+	$("#buttonPrevUntil").click(function(){
+		$("#startPrevUntil").prevUntil("#stopPrevUntil").css("color","blue");			
+	});	
+
 	$("#premierLi").click(function(){
 		var premierLi = $("#premierLi ul li:first-child") ;	
 		console.log("Sélectionner le premier <li> de chaque liste");
@@ -191,6 +241,26 @@ $(function(){
 		console.log("Sélectionne le premier éléments p suivant sur le même niveau que la div elementSuivant");
 		elementSuivantUnique.css("color","#ff0000");			
 	});
+
+	//find
+	$("#buttonFind").click(function() {
+		$("#ulFind").find("span").css({"color": "red", "border": "2px solid red"});
+	})	
+	//fin
+
+	//children
+	$("#buttonChildren").click(function() {
+		$("#ulChildren").children().css("color","red");
+	})	
+	//fin
+
+	//nbElement 
+	$("#buttonLength").click(function() {
+		nbElementUl=$("#divNbElement ul").length;
+		nbElementLi=$("#divNbElement li").length;
+		$("#divWriteNbElement").html("nb élément ul :"+nbElementUl+"<br>nb élément li :"+nbElementLi);		
+	})	
+	//fin
 
 	/*filtres additionnels*/
 	$("#has").on("click",function(){
@@ -492,12 +562,55 @@ $(function(){
 	});
 	//fin
 
-
-
+	//Menu déroulant
 	$("#buttonSelect").click(function() {			
 		valeur=$("#paysSelect").val();
 		$("#divSelect").html("<b>"+valeur+"</b>") ;
 	});
+	//fin
+
+	//Menu déroulant récupérer un élément (le 2e, le 3e,...)
+	$("#buttonSelectElementN3").click(function(){
+		pays=$("#paysSelectElementN3 option").eq(3).val();
+		$("#divSelectElementN3").html("<b>"+pays+"</b>")
+	})
+	//fin
+
+	//Menu déroulant récupérer un élément (le 2e, le 3e,...)
+	$("#buttonSelectElementN4").click(function(){
+		pays=$("#paysSelectElementN4 option:eq(4)").val();
+		$("#divSelectElementN4").html("<b>"+pays+"</b>")
+	})
+	//fin
+
+	//Menu déroulant sélectionner un élément (le 2e, le 3e,...)
+	$("#buttonSelectElementN5").click(function(){
+		pays=$("#paysSelectElementN5 option").eq(5).prop("selected",true);		
+	})
+	//fin
+
+	//Menu déroulant sélectionner un élément (le 2e, le 3e,...)
+	$("#buttonSelectElementN6").click(function(){
+		pays=$("#paysSelectElementN6 option:eq(6)").prop("selected",true);		
+	})
+	//fin
+
+	//Menu déroulant sélectionner une valeur 
+	$("#buttonSelectElementN7").click(function(){
+		pays=$("#paysSelectElementN7 [value='France']").prop("selected",true);				
+	})
+	//fin
+
+	//Menu déroulant sélectionner une valeur 
+	$("#buttonSelectElementN8").click(function(){		
+		pays=$("#paysSelectElementN8").val("USA");		
+	})
+	//fin
+
+	function selectionnerMenuDeroulant2() {
+		var sport = $("#sports option:eq(2)").val() ;	
+		alert(sport);
+	}
 
 	$("#buttonMultiSelect").click(function() {			
 		valeur=$("#paysMultiSelect").val();
@@ -607,26 +720,90 @@ $(function(){
 	})
 	//fin
 			
-	
-	
+	/**************
+	 * evenements *
+	 **************/
 
-
-	$("#each").on("click",function(){
-		var elementCocheCheckbox = $(":input[type='checkbox']:checked") ;		
-		elementCocheCheckbox.each(function () {
-			//alert($(this).val());
-			console.log("Valeur : "+$(this).val());		
-		})		
+	//blur
+	$("#evtBlur").focus();
+	$("#evtBlur").blur(function() {
+		alert("perte du focus");
+	});
+	
+	//focus
+	$("#evtFocus").focus(function() {
+		$(this).css("backgroundColor","lightblue")
 	});
 
-		/*$("#each").on("click",function(){
-		var elementCoche = $(":input:checked") ;		
-		elementCoche.each(function () {
-			alert($(this).val());
-			console.log("Valeur : "+$(this).val());		
-		})		
-	});*/
+	//change
+	$("#evtChange").change(function() {
+		valeur=$(this).val();
+		$("#inputChange").val(valeur);
+	});
 
+	//hover
+	$("#evtHover1").hover(function() {
+		$(this).css("backgroundColor","lightblue")
+	});
+
+	$("#evtHover2").hover(function() {
+		$(this).css("backgroundColor","lightblue")
+	},
+	function() {
+		$(this).css("backgroundColor","darkblue")
+	}
+	);
+
+	//mousenter
+	$("#evtMouseEnter").mouseenter(function() {
+		$(this).css("backgroundColor","lightblue")
+	});
+
+	//mouseleave
+	$("#evtMouseLeave").mouseleave(function() {
+		$(this).css("backgroundColor","lightblue")
+	});
+
+	//mouseover
+	$("#evtMouseOver").mouseover(function() {
+		$(this).css("backgroundColor","lightblue")
+	});
+
+	//mouseout
+	$("#evtMouseOut").mouseout(function() {
+		$(this).css("backgroundColor","lightblue")
+	});
+	
+	//mousedown
+	$("#evtMouseDown").mousedown(function() {
+		$(this).css("backgroundColor","lightblue")
+	});
+
+	//mouseup
+	$("#evtMouseUp").mouseup(function() {
+		$(this).css("backgroundColor","lightblue")
+	});
+
+	//keydown
+	$("#evtKeyDown").keydown(function() {
+		$(this).css("backgroundColor","lightblue")
+	});
+
+	//keyup
+	$("#evtKeyUp").keyup(function() {
+		$(this).css("backgroundColor","lightblue")
+	});
+
+	//keypress
+	$("#evtKeyPress").keypress(function() {
+		$(this).css("backgroundColor","lightblue")
+	});
+
+
+
+	
+ 
+ 
 	
 })
 

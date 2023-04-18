@@ -78,6 +78,15 @@
 	Font-size:12px;
 }
 
+.button2 {
+	background-color: darkblue;
+	color:#fff;	
+	border-radius: 12px;
+	margin-top :10px;
+	padding:10px;
+	border:none;
+}
+
 .titre {
 	text-align: center;
 	margin: 0 auto;
