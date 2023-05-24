@@ -3,6 +3,39 @@ require_once('../TCPDF-main/examples/tcpdf_include.php');
 
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
+/*
+La méthode MultiCell prend en arguments 15 paramètres :  
+1er paramètre : La longueur de la cellule
+2e paramètre : La hauteur de la cellule
+3e paramètre : Une bordure
+4e paramètre : Alignement du texte	 
+	 L : à gauche (par défaut)
+	 C : centré
+	 R : à droite
+5e paramètre :  Appliquer ou non couleur de fond (définit auparavant avec la méthode setFillColor)
+6e paramètre : Position du prochain élément.
+    0: à droite
+    1: au début de la ligne du dessous
+    2: en dessous et décalé de la longueur du bloc
+7e paramètre : Coordonnées X
+8e paramètre : Coordonnées Y
+9e paramètre : Réinitialiser la hauteur de la dernière cellule
+10e paramètre : stretch mode: 
+	0 : Désactivé
+	1 : Mise à l'échelle horizontale uniquement si le texte est plus grand que la largeur de la cellule
+	2 : Mise à l'échelle horizontale forcée pour s'adapter à la largeur de la cellule
+	3 : Espacement des caractères uniquement si le texte est plus grand que la largeur de la cellule
+	4 : Espacement forcé des caractères pour s'adapter à la largeur de la cellule
+11e paramètre : Si le texte de la cellule est du HTML
+12e paramètre : Appliquer ou non l'autopadding
+13e paramètre : hauteur max (doit être supérieur au 1er paramètre)
+14e paramètre : Alignement vertical (fonctionne que si le 11e paramètre (texteHTML) = false)
+	T : En haut
+	M : Au milieu
+	B : En bas
+15e paramètre : ??
+*/
+
 $pdf->setHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, 'Multi cellules', '', array(0,64,255), array(187,11,11));
 $pdf->setFooterData(array(187,11,11),array(0,64,255));
 

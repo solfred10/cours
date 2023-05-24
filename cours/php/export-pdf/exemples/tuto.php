@@ -156,7 +156,7 @@ $pdf->writeHTMLCell(0, 0, 50, 50, $html1, 0, 1, 0, true, '', true);
 /*
 La méthode WRITEHTML prend en paramètres 6 arguments
 1er paramètre : Le texte HTML à afficher
-2e paramètre : Créer ou non une nouvelle ligne après ce contenu
+2e paramètre : Effectuer ou non un saut de ligne à la fin de ce contenu
 3e paramètre : Appliquer ou non couleur de fond (définit auparavant avec la méthode setFillColor)
 4e paramètre : Réinitialise ou non la hauteur de ligne
 5e paramètre : Auto padding
@@ -167,28 +167,30 @@ La méthode WRITEHTML prend en paramètres 6 arguments
 */
 $pdf->writeHTML($html2,true,true,false,true,'R');
 
+
 /*La méthode WRITE prend en paramètres 11 arguments
 1er paramètre : La marge en haut
 2e paramètre : Le texte à afficher
-3e paramètre : lien hypertexte
+3e paramètre : lien hypertexte sur le bloc
 4e paramètre : Appliquer ou non couleur de fond (définit auparavant avec la méthode setFillColor)
 5e paramètre : Alignement du texte	 
 	 L : à gauche (par défaut)
 	 C : centré
 	 R : à droite
-6e paramètre : stretch
+6e paramètre : Si vrai le curseur sera en fin de ligne, sinon il sera en début de ligne suivante
+7e paramètre : stretch
 	0 : Désactivé
 	1 : Mise à l'échelle horizontale uniquement si le texte est plus grand que la largeur de la cellule
 	2 : Mise à l'échelle horizontale forcée pour s'adapter à la largeur de la cellule
 	3 : Espacement des caractères uniquement si le texte est plus grand que la largeur de la cellule
 	4 : Espacement forcé des caractères pour s'adapter à la largeur de la cellule
-7e paramètre : Si vrai imprime uniquement la première ligne et renvoie la chaîne restante.
-8e paramètre : Si vrai la chaîne est le début d'une ligne
-9e paramètre : Hauteur max
-10e paramètre : La largeur de la première ligne sera réduite de ce montant
-11e paramètre : Tableau margin du conteneur parent
+8e paramètre : Si vrai imprime uniquement la première ligne et renvoie la chaîne restante.
+9e paramètre : Si vrai la chaîne est le début d'une ligne
+10e paramètre : Hauteur max
+11e paramètre : La largeur de la première ligne sera réduite de ce montant
+12e paramètre : Tableau margin du conteneur parent
 */	
-$pdf->write(100,"lorem ipsums ade amgfdg fdg ",'www.fred-sol.fr',false,'C',0,true,false,200);
+$pdf->write(100,"lorem ipsums ade amgfdg fdg ",'www.fred-sol.fr',false,'C',false,0,true,false,200,'','');
 
 /*
 La méthode MultiCell prend en arguments 15 paramètres :  

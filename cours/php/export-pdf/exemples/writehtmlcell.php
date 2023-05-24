@@ -345,9 +345,9 @@ $html14 = <<<EOD
 <b>Autopadding : </b>false
 EOD;
 
-$pdf->setHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 001', PDF_HEADER_STRING_SOUS_TITRE, array(0,64,255), array(187,11,11));
+$pdf->setHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, 'writeHTMLCell', '', array(0,64,255), array(187,11,11));
 
-$pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, 'I', PDF_FONT_SIZE_MAIN));
+$pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, 'I', 16));
 
 $pdf->setHeaderMargin(PDF_MARGIN_HEADER);
 
@@ -359,15 +359,10 @@ $pdf->setFooterMargin(PDF_MARGIN_FOOTER);
 
 $pdf->setFont('dejavusans', 'N', 14);
 
-//Couleur du texte
-//$pdf->setTextColor(0, 63, 127);
-
-//couleur de fond de la prochaine cellule
 $pdf->setFillColor(255, 255, 127);
 
 $pdf->setMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
 
-//Ajout d'une page. Obligatoire sinon le PDF ne sera pa généré
 $pdf->AddPage();
 
 $pdf->setAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
@@ -407,9 +402,6 @@ Cette méthode prend en paramètre plusieurs arguments :
 11e paramètre : Auto padding	 
 */
 
-
-$pdf->writeHTML("<h1>writeHTMLCell</h1>",true) ;
-$pdf->Ln(5);
 $pdf->setFont('helvetica', 'N', 16);
 $pdf->writeHTML("Auto padding sans utiliser la méthode <i>setCellPadding</i>",true,false,true,true,'L');
 $pdf->writeHTMLCell(0, 0, '' , '', $html1, 1, 1, true, false, 'L', true);
@@ -459,19 +451,4 @@ $pdf->Ln(5);
 $pdf->setCellPadding(10,10,10,10);
 $pdf->writeHTMLCell(88, 50, '' , '', $html14, array('LTRB'=>array('width'=>3,'color'=>array(66,0, 255))), 1, true, false, 'L', true);
 
-
-
-/*La méthode Output prend en paramètre 2 arguments :
-1er paramètre : le nom du fichier à sauvegarder
-2e paramètre : le type d'enregistrement 
-    I : Ouvrir dans le navigateur
-    D : Lancer le téléchargement
-    F : Sauvegarder sur le serveur
-    FD : Sauvegarder sur le serveur et Lancer le téléchargement
-*/
-
 $pdf->Output('export/writehtmlcell.pdf', 'I');
-
-
-
-
