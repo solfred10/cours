@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="../../../css/style.css" rel="stylesheet">
+	<title>PHP5 - Export pdf</title>  
+
+    <style>
+        h3.verificationOK {
+            color :green;
+        }
+
+        .MT40 {
+	margin-top:40px;
+}
+    </style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row MT20">	
+			<div class="col-xl-12 titre">		
+                <a href="../accueil.html">
+				<img src="../../../images/icones/iconePHP.png">
+                </a>		
+			</div>
+		</div>	
+
+        <div class="row MT40">	  
+            <div class="col-lg-4">				
+                <h3>Recap des fonctions</h3>
+                <a href="exemples/recapFonction.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/recapFonction.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>       
+            
+            <div class="col-lg-4">
+                <h3>Template</h3> 
+                <a href="exemples/template.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>        
+                <a href="codeSource/template-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>                       
+            </div>    
+
+            <div class="col-lg-4">
+                <h3>Annotation</h3> 
+                <a href="exemples/annotation.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>        
+                <a href="codeSource/annotation-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>                       
+            </div>               
+            
+        </div>
+        
+        <div class="row MT40">	
+            <div class="col-lg-4">				
+                <h3>Camembert</h3>
+                <a href="exemples/camembert.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/camembert-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+
+            <div class="col-lg-4">				
+                <h3>Codes barres</h3>
+                <a href="exemples/codeBarre.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/codeBarre-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+
+            <div class="col-lg-4">				
+                <h3>Crops & Marks</h3>
+                <a href="exemples/crop.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/crop-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+        </div>
+        
+        <div class="row MT40">	
+            <div class="col-lg-4">				
+                <h3>CSS</h3>
+                <a href="exemples/css.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/css-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+
+            <div class="col-lg-4">				
+                <h3>Dupliquer une page</h3>
+                <a href="exemples/dupliquerPage.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/dupliquerPage-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+
+            <div class="col-lg-4">				
+                <h3>Effets sur un texte</h3>
+                <a href="exemples/effetTexte.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/effetTexte-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+
+        </div>
+        
+        <div class="row MT40">	
+            <div class="col-lg-4">				
+                <h3>Entête personalisé</h3>
+                <a href="exemples/entetePersonnalise.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/entetePersonnalise-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+
+            <div class="col-lg-4">				
+                <h3>Les formats de page</h3>
+                <a href="exemples/formatPage.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/formatPage-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+
+            <div class="col-lg-4">				
+                <h3>Formes</h3>
+                <a href="exemples/formes.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/formes-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+        </div>
+        
+        <div class="row MT40">	
+
+            <div class="col-lg-4">				
+                <h3>Formulaires</h3>
+                <a href="exemples/formulaire.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/formulaire-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+
+            <div class="col-lg-4">				
+                <h3>Formulaires HTML</h3>
+                <a href="exemples/formulaire2.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/formulaireHTML-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+
+            <div class="col-lg-4">				
+                <h3>Gradient</h3>
+                <a href="exemples/gradient.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/gradient-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+        </div>      
+
+        <div class="row MT40">	
+            <div class="col-lg-4">				
+                <h3>Image</h3>
+                <a href="exemples/image.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/image-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+            
+            <div class="col-lg-4">				
+                <h3>Image de couverture</h3>
+                <a href="exemples/imageCouverture.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/imageCouverture-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+
+            <div class="col-lg-4">				
+                <h3>Import fichier texte</h3>
+                <a href="exemples/importFichierTexte.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/importFichierTexte.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div> 
+        </div>    
+
+        <div class="row MT40">	
+            <div class="col-lg-4">				
+				<h3>Journal</h3>
+                <a href="exemples/journal.php" class="button withoutUnderline MT40" target="_blank">Générér le fichier</a>
+                <a href="codeSource/journal-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>  
+
+            <div class="col-lg-4">				
+				<h3>MultiCell</h3>
+                <a href="exemples/multiCell.php" class="button withoutUnderline MT40" target="_blank">Générér le fichier</a>
+                <a href="codeSource/multiCell-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>  
+
+            <div class="col-lg-4">				
+				<h3 >QR code</h3>
+                <a href="exemples/QRcode.php" class="button withoutUnderline MT40" target="_blank">Générér le fichier</a>
+                <a href="codeSource/QRcode-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>  
+        </div>    
+
+        <div class="row MT40">	
+            <div class="col-lg-4">				
+                <h3>Sans entete et footer</h3>
+                <a href="exemples/sansHeaderFooter.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/sansHeaderFooter-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+
+            <div class="col-lg-4">
+                <h3>Table des matières</h3>
+                <a href="exemples/tableDesMatieres.php" class="button withoutUnderline MT40" target="_blank">Générér le fichier</a>
+                <a href="codeSource/tableDesMatieres-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>   
+
+            <div class="col-lg-4">
+                <h3>Tableaux HTML</h3>
+                <a href="exemples/tableHTML.php" class="button withoutUnderline MT40" target="_blank">Générér le fichier</a>
+                <a href="codeSource/tableHTML-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>   
+        </div>
+        
+        <div class="row MT40">	
+            <div class="col-lg-4">				
+                <h3>Write</h3>
+                <a href="exemples/write.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/write-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+
+            <div class="col-lg-4">				
+                <h3>WriteHTML</h3>
+                <a href="exemples/writehtml.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/writehtml-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+            
+            <div class="col-lg-4">				
+                <h3>WriteHTMLCell</h3>
+                <a href="exemples/writehtmlcell.php" class="button withoutUnderline" target="_blank">Générér le fichier</a>
+                <a href="codeSource/writehtmlcell-codeSource.pdf" class="button withoutUnderline" target="_blank">Voir le code source</a>
+            </div>
+        </div>
+		
+
+        <div class="row MT40">		
+           
+
+            
+	</div>	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<script src="../../js/fonctionsJS.js"></script>
+
+</body>
+
+</html>

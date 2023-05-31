@@ -6,26 +6,26 @@ require_once('../TCPDF-main/examples/tcpdf_include.php');
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, True, 'UTF-8', false);
 
 /*La méthode WRITE prend en paramètres 11 arguments
-1er paramètre : La marge en haut
-2e paramètre : Le texte à afficher
-3e paramètre : lien hypertexte sur le bloc
-4e paramètre : Appliquer ou non couleur de fond (définit auparavant avec la méthode setFillColor)
-5e paramètre : Alignement du texte	 
+1er argument : La marge en haut
+2e argument : Le texte à afficher
+3e argument : lien hypertexte sur le bloc
+4e argument : Appliquer ou non couleur de fond (définit auparavant avec la méthode setFillColor)
+5e argument : Alignement du texte	 
 	 L : à gauche (par défaut)
 	 C : centré
 	 R : à droite
-6e paramètre : Si vrai le curseur sera en fin de ligne, sinon il sera en début de ligne suivante
-7e paramètre : stretch
+6e argument : Si vrai le curseur sera en fin de ligne, sinon il sera en début de ligne suivante
+7e argument : stretch
 	0 : Désactivé
 	1 : Mise à l'échelle horizontale uniquement si le texte est plus grand que la largeur de la cellule
 	2 : Mise à l'échelle horizontale forcée pour s'adapter à la largeur de la cellule
 	3 : Espacement des caractères uniquement si le texte est plus grand que la largeur de la cellule
 	4 : Espacement forcé des caractères pour s'adapter à la largeur de la cellule
-8e paramètre : Si vrai imprime uniquement la première ligne et renvoie la chaîne restante.
-9e paramètre : Si vrai la chaîne est le début d'une ligne
-10e paramètre : Hauteur max
-11e paramètre : La largeur de la première ligne sera réduite de ce montant
-12e paramètre : Tableau margin du conteneur parent
+8e argument : Si vrai imprime uniquement la première ligne et renvoie la chaîne restante.
+9e argument : Si vrai la chaîne est le début d'une ligne
+10e argument : Hauteur max
+11e argument : La largeur de la première ligne sera réduite de ce montant
+12e argument : Tableau margin du conteneur parent
 */	
 
 $html1 = <<<EOD
@@ -141,7 +141,7 @@ $htmlLorem2 = <<<EOD
 Lorem ipsum dolor sit amet1, Lorem ipsum dolor sit amet2, Lorem
 EOD;
 
-$pdf->setHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, 'write', '', array(0,64,255), array(187,11,11));
+$pdf->setHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, 'WRITE', '', array(0,64,255), array(187,11,11));
 
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, 'I', 16));
 

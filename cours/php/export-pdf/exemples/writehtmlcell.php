@@ -345,7 +345,7 @@ $html14 = <<<EOD
 <b>Autopadding : </b>false
 EOD;
 
-$pdf->setHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, 'writeHTMLCell', '', array(0,64,255), array(187,11,11));
+$pdf->setHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, 'WRITEHTMLCELL', '', array(0,64,255), array(187,11,11));
 
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, 'I', 16));
 
@@ -373,12 +373,12 @@ $pdf->setCellMargins(1, 1, 1, 1);
 /*
 La méthode WRITEHTMLCELL permet d'écrire dans une cellule avec la possibilité de mettre des bordure, une couleur de fond et du text HTML (tous les attributs HTML doivent être entre doubles quotes).
 Cette méthode prend en paramètre plusieurs arguments : 
-1er paramètre : la longueur de la cellule. Si on met 0 alors la cellule occupera toute la largeur (jusqu'à la limite de la marge)
-2e paramètre : la hauteur de la cellule
-3e paramètre : la coordonnée X
-4e paramètre : la coordonnée Y
-5e paramètre : le texte HTML à afficher
-6e paramètre : la bordure :
+1er argument : la longueur de la cellule. Si on met 0 alors la cellule occupera toute la largeur (jusqu'à la limite de la marge)
+2e argument : la hauteur de la cellule
+3e argument : la coordonnée X
+4e argument : la coordonnée Y
+5e argument : le texte HTML à afficher
+6e argument : la bordure :
 	0 : Pas de bordure
 	1 : bordure de chaque coté
 	XXXX :         
@@ -389,17 +389,17 @@ Cette méthode prend en paramètre plusieurs arguments :
 		    Exemple : LR pour une bordure à gauche et  àdroite
 	Array : Pour définir le type de bordure, l'épaisseur, la couleur, ... 
 		Exemple : array('LTRB' => array('width' => 2, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)))
-7e paramètre : Position du prochain élément
+7e argument : Position du prochain élément
     0: à droite
     1: au début de la ligne du dessous
     2: en dessous et décalé de la longueur de la cellule précédente
-8e paramètre : Appliquer ou non une couleur de fond (définit auparavant avec la méthode setFillColor)
-9e paramètre : Reinitialiser ou non la hauteur de la dernière cellule
-10e paramètre :	Alignement du texte	 
+8e argument : Appliquer ou non une couleur de fond (définit auparavant avec la méthode setFillColor)
+9e argument : Reinitialiser ou non la hauteur de la dernière cellule
+10e argument :	Alignement du texte	 
 	 L : à gauche (par défaut)
 	 C : centré
 	 R : à droite
-11e paramètre : Auto padding	 
+11e argument : Auto padding	 
 */
 
 $pdf->setFont('helvetica', 'N', 16);
@@ -451,4 +451,4 @@ $pdf->Ln(5);
 $pdf->setCellPadding(10,10,10,10);
 $pdf->writeHTMLCell(88, 50, '' , '', $html14, array('LTRB'=>array('width'=>3,'color'=>array(66,0, 255))), 1, true, false, 'L', true);
 
-$pdf->Output('export/writehtmlcell.pdf', 'I');
+$pdf->Output('export/writeHTMLCell.pdf', 'I');

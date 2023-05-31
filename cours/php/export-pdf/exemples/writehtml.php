@@ -7,12 +7,12 @@ $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, True, 'UTF-8',
 
 /*
 La méthode WRITEHTML prend en paramètres 6 arguments
-1er paramètre : Le texte HTML à afficher
-2e paramètre : Effectuer ou non un saut de ligne à la fin de ce contenu
-3e paramètre : Appliquer ou non couleur de fond (définit auparavant avec la méthode setFillColor)
-4e paramètre : Réinitialise ou non la hauteur de ligne
-5e paramètre : Auto padding
-6e paramètre : Alignement du texte	 
+1er argument : Le texte HTML à afficher
+2e argument : Effectuer ou non un saut de ligne à la fin de ce contenu
+3e argument : Appliquer ou non couleur de fond (définit auparavant avec la méthode setFillColor)
+4e argument : Réinitialise ou non la hauteur de ligne
+5e argument : Auto padding
+6e argument : Alignement du texte	 
 	 L : à gauche (par défaut)
 	 C : centré
 	 R : à droite
@@ -140,4 +140,4 @@ $pdf->Ln(5);
 
 $pdf->writeHTML($html6,true,true,false,false,'C');
 
-$pdf->Output('export/writehtml.pdf', 'I');
+$pdf->Output('export/writeHTML.pdf', 'I');

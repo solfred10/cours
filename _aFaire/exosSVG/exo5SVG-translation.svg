@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1200" height="1000" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+
+
+<path d="M50`50 q30`50 -10`110 q50`40 100`0 q-40`-60 -10`-110 q-40`-30 -80`0 z" style="fill:#00DA43; stroke:#28601D;">
+<animateTransform attributeName="transform" attributeType="XML" type="translate" from="0`0" to="320`240" begin="1s" dur="5s" fill="freeze" />
+</path>
+
+
+</svg>

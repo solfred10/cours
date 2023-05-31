@@ -4,6 +4,10 @@
 	height:259px;	
 }
 
+.withoutUnderline {
+    text-decoration:none
+}
+
 .texteGras {
 	font-weight:bold;
 }
@@ -24,8 +28,20 @@
 	color:#0000ff
 }
 
+.textNoir {
+	color:#000000;
+}
+
+.MT10 {
+	margin-top:10px;
+}
+
 .MT20 {
 	margin-top:20px;
+}
+
+.MT40 {
+	margin-top:40px;
 }
 
 .MB50 {
@@ -38,14 +54,6 @@
 
 .padding20 {
 	padding:20px;
-}
-
-.margin20 {
-	margin:20px;
-}
-
-.MB50 {
-	margin-bottom:50px;
 }
 
 .borderGrey {
@@ -105,15 +113,123 @@
 	padding:20px;
 }
 
-/*
-ol.sommaire {
-  counter-reset: sommaire;               
-  list-style-type: none;
+table {
+	border-collapse:collapse ;
 }
 
-ol.sommaire2 > li.sommaire::before {
-  counter-increment: sommaire;            
-  content: counters(sommaire,".") " ";    
-                                         
+th { 
+    word-wrap: normal;
 }
-*/
+
+.tableBalise td, .tableBalise th {  
+    border:1px solid #000  ;
+    border-collapse: collapse;
+    padding : 5px;    
+}
+
+.backgroundGrey {
+    background-color:lightslategrey;
+}
+
+.divGris {			
+    background-color:#666 ;
+    width: 250px;
+    height:100px;   
+}
+
+.divTransformation {
+    height:30px;
+    width:75px ;
+    margin-top: 25px;
+    background-color:#ff0000 ;	
+}
+
+.divTransformation2 {
+    height:50px;
+    width:75px ;
+    position: absolute;
+    margin:25px 85px;			
+    background-color:#ff0000 ;	
+}
+
+.divLightBlue {			
+    background-color:lightblue ;
+    width: 550px;
+    padding:10px;    
+}
+
+.divLightBlue2 {			
+    background-color:lightblue ;        
+    padding:10px;    
+}
+
+.divLightBlue3 {			
+    background-color:lightblue ;    
+    width:200^x
+    padding:10px;    
+}
+
+/*recap fonctions javascript*/
+.enteteBouton {
+    margin-bottom: 25px;
+}
+
+.bouton {
+    border-style: none;
+    border-radius : 25px ;
+    Width :150px;
+    height: 35px;      
+    cursor: pointer;      
+}
+
+.chaine {
+    background-color: springgreen;
+}
+
+.chaine:hover {
+    color: darkgreen;
+    background: white;
+    border: 1px solid springgreen;
+}
+
+.nombre {
+    background-color: dodgerblue;
+}
+
+.nombre:hover {
+    color: dodgerblue;
+    background: white;
+    border: 1px solid dodgerblue;
+}
+
+.tableau {
+    background-color: darkorange;
+}
+
+.tableau:hover {
+    color: darkorange;
+    background: white;
+    border: 1px solid darkorange;
+}
+
+.DOM {
+    background-color: darkblue;
+    color:#ffffff;
+}
+
+.DOM:hover {
+    color: darkblue;
+    background: white;
+    border: 1px solid darkblue;
+}
+
+.all {
+    background-color: lightslategrey;
+}
+
+.all:hover {
+    color: lightslategrey;
+    background: white;
+    border: 1px solid lightslategrey;
+}
+/*fin recap fonctions javascript*/

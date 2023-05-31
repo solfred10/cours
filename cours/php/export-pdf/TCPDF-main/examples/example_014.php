@@ -95,13 +95,13 @@ $pdf->Ln(10);
 $pdf->setFont('helvetica', '', 12);
 
 // First name
-$pdf->Cell(35, 5, 'First name:');
-$pdf->TextField('firstname', 50, 5);
+$pdf->Cell(35, 50, 'First name:');
+$pdf->TextField('firstname', 50, 50);
 $pdf->Ln(6);
 
 // Last name
-$pdf->Cell(35, 5, 'Last name:');
-$pdf->TextField('lastname', 50, 5);
+$pdf->Cell(35, 50, 'Last name:');
+$pdf->TextField('lastname', 50, 50);
 $pdf->Ln(6);
 
 // Gender

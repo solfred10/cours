@@ -1,0 +1,103 @@
+<html>
+    <head>
+      <style type="text/css">
+		#monmenu ul 
+		{
+			margin:0px; 
+			padding:0px; 
+		}
+		
+		#monmenu li {
+			list-style-type: none; 
+			position: relative; 
+			width: 140px; 
+			background-color: #E0E0E0; 
+			padding: 5px; 
+			margin: 0px
+		}
+		
+		 #monmenu li a {
+			text-decoration:none;
+		}
+	   
+        #monmenu ul ul 
+		{
+			position: absolute; 
+			display: none; 
+			left: 144px; 
+			top: 0px; 			
+			margin:0px; 
+			padding: 0px;			
+		}		        
+		
+        #monmenu li:hover {
+			background-color: #FFFF70;
+		}		       
+		
+        #monmenu li:hover ul.niveau2, #monmenu li li:hover ul.niveau3
+		{
+			display: block
+		}
+		
+        
+      </style>
+  
+     <meta name="keywords"
+ content="CSS, cascading style sheets, mise en page, design, site, web, techniques, sites, webmaster, page">
+     <meta name="description"
+ content="Voici un exemple de code de menu hiérarchique déroulant réalisé à l'aide de CSS.">
+     <title>Exemple de menu hiérarchique en CSS</title>
+  </head>
+  <body>
+    <div id="monmenu">
+        <ul class="niveau1">
+           <li> Menu
+               <ul class="niveau2">
+                  <li class="plus"><a href= "http://www.rankspirit.com">Extras</a>
+                    <ul class="niveau3">
+						<li>
+							<a href= "http://www.rankspirit.com">Demander la note</a>
+						</li>
+						<li>
+							<a href= "http://www.rankspirit.com">Draguer la serveuse</a>
+						</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href= "http://www.rankspirit.com">Entrée</a>
+					<ul>
+						<li>Tomate Mozza</li>
+						<li>melon jambon</li>
+					</ul>
+                  </li>
+                </ul>
+              </li>
+			  
+			  <li> Menu
+               <ul class="niveau2">
+                  <li class="plus"><a href= "http://www.rankspirit.com">Extras</a>
+                    <ul class="niveau3">
+						<li>
+							<a href= "http://www.rankspirit.com">Demander la note</a>
+						</li>
+						<li>
+							<a href= "http://www.rankspirit.com">Draguer la serveuse</a>
+						</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href= "http://www.rankspirit.com">Entrée</a>
+					<ul>
+						<li>Tomate Mozza</li>
+						<li>melon jambon</li>
+					</ul>
+                  </li>
+                </ul>
+              </li>
+        </ul>
+		
+		
+		
+    </div>
+  </body>
+</html>

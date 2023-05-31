@@ -1,0 +1,1171 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Recap des fonctions PHP</title>
+        
+    <script type="text/javascript" src='DataTables/media/js/jquery.js'></script>
+    <script type="text/javascript" src="DataTables/media/js/jquery.dataTables.min.js"></script>
+    <link href="../../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="DataTables/media/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">  
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+			<div class="col-lg-12 header" id="headerCours">
+				 
+			</div>			
+		</div>
+
+		<div class="row MT20">	
+			<div class="col-xl-12 titleCenter">				
+				<img src="../../images/icones/iconePHP.png">
+			</div>
+		</div>		
+
+		<div class="row MT20">	
+			<div class="col-xl-12 titleCenter">				
+                <h1>Recap des fonctions PHP</h1>
+			</div>
+		</div>		
+
+        <div class="row MT20">	
+			<div class="offset-xl-2 col-xl-4">
+                <div class="enteteBouton">
+                    <input type="button" class="bouton chaine" name="Chaine" value="Chaines de caractères" id="chaine" data-id="Chaine">
+                    <input type="button" class="bouton nombre" name="Nombre" value="Nombres" id="Nombre" data-id="Maths">
+                    <input type="button" class="bouton tableau" name="Tableau" value="Tableaux" id="Tableau" data-id="Tableau">
+                    <input type="button" class="bouton all" name="All" value="All" id="All" data-id="">    
+                </div>
+
+                <table id='tab' class='display'>        
+                    <thead> 
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Argument1</th>
+                            <th>Argument2</th>
+                            <th>Argument3</th>                
+                            <th>Valeur de retour</th>                
+                        </tr> 
+                    </thead>
+
+                    <tbody> 
+                        <!-- Fonctions sur les chaines de caractères -->
+                        <tr>
+                            <td>floatval</td>
+                            <td>Chaine de caractères</td>
+                            <td>Convertit une chaîne en nombre à virgule flottante</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>intval</td>
+                            <td>Chaine de caractères</td>
+                            <td>Retourne la valeur numérique entière équivalente d'une variable</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>strval</td>
+                            <td>Chaine de caractères</td>
+                            <td>Récupère la valeur d'une variable, au format chaîne</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>strlen</td>
+                            <td>Chaine de caractères</td>
+                            <td>Longueur d'une chaine de caractères</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>trim</td>
+                            <td>Chaine de caractères</td>
+                            <td>Supprimer les espaces au début et à la fin d'une chaine de caractères</td>                
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>ltrim</td>
+                            <td>Chaine de caractères</td>
+                            <td>Supprimer les espace au début d'une chaine de caractères</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>rtrim</td>
+                            <td>Chaine de caractères</td>
+                            <td>Supprimer les espace à la fin d'une chaine de caractères</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>strcmp</td>
+                            <td>Chaine de caractères</td>
+                            <td>Comparer 2 chaines de caractères<br>
+                            Retourne < 0 si <i>String1</i> est inférieure à <i>String2</i><br>
+                            Retourne > 0 si <i>String1</i> est supérieure à <i>String2</i><br>
+                            Retourne 0 si les deux chaînes sont égales<br>
+                            <i>Attention la comparaison est sensible à la case</i>
+                            </td>
+                            <td>String1</td>
+                            <td>String2</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>strpos</td>
+                            <td>Chaine de caractères</td>
+                            <td>Position de la 1ère occurrence d’un caractere (case sensitive)</td>
+                            <td>Chaine dans laquelle on cherche</td>
+                            <td>Caractère recherché</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>stripos</td>
+                            <td>Chaine de caractères</td>
+                            <td>Position de la 1ère occurrence d’un caractere (non case sensitive)</td>
+                            <td>Chaine dans laquelle on cherche</td>
+                            <td>Caractère recherché</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>strrpos</td>
+                            <td>Chaine de caractères</td>
+                            <td>Dernière occurrence d’une chaine de caractères dans une autre(case sensitive)</td>
+                            <td>Chaine dans laquelle on cherche</td>
+                            <td>Chaine recherchée</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>strripos</td>
+                            <td>Chaine de caractères</td>
+                            <td>Dernière occurrence d’une chaine de caractères dans une autre(non case sensitive)</td>
+                            <td>Chaine dans laquelle on cherche</td>
+                            <td>Chaine recherchée</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>strrchr</td>
+                            <td>Chaine de caractères</td>
+                            <td>Trouve la dernière occurrence d'un caractère dans une chaîne de caractères</td>
+                            <td>Chaine dans laquelle on cherche</td>
+                            <td>Caractère recherché</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>strtoupper</td>
+                            <td>Chaine de caractères</td>
+                            <td>Mettre une chaine de caractères en majuscule</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>strtolower</td>
+                            <td>Chaine de caractères</td>
+                            <td>Mettre une chaine de caractères en minuscule</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>ucfirst</td>                
+                            <td>Chaine de caractères</td>
+                            <td>Mettre la 1ère lettre d'une chaine de caractères en majuscule</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>lcfirst</td>                
+                            <td>Chaine de caractères</td>
+                            <td>Mettre la 1ère lettre d'une chaine de caractères en minuscule</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>ucwords</td>
+                            <td>Chaine de caractères</td>
+                            <td>Mettre la 1ère lettre de chaque mot d'une chaine de caractères en majuscule</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>substr</td>
+                            <td>Chaine de caractères</td>
+                            <td>Extraction d'une chaine de caractères</td>
+                            <td>String</td>
+                            <td>Position du début d'extraction (si le chiffre est négatif alors on commencera à compter de la droite vers la gauche)</td>
+                            <td>Longueur</td>
+                            <td>-</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>strstr</td>
+                            <td>Chaine de caractères</td>
+                            <td>Retourne une sous-chaîne allant de la première occurrence jusqu'à la fin de la chaîne.</td>
+                            <td>Chaine dans la quelle on cherche</td>
+                            <td>Chaine recherchée</td>
+                            <td>Longueur</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>str_replace</td>
+                            <td>Chaine de caractères</td>
+                            <td>Remplace toutes les occurrences dans une chaîne (casse sensitive)</td>
+                            <td>Valeur recherchée</td>
+                            <td>Valeur de remplacement</td>
+                            <td>Chaine dans laquelle on cherche</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>str_ireplace</td>
+                            <td>Chaine de caractères</td>
+                            <td>Remplace toutes les occurrences dans une chaîne (non casse sensitive)</td>
+                            <td>Valeur recherchée</td>
+                            <td>Valeur de remplacement</td>
+                            <td>Chaine dans laquelle on cherche</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>addslashes</td>
+                            <td>Chaine de caractères</td>
+                            <td>Echappe tous les caractères qui doivent l'être : quote, guillement et antislash</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>explode</td>
+                            <td>Chaine de caractères</td>
+                            <td>Retourne un tableau contenant la chaine de caractère qui a été découpée en utilisant un séparateur</td>
+                            <td>String</td>
+                            <td>Séparateur</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>html_entity_decode </td>
+                            <td>Chaine de caractères</td>
+                            <td>
+                            Convertit les entités HTML à leurs caractères correspondant<br>
+                            Exemple : html_entity_decode(") va donner &quot;
+                            </td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>htmlentities</td>
+                            <td>Chaine de caractères</td>
+                            <td>
+                            Convertit tous les caractères éligibles en entités HTML<br>
+                            Exemple : htmlentities(&quot) va donner ";
+                            </td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>htmlspecialchars_decode</td>
+                            <td>Chaine de caractères</td>
+                            <td>Convertit les entités HTML spéciales en caractères </td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>htmlspecialchars</td>
+                            <td>Chaine de caractères</td>
+                            <td>Convertit les caractères spéciaux en entités HTML</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>md5</td>
+                            <td>Chaine de caractères</td>
+                            <td>Calcule le MD5 de la chaîne de caractères de caractères et ainsi crypter la chaine de caractères... mais ça n'est pas si efficace </td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>nl2br</td>
+                            <td>Chaine de caractères</td>
+                            <td>Insère un <i>br</i> devant toutes les nouvelles lignes (\r\n, \n\r, \n et \r). </td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>str_contains</td>
+                            <td>Chaine de caractères</td>
+                            <td>Indique si une chaine est contenue dans une autre chaine</td>
+                            <td>Chaine dans laquelle on cherche</td>
+                            <td>Chaine recherchée</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>str_starts_with </td>
+                            <td>Chaine de caractères</td>
+                            <td>Indique si une chaine commence par une chaine précise (case sensitive)</td>
+                            <td>Chaine dans laquelle on cherche</td>
+                            <td>Chaine recherchée</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>str_ends_with </td>
+                            <td>Chaine de caractères</td>
+                            <td>Indique si une chaine se termine par une chaine précise (case sensitive)</td>
+                            <td>Chaine dans laquelle on cherche</td>
+                            <td>Chaine recherchée</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>str_repeat</td>
+                            <td>Chaine de caractères</td>
+                            <td>Répète une chaine de caractères un certains nombres de fois</td>
+                            <td>String</td>
+                            <td>Nombre de répétitions</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>str_shuffle</td>
+                            <td>Chaine de caractères</td>
+                            <td>Mélange les caractères</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>str_split</td>
+                            <td>Chaine de caractères</td>
+                            <td>Convertit une chaîne de caractères en tableau</td>
+                            <td>String</td>
+                            <td>Nombre de caractères par indice dans le tableau</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>str_word_count</td>
+                            <td>Chaine de caractères</td>
+                            <td>compte le nombre de mots dans une chaine de caractères</td>
+                            <td>String</td>
+                            <td>
+                            0 : Retourne le nombre de mots trouvés<br>
+                            1 : Retourne un tableau contenant tous les mots trouvés à l'intérieur de la chaine<br>
+                            2 : Retourne un tableau associatif, où la clé indique la position numérique du mot à l'intérieur de la chaine et la valeur est le mot actuel<br>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>strip_tags</td>
+                            <td>Chaine de caractères</td>
+                            <td>Supprime les balises HTML et PHP d'une chaîne</td>
+                            <td>String</td>
+                            <td>Balise autorisée<br>
+                                PHP < 7 : Le nom de la balise avec les chevrons<br>
+                                PHP > 7 : Un tableau avec le nom des balises sans les chevrons
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>stripcslashes</td>
+                            <td>Chaine de caractères</td>
+                            <td>Décode une chaîne encodée avec addcslashes()</td>
+                            <td>String</td>                
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>stripslashes</td>
+                            <td>Chaine de caractères</td>
+                            <td>Supprime les antislashs d'une chaîne de caractères</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>strrev</td>
+                            <td>Chaine de caractères</td>
+                            <td>Inverse une chaîne de caractères</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>substr_count</td>
+                            <td>Chaine de caractères</td>
+                            <td>Compte le nombre d'occurrences de segments dans une chaîne de caractères</td>
+                            <td>String</td>
+                            <td>Chaine recherchée</td>
+                            <td>Position du début d'extraction</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>substr_replace</td>
+                            <td>Chaine de caractères</td>                
+                            <td>Remplace un segment de la chaîne <i>String</i> par une autre chaine depuis un indice et avec une longueur</td>
+                            <td>String</td>
+                            <td>Chaine de remplacement</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>utf8_encode</td>
+                            <td>Chaine de caractères</td>
+                            <td>Convertit une chaîne ISO-8859-1 en UTF-8 (absolète à partir de PHP 8.2)</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>utf8_decode</td>
+                            <td>Chaine de caractères</td>
+                            <td>Convertit une chaîne UTF-8 en ISO-8859-1 (absolète à partir de PHP 8.2)</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>          
+
+                        <!-- Fonctions sur les nombre -->
+                        <tr>
+                            <td>abs</td>
+                            <td>Maths</td>
+                            <td>Valeur absolue d'un nombre</td>
+                            <td>Nombre</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>floor</td>
+                            <td>Maths</td>
+                            <td>Arrondit à l'entier inférieur</td>
+                            <td>Nombre</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>ceil</td>
+                            <td>Maths</td>
+                            <td>Arrondit au nombre supérieur</td>
+                            <td>Nombre</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>round</td>
+                            <td>Maths</td>
+                            <td>Arrondit un nombre à virgule flottante</td>
+                            <td>Nombre</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>fmod</td>
+                            <td>Maths</td>
+                            <td>Retourne le reste de la division</td>
+                            <td>Nombre</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>max</td>
+                            <td>Maths</td>
+                            <td>Maximum entre 2 nombres</td>
+                            <td>Nombre1</td>
+                            <td>Nombre2</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>min</td>
+                            <td>Maths</td>
+                            <td>Minimum entre 2 nombres</td>
+                            <td>Nombre1</td>
+                            <td>Nombre2</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>pow</td>
+                            <td>Maths</td>
+                            <td><i>Nombre1</i>^<i>Nombre2</i></td>
+                            <td>Nombre1</td>
+                            <td>Nombre2</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>rand</td>
+                            <td>Maths</td>
+                            <td>Nombre aléatoire entre <i>Nombre1</i> et <i>Nombre2</i></td>
+                            <td>Nombre1</td>
+                            <td>Nombre2</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>sqrt</td>
+                            <td>Maths</td>
+                            <td>Racine carrée d'un nombre</td>
+                            <td>Nombre</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <!-- Fonctions sur les tableaux -->
+                        <tr>
+                            <td>array_chunk </td>
+                            <td>Tableau</td>
+                            <td>Découpe un tableau en plusieurs tableaux</td>
+                            <td>Array</td>
+                            <td>Nombre d'éléments par tableau</td>
+                            <td>Bool (True si on garde la valeur des clés. Par défaut c'est false)</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_column</td>
+                            <td>Tableau</td>
+                            <td>Retourne sous forme de tableau l'ensemble des éléments d'une colonne d'un tableau multi-dimensionnel</td>
+                            <td>Array</td>
+                            <td>Nom de la clé</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_combine</td>
+                            <td>Tableau</td>
+                            <td>Créé un tableau à partir de 2 tableaux uni-dimensionnel.<br>
+                                Les valeurs du 1er tableau seront les clés du tableau retourné<br>
+                                Les valeurs du 2e tableau seront les valeurs du tableau retourné<br>
+                            </td>
+                            <td>Array1</td>
+                            <td>Array2</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_count_values</td>
+                            <td>Tableau</td>
+                            <td>Compare le tableau array avec un ou plusieurs tableaux et retourne les valeurs du tableau array qui ne sont pas présentes dans les autres tableaux.</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_diff</td>
+                            <td>Tableau</td>
+                            <td>Calcule la différence entre des tableaux</td>
+                            <td>Array1</td>
+                            <td>Array2</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_diff_assoc</td>
+                            <td>Tableau</td>
+                            <td>Retourne un tableau contenant toutes les valeurs de <i>Array1</i> qui ne sont pas présentes dans <i>Array2</i> et en tenant compte des clés</td>
+                            <td>Array1</td>
+                            <td>Array2</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_diff_key</td>
+                            <td>Tableau</td>
+                            <td>Retourne un tableau contenant toutes les clés de <i>Array1</i> qui ne sont pas présentes dans <i>Array2</i> et en tenant compte des clés</td>
+                            <td>Array1</td>
+                            <td>Array2</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>                     
+
+                        <tr>
+                            <td>array_fill_keys</td>
+                            <td>Tableau</td>
+                            <td>Remplit un tableau avec des valeurs, en spécifiant les clés</td>
+                            <td>Tableau contenant les clés</td>
+                            <td>Valeur à associer à chaque clés</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_flip</td>
+                            <td>Tableau</td>
+                            <td>Remplace les clés par les valeurs, et les valeurs par les clés</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_intersect_assoc</td>
+                            <td>Tableau</td>
+                            <td>Retourne un tableau contenant toutes les valeurs de <i>Array1</i> qui sont aussi présentes dans <i>Array2</i> et en tenant compte des clés</td>
+                            <td>Array1</td>
+                            <td>Array2</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_intersect_key</td>
+                            <td>Tableau</td>
+                            <td>Retourne un tableau contenant toutes les entrées de <i>Array1</i> dont les clés présentes dans <i>Array2</i></td>
+                            <td>Array1</td>
+                            <td>Array2</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_intersect</td>
+                            <td>Tableau</td>
+                            <td>Vérifie si une clé existe dans un tableau</td>
+                            <td>String</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_key</td>
+                            <td>Tableau</td>
+                            <td>Retourne toutes les clés ou un ensemble des clés d'un tableau</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_key_exists</td>
+                            <td>Tableau</td>
+                            <td>Retourne un tableau contenant toutes les valeurs de <i>Array1</i> qui sont aussi présentes dans <i>Array2</i> sans tenir compte des clés</td>
+                            <td>Array1</td>
+                            <td>Array2</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_map</td>
+                            <td>Tableau</td>
+                            <td>Applique une fonction sur les éléments d'un tableau</td>
+                            <td>Nom de la fonction</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_merge</td>
+                            <td>Tableau</td>
+                            <td>rassemble les éléments d'un ou de plusieurs tableaux en ajoutant les valeurs de l'un à la fin de l'autre. Le résultat est un tableau.
+                                <br>
+                                Si les tableaux d'entrées ont des clés en commun, alors, la valeur finale pour cette clé écrasera la précédente. Cependant, si les tableaux contiennent des clés numériques, la valeur finale n'écrasera pas la valeur originale, mais sera ajoutée.</td>
+                            <td>Array1</td>
+                            <td>Array2</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_multisort</td>
+                            <td>Tableau</td>
+                            <td>Trie simultanément plusieurs tableaux, ou bien trie un tableau multidimensionnel, suivant l'une ou l'autre de ses dimensions. </td>
+                            <td>Array1</td>
+                            <td>Array2 (optionnel)</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_pad</td>
+                            <td>Tableau</td>
+                            <td>Complète un tableau avec une valeur jusqu'à la longueur spécifiée</td>
+                            <td>Array</td>
+                            <td>Nouvelle taille du tableau</td>
+                            <td>Valeur à insérer</td>
+                            <td>-</td>
+                        </tr>  
+                        
+                        <tr>
+                            <td>array_product</td>
+                            <td>Tableau</td>
+                            <td>Calcule le produit des valeurs d'un tableau</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_unshift</td>
+                            <td>Tableau</td>
+                            <td>Ajoute un élément au début d'un tableau</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>array_push</td>
+                            <td>Tableau</td>
+                            <td>Ajoute un élément à la fin d'un tableau</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_shift</td>
+                            <td>Tableau</td>
+                            <td>Supprime le 1er élément d'un tableau</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_pop</td>
+                            <td>Tableau</td>
+                            <td>Supprime le dernier élément d'un tableau</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr> 
+
+                        <tr>
+                            <td>array_reduce</td>
+                            <td>Tableau</td>
+                            <td>Applique itérativement une fonction aux éléments d'un tableau de manière à réduire le tableau à une valeur simple</td>
+                            <td>Array</td>
+                            <td>Nom de la fonction</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_rand</td>
+                            <td>Tableau</td>
+                            <td>Prend une ou plusieurs clés, au hasard dans un tableau</td>
+                            <td>Array</td>
+                            <td>Nombre d'entrée à récupérer</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_replace</td>
+                            <td>Tableau</td>
+                            <td>Remplace les valeurs d'un tableau <i>Array1</i> avec celle de <i>Array2</i> pour lesquelles les clés sont identiques</td>
+                            <td>Array1</td>
+                            <td>Array2</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_reverse</td>
+                            <td>Tableau</td>
+                            <td>Retourne un nouveau tableau qui contient les mêmes éléments mais dans l'ordre inverse. </td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_search</td>
+                            <td>Tableau</td>
+                            <td>Recherche dans un tableau la première clé associée à la valeur</td>
+                            <td>Array</td>
+                            <td>Valeur à chercher</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+                        
+                        <tr>
+                            <td>array_slice</td>
+                            <td>Tableau</td>
+                            <td>Extrait une portion de tableau</td>
+                            <td>Array</td>
+                            <td>Indice de départ</td>
+                            <td>Longueur de l'extrait</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_splice</td>
+                            <td>Tableau</td>
+                            <td>Efface une portion de tableau</td>
+                            <td>Array</td>
+                            <td>Indice de départ</td>
+                            <td>Longueur de l'extrait</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_sum</td>
+                            <td>Tableau</td>
+                            <td>Calcule la somme des valeurs d'un tableau</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_unique</td>
+                            <td>Tableau</td>
+                            <td>Supprime les doublons d'un tableau</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>array_values</td>
+                            <td>Tableau</td>
+                            <td>Retourne toutes les valeurs d'un tableau</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>asort</td>
+                            <td>Tableau</td>
+                            <td>Trie un tableau par ordre croissant de ses valeurs en gardant l'association clés/valeurs</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr> 
+                        
+                        <tr>
+                            <td>arsort</td>
+                            <td>Tableau</td>
+                            <td>Trie un tableau par ordre décroissant de ses valeurs en gardant l'association clés/valeurs</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>sort</td>
+                            <td>Tableau</td>
+                            <td>Trie un tableau par ordre croissant de ses valeurs mais en modifiant l'association clés/valeurs</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr> 
+
+                        <tr>
+                            <td>rsort</td>
+                            <td>Tableau</td>
+                            <td>Trie un tableau par ordre décroissant de ses valeurs mais en modifiant l'association clés/valeurs</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr> 
+
+                        <tr>
+                            <td>implode</td>
+                            <td>Tableau</td>
+                            <td>Rassemble les éléments d'un tableau en une chaîne</td>
+                            <td>Array</td>
+                            <td>Séparateur</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr> 
+
+                        <tr>
+                            <td>ksort</td>
+                            <td>Tableau</td>
+                            <td>Trie un tableau par ordre croissant de ses clés en gardant l'association clés/valeurs</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr> 
+                        
+                        <tr>
+                            <td>krsort</td>
+                            <td>Tableau</td>
+                            <td>Trie un tableau par ordre décroissant de ses clés en gardant l'association clés/valeurs</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>count</td>
+                            <td>Tableau</td>
+                            <td>Compte le nombre d'éléments d'un tableau</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>in_array</td>
+                            <td>Tableau</td>
+                            <td>Indique si une valeur est dans un tableau</td>
+                            <td>Valeur recherchée</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr> 
+                        
+                        <tr>
+                            <td>is_array</td>
+                            <td>Tableau</td>
+                            <td>Indique si une variable est un tableau</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr> 
+
+                        <tr>
+                            <td>shuffle</td>
+                            <td>Tableau</td>
+                            <td>Mélange les éléments d'un tableau</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>     
+
+                        <tr>
+                            <td>shuffle</td>
+                            <td>Tableau</td>
+                            <td>Mélange les éléments d'un tableau</td>
+                            <td>Array</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>print_r</td>
+                            <td>-</td>
+                            <td>Affiche des informations lisibles pour une variable</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+
+                        <tr>
+                            <td>var_dump</td>
+                            <td>-</td>
+                            <td>Affiche les informations structurées d'une variable, y compris son type et sa valeur</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>  
+                    </tbody> 
+                </table>
+                
+            </div>
+        </div>
+    </div>         
+    
+</body>
+
+<script src="../../js/fonctionsJS.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+
+<script >
+    $(document).ready(function() {
+    var table = $('#tab').DataTable( {
+        language: {
+            url: "DataTables/media/French.json"
+        },     
+        //dom:"lftipr", //Afficher certains éléments
+        paging : true , //Menu déroulant avec le nombre d’éléments à afficher par page
+        searching:true, // Barre de recherche
+        ordering:true,
+        info : true , //Nombre d’éléments en bas à gauche du tableau qui s’affiche par page
+        pagingType: "full_numbers", //type de pagination        
+        pageLength: 50, //nombre d'éléménet par page de base           
+        lengthMenu : [5,10,25,50,100], //Menu déroulant pour afficher le nombre d'élément par page            
+        order : [[1,"desc"],[0,"desc"]], //Tri au chargement de la page. 0 pour la 1ère colonne. On peut trier sur plusieurs colonne
+        columnDefs : [
+        {
+          target:[0], //Numéro de la colonne
+          searchable:true, //Possibilité de chercher dans cette colonne
+          visible : true //Afficher la colonne
+        },
+        {
+          target:[2,4],
+          searchable:false,
+          visible : true,
+          sortable:false
+        },        
+        ],
+
+        "stateSave": true, //activer la sauvegarde
+        "stateDuration": 60, //durée de la sauvegarde en seconde
+
+        //scrollY: '500px', //hauteur du talbeau dans lequel on pourra scroller
+        //scrollCollapse: true, //Permettre au tableau de réduire sa hauteur lorsqu'un nombre limité de lignes est affiché.
+        //scrollX:true,
+
+    });
+
+  $('input:button').click(function () {   
+   var table = $('#tab').DataTable();
+   var identifiant = $(this).data("id");   
+   //alert("Filtre : "+identifiant);
+    table
+        .columns(1)
+        .search(identifiant)
+        .draw();
+    });
+});
+
+</script>
+
+	
+    
+
+    
+</html>

@@ -4,11 +4,11 @@ require_once('../TCPDF-main/examples/tcpdf_include.php');
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
 /*
-La méthode MultiCell prend en arguments 15 paramètres :  
-1er paramètre : La longueur de la cellule
-2e paramètre : La hauteur de la cellule
-3e paramètre : Le texte à afficher
-4e paramètre : la bordure :
+La méthode MultiCell prend en paramètres 15 arguments :  
+1er argument : La longueur de la cellule
+2e argument : La hauteur de la cellule
+3e argument : Le texte à afficher
+4e argument : la bordure :
 	0 : Pas de bordure
 	1 : bordure de chaque coté
 	XXXX :         
@@ -19,32 +19,32 @@ La méthode MultiCell prend en arguments 15 paramètres :
 		    Exemple : LR pour une bordure à gauche et  àdroite
 	Array : Pour définir le type de bordure, l'épaisseur, la couleur, ... 
 		Exemple : array('LTRB' => array('width' => 2, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)))
-5e paramètre : Alignement du texte	 
+5e argument : Alignement du texte	 
 	 L : à gauche (par défaut)
 	 C : centré
 	 R : à droite
-6e paramètre :  Appliquer ou non couleur de fond (définit auparavant avec la méthode setFillColor)
-7e paramètre : Position du prochain élément.
+6e argument :  Appliquer ou non couleur de fond (définit auparavant avec la méthode setFillColor)
+7e argument : Position du prochain élément.
     0: à droite
     1: au début de la ligne du dessous
     2: en dessous et décalé de la longueur du bloc
-8e paramètre : Coordonnées X
-9e paramètre : Coordonnées Y
-10e paramètre : Réinitialiser la hauteur de la dernière cellule
-11e paramètre : stretch mode: 
+8e argument : Coordonnées X
+9e argument : Coordonnées Y
+10e argument : Réinitialiser la hauteur de la dernière cellule
+11e argument : stretch mode: 
 	0 : Désactivé
 	1 : Mise à l'échelle horizontale uniquement si le texte est plus grand que la largeur de la cellule
 	2 : Mise à l'échelle horizontale forcée pour s'adapter à la largeur de la cellule
 	3 : Espacement des caractères uniquement si le texte est plus grand que la largeur de la cellule
 	4 : Espacement forcé des caractères pour s'adapter à la largeur de la cellule
-12e paramètre : Si le texte de la cellule est du HTML
-13e paramètre : Appliquer ou non l'autopadding
-14e paramètre : hauteur max (doit être supérieur au 1er paramètre)
-15e paramètre : Alignement vertical (fonctionne que si le 11e paramètre (texteHTML) = false)
+12e argument : Si le texte de la cellule est du HTML
+13e argument : Appliquer ou non l'autopadding
+14e argument : hauteur max (doit être supérieur au 1er argument)
+15e argument : Alignement vertical (fonctionne que si le 11e argument (texteHTML) = false)
 	T : En haut
 	M : Au milieu
 	B : En bas
-16e paramètre : ??
+16e argument : ??
 */
 
 $txtG = '<i>Texte</i>  aligné à gauche';
@@ -121,7 +121,7 @@ $html2 = <<<EOD
 <br>
 EOD;
 
-$pdf->setHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, 'Multi cellules', '', array(0,64,255), array(187,11,11));
+$pdf->setHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, 'MULTICELL', '', array(0,64,255), array(187,11,11));
 $pdf->setFooterData(array(187,11,11),array(0,64,255));
 
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, 'I', 24));
@@ -160,4 +160,4 @@ $pdf->setCellPadding(5);
 
 
 
-$pdf->Output('export/multi-cellule.pdf', 'I');
+$pdf->Output('export/multiCell.pdf', 'I');
