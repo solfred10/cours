@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="DataTables/media/css/jquery.dataTables.min.css">    
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">     
+    <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"  >
+	<title>Recap des fonctions javascript</title>               
+</head>
+
+<body>
+    <div class="container">  
+		<div class="row MT20">	
+			<div class="col-xl-12 titre">				
+                <a href="../index.php">
+                    <img src="../../images/icones/iconeJavascript.png" /> 
+                </a>
+			</div>
+		</div>		
+
+		<div class="row MT20">	
+			<div class="col-xl-12 titre">				
+                <h1>Recap des fonctions javascript</h1>
+			</div>
+		</div>		
+
+        <div class="row MT20">	
+			<div class="col-xl-12">
+                <div class="enteteBouton">
+                    <input type="button" class="boutonFonction fonctionChaine" name="Chaine" value="Chaines de caractères" id="chaine" data-id="Chaine">
+                    <input type="button" class="boutonFonction fonctionNombre" name="Nombre" value="Nombres" id="Nombre" data-id="Maths">
+                    <input type="button" class="boutonFonction fonctionTableau" name="Tableau" value="Tableaux" id="Tableau" data-id="Tableau">
+                    <input type="button" class="boutonFonction fonctionDOM" name="DOM" value="DOM" id="DOM" data-id="DOM">
+                    <input type="button" class="boutonFonction fonctionAll" name="All" value="Toutes les fonctions" id="All" data-id="">    
+                </div>
+            </div>
+        </div>
+
+        <div class="row MT20">	
+            <div class="col-lg-12">	
+                <table id="tableauFonction" class="display">
+                    <thead> 
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Paramètre 1</th>
+                            <th>Paramètre 2</th>                            
+                            <th>Exemple</th>                            
+                        </tr> 
+                    </thead>
+
+                    <tbody> 
+                        <!-- Fonctions sur les tableaus -->
+                        <tr>    
+                            <td>concat</td>
+                            <td>Tableau</td>
+                            <td>Concatène 2 tableau</td>
+                            <td>un tableau</td> 
+                            <td>un tableau (optionnel)</td>                             
+                            <td>tableau1.concat(tableau2)</td>                              
+                        </tr>  
+                        
+                        <tr>
+                            <td>fill</td>
+                            <td>Tableau</td>
+                            <td>rempli un tableau avec un élément</td>
+                            <td>index de départ</td>  
+                            <td>Index d'arret (non inclus)</td>                             
+                            <td>element.tableau(0,2) : les éléments 0 et 1 du tableau seront remplacé par "élément" </td>                             
+                        </tr>
+                        
+                        <tr>
+                            <td>filter</td>
+                            <td>Tableau</td>
+                            <td>Crée un nouveau tableau rempli d'éléments qui réussissent un test fourni par une fonction.</td>
+                            <td>Nom de la fonction</td>  
+                            <td>-</td>                             
+                            <td>tableau.filter(isPair)</td>                             
+                        </tr>
+
+                        <tr>
+                            <td>find</td>
+                            <td>Tableau</td>
+                            <td>renvoie la valeur du premier élément qui réussit un test.</td>
+                            <td>Nom de la fonction</td>  
+                            <td>-</td>                             
+                            <td>tableau.find(isPair)</td>                             
+                        </tr>
+
+                        <tr>
+                            <td>findIndex</td>
+                            <td>Tableau</td>
+                            <td>renvoie l'index du premier élément qui réussit un test.</td>
+                            <td>Nom de la fonction</td>  
+                            <td>-</td>                             
+                            <td>tableau.findIndex(isPair)</td>                             
+                        </tr>                        
+
+                        <tr>
+                            <td>includes</td>
+                            <td>Tableau</td>
+                            <td>Retourne true si un tableau contient une valeur spécifiée.</td>
+                            <td>élément rechercher</td>  
+                            <td>-</td>                             
+                            <td>tableau.includes("test")</td>                             
+                        </tr>
+
+                        <tr>
+                            <td>indexOf</td>
+                            <td>Tableau</td>
+                            <td>Renvoi le 1er index de l'élément recherché (-1 sinon)</td>
+                            <td>élément rechercher</td>  
+                            <td>Indice de début de recherche</td>                             
+                            <td>tableau.indexOf("test")</td>                             
+                        </tr>
+
+                        <tr>
+                            <td>join</td>
+                            <td>Tableau</td>
+                            <td>Concatène les éléments d'un tableau avec le séparateur passé en paramètre</td>
+                            <td>Séparateur</td>  
+                            <td>-</td>                             
+                            <td>tableau.join("-")</td>                             
+                        </tr>
+
+                        <tr>
+                            <td>keys</td>
+                            <td>Tableau</td>
+                            <td>Renvoi le tableau des clés</td>
+                            <td>tableau</td>  
+                            <td>-</td>                             
+                            <td>object.keys(tableau)</td>                             
+                        </tr>
+
+                        <tr>
+                            <td>lastIndexOf</td>
+                            <td>Tableau</td>
+                            <td>Renvoi le dernier index de l'élément recherché (-1 sinon)</td>
+                            <td>élément rechercher</td>  
+                            <td>Indice de début de recherche(on cherche de droite à gauche)</td>                             
+                            <td>tableau.lastIndexOf("test")</td>                             
+                        </tr>
+
+                        <tr>
+                            <td>length</td>
+                            <td>Tableau</td>
+                            <td>Longueur d'un tableau</td>
+                            <td>-</td>  
+                            <td>-</td>                             
+                            <td>tableau.length</td>                             
+                        </tr>
+
+                        <tr>
+                            <td>map</td>
+                            <td>Tableau</td>
+                            <td>Appelle une fonction pour chaque élément d'un tableau</td>
+                            <td>Nom de la fonction</td>  
+                            <td>-</td>                             
+                            <td>tableau.map(foisDeux)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>pop</td>
+                            <td>Tableau</td>
+                            <td>Supprime le dernier élément d'un tableau</td>
+                            <td>-</td>  
+                            <td>-</td>                             
+                            <td>tableau.pop()</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>shift</td>
+                            <td>Tableau</td>
+                            <td>Supprime le premier élément d'un tableau</td>
+                            <td>-</td>  
+                            <td>-</td>                             
+                            <td>tableau.shift()</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>push</td>
+                            <td>Tableau</td>
+                            <td>Ajoute un élément à la fin d'un tableau</td>
+                            <td>élément à insérer</td>  
+                            <td>2e élément à insérer (on peut mettre autant de paramètre que de valeur à insérer)</td>                             
+                            <td>tableau.push("test")</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>ubshift</td>
+                            <td>Tableau</td>
+                            <td>Ajoute un élément au début d'un tableau</td>
+                            <td>élément à insérer</td>  
+                            <td>2e élément à insérer (on peut mettre autant de paramètre que de valeur à insérer)</td>                             
+                            <td>tableau.unshift("test")</td>                                   
+                        </tr>
+                        
+                        <tr>
+                            <td>reverse</td>
+                            <td>Tableau</td>
+                            <td>Réordonne le tableau de gauche à droite</td>
+                            <td>-</td>  
+                            <td>-</td>                             
+                            <td>tableau.reverse()</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>slice</td>
+                            <td>Tableau</td>
+                            <td>Extrait une partie d'un tableau</td>
+                            <td>Indice de départ</td>  
+                            <td>Indice de fin (non inclus)</td>                             
+                            <td>tableau.slice(1,3)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>sort</td>
+                            <td>Tableau</td>
+                            <td>Tri un tableau par ordre croissant</td>
+                            <td>-</td>  
+                            <td>-</td>                             
+                            <td>tableau.sort()</td>                               
+                        </tr>
+
+                        <!-- Fonctions mathématiques -->
+
+                        <tr>
+                            <td>Math.ceil</td>
+                            <td>Maths</td>
+                            <td>Arrondi à l'entier supérieur</td>
+                            <td>Valeur à arrondir</td>  
+                            <td>-</td>                             
+                            <td>Math.ceil(10.4)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>Math.floor</td>
+                            <td>Maths</td>
+                            <td>Arrondi à l'entier inférieur</td>
+                            <td>Valeur à arrondir</td>  
+                            <td>-</td>                             
+                            <td>Math.ceil(10.4)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>Math.round</td>
+                            <td>Maths</td>
+                            <td>Arrondi à l'entier le plus proche</td>
+                            <td>Valeur à arrondir</td>  
+                            <td>-</td>                             
+                            <td>Math.round(10.4)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>Math.max</td>
+                            <td>Maths</td>
+                            <td>Renvoi le maximum d'une liste d'élément</td>
+                            <td>Valeur1</td>  
+                            <td>Valeur2 (on peut mettre autant de paramètre que l'on veut)</td>                             
+                            <td>Math.max(10.4)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>Math.min</td>
+                            <td>Maths</td>
+                            <td>Renvoi le minimum d'une liste d'élément</td>
+                            <td>Valeur1</td>  
+                            <td>Valeur2 (on peut mettre autant de paramètre que l'on veut)</td>                             
+                            <td>Math.min(10.4)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>Math.pow</td>
+                            <td>Maths</td>
+                            <td>Renvoi a^b</td>
+                            <td>Valeur1</td>  
+                            <td>Valeur2 </td>                             
+                            <td>Math.pow(2,4)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>Math.round</td>
+                            <td>Maths</td>
+                            <td>Renvoi un nombre décimal entre 0 (inclus) et 1 (exclus)</td>
+                            <td>-</td>  
+                            <td>- </td>                             
+                            <td>Math.round()</td>                               
+                        </tr>
+
+                        <!-- Fonctions sur les chaines de caractères  -->
+                        <tr>
+                            <td>charAt</td>
+                            <td>Chaine</td>
+                            <td>Renvoi de le caractère en position n (n étant le numéro de l'index)</td>
+                            <td>index</td>  
+                            <td>-</td>                             
+                            <td>chaine1.charAt(4)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>concat</td>
+                            <td>Chaine</td>
+                            <td>Concatène 2 chaines de caractères</td>
+                            <td>chaine de caractères</td>  
+                            <td>2e élément à concaténer(on peut mettre autant de paramètre que l'on veut)</td>                             
+                            <td>chaine1.concat(chaine2)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>includes</td>
+                            <td>Chaine</td>
+                            <td>Vérifie si une chaine est contenu dans une autre (case sensitive)</td>
+                            <td>chaine cherchée</td>  
+                            <td>Indice de départ</td>                             
+                            <td>chaine1.includes(chaine2)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>indexOf</td>
+                            <td>Chaine</td>
+                            <td>Renvoi le 1er index de l'élément recherché (-1 sinon)</td>
+                            <td>élément rechercher</td>  
+                            <td>Indice de début de recherche</td>                             
+                            <td>chaine1.indexOf(chaine2)</td>                             
+                        </tr>
+
+                        <tr>
+                            <td>lastIndexOf</td>
+                            <td>Chaine</td>
+                            <td>Renvoi le dernier index de l'élément recherché (-1 sinon)</td>
+                            <td>élément rechercher</td>  
+                            <td>Indice de début de recherche(on cherche de droite à gauche)</td>       
+                            <td>chaine1.lastIndexOf(chaine2)</td>                             
+                        </tr>
+
+                        <tr>
+                            <td>length</td>
+                            <td>Chaine</td>
+                            <td>Longueur d'une chaine</td>
+                            <td>-</td>  
+                            <td>-</td>                             
+                            <td>chaine.length</td>                             
+                        </tr>
+
+                        <tr>
+                            <td>repeat</td>
+                            <td>Chaine</td>
+                            <td>Répéter une chaine de caractères</td>
+                            <td>nombre de répatition</td>  
+                            <td>-</td>                             
+                            <td>chaine.repeat(3)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>replace</td>
+                            <td>Chaine</td>
+                            <td>Remplacer une chaine de caractères par une autre</td>
+                            <td>Chaine à remplacer</td>  
+                            <td>chaine de remplacement</td>                             
+                            <td>chaine1.replace(chaine2,chaine3)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>slice</td>
+                            <td>Chaine</td>
+                            <td>Extrait une partie d'une chaine</td>
+                            <td>Indice de départ</td>  
+                            <td>Indice de fin (non inclus)</td>                             
+                            <td>chaine.slice(1,3)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>split</td>
+                            <td>Chaine</td>
+                            <td>Renvoi un tableau contenant la chaine de caractères découpé en fonction d'un séparateur</td>
+                            <td>Séparateur</td>  
+                            <td>-</td>                             
+                            <td>chaine.split(" ")</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>startsWith</td>
+                            <td>Chaine</td>
+                            <td>Renvoie true si la chaine1 commence par la chaine2</td>
+                            <td>Chaine de caractères</td>  
+                            <td>Indice de départ</td>                             
+                            <td>chaine1.startsWith(chaine2)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>substr</td>
+                            <td>Chaine</td>
+                            <td>Extrait une partie d'une chaine</td>
+                            <td>Indice de départ</td>  
+                            <td>longueur de la chaine en sortie</td>                             
+                            <td>chaine.substr(1,3)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>toLowerCase</td>
+                            <td>Chaine</td>
+                            <td>Met une chaine en minuscule</td>
+                            <td>-</td>  
+                            <td>-</td>                             
+                            <td>chaine1.toLowerCase()</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>toUpperCase</td>
+                            <td>Chaine</td>
+                            <td>Met une chaine en minuscule</td>
+                            <td>-</td>  
+                            <td>-</td>                             
+                            <td>chaine1.toUpperCase()</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>trimStart</td>
+                            <td>Chaine</td>
+                            <td>Supprime les espaces en début de chaine</td>
+                            <td>-</td>  
+                            <td>-</td>                             
+                            <td>chaine1.trimStart()</td>                               
+                        </tr>
+                        
+                        <tr>
+                            <td>trimEnd</td>
+                            <td>Chaine</td>
+                            <td>Supprime les espaces en fin de chaine</td>
+                            <td>-</td>  
+                            <td>-</td>                             
+                            <td>chaine1.trimEnd()</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>trim</td>
+                            <td>Chaine</td>
+                            <td>Supprime les espace en début et en fin de chaine</td>
+                            <td>-</td>  
+                            <td>-</td>                             
+                            <td>chaine1.trim()</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>toString</td>
+                            <td>Chaine</td>
+                            <td>Convertir une donnée en chaine de caractères</td>
+                            <td>-</td>  
+                            <td>-</td>                             
+                            <td>element.toString()</td>                               
+                        </tr>
+
+                        <!-- fonctions sur le dom -->                     
+                        <tr>
+                            <td>getElementById</td>
+                            <td>DOM</td>
+                            <td>Récupérer l'ID d'un élément</td>
+                            <td>ID de l'élément</td>  
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId")</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>getElementsByClassName</td>
+                            <td>DOM</td>
+                            <td>renvoie la liste des éléments ayant pour classe nomClasse</td>
+                            <td>Nom de la classe</td>  
+                            <td>-</td>                             
+                            <td>document.getElementsByClassName("nomClasse")</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>getElementsByTagName</td>
+                            <td>DOM</td>
+                            <td>renvoie la liste des balises</td>
+                            <td>Nom de la balise</td>  
+                            <td>-</td>                             
+                            <td>document.getElementsByTagName("nomBalise")</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>querySelector</td>
+                            <td>DOM</td>
+                            <td>Renvoi le 1er élément sélectionner</td>
+                            <td>nom de l'Id</td>  
+                            <td>-</td>                             
+                            <td>document.querySelector('#nomId')</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>querySelector</td>
+                            <td>DOM</td>
+                            <td>Renvoi le 1er élément sélectionner</td>
+                            <td>nom de la classe</td>  
+                            <td>-</td>                             
+                            <td>document.querySelector('.nomClasse')</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>children</td>
+                            <td>DOM</td>
+                            <td>Retourne la liste des enfants</td>
+                            <td>nom de l'Id</td>    
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").children</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>parentElement</td>
+                            <td>DOM</td>
+                            <td>Retourne l'élément parent</td>
+                            <td>nom de l'Id</td>    
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").parentElement</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>nextElementSibling</td>
+                            <td>DOM</td>
+                            <td>Retourne l'élément suivant de même niveau</td>
+                            <td>nom de l'Id</td>     
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").nextElementSibling</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>previousElementSibling</td>
+                            <td>DOM</td>
+                            <td>Retourne l'élément précédent de même niveau</td>
+                            <td>nom de l'Id</td>    
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").previousElementSibling</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>innerHTML</td>
+                            <td>DOM</td>
+                            <td>Récupère ce qu'il y a dans l'élément en conservant les balises HTML</td>
+                            <td>nom de l'Id</td>    
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").innerHTML</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>textContent</td>
+                            <td>DOM</td>
+                            <td>Récupère ce qu'il y a dans l'élément en supprimant les balises HTML</td>
+                            <td>nom de l'Id</td>    
+                            <td>-</td>                             
+                            <td></td>                               
+                        </tr>
+
+                        <tr>
+                            <td>innerHTML</td>
+                            <td>DOM</td>                            
+                            <td>Affiche du texte dans l'élément passer en paramètre et en conservant les balises HTML</td>  
+                            <td>nom de l'Id</td>    
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").innerHTML = <p>test</p></td>                               
+                        </tr>
+
+                        <tr>
+                            <td>textContent</td>
+                            <td>DOM</td>                            
+                            <td>Affiche du texte dans l'élément passer en paramètre et en supprimant les balises HTML</td>  
+                            <td>nom de l'Id</td>    
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").textContent = "test"</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>add</td>
+                            <td>DOM</td>
+                            <td>Ajoute le nom de la/les classes</td>    
+                            <td>nom de la classe</td>    
+                            <td>nom de la classe (on peut en mettre autant qu'on veut)</td>    
+                            <td>document.getElementById("nomId").add("classe1","classe2")</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>remove</td>
+                            <td>DOM</td>
+                            <td>Supprime le nom de la/les classes</td>    
+                            <td>nom de la classe</td>    
+                            <td>nom de la classe (on peut en mettre autant qu'on veut)</td>    
+                            <td>document.getElementById("nomId").remove("classe1","classe2")</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>replace</td>
+                            <td>DOM</td>
+                            <td>Remplace l’ancienne classe par la nouvelle</td>
+                            <td>ancienneClasse</td>    
+                            <td>nouvelleClasse</td>                             
+                            <td>document.getElementById("nomId").replace("classe1", "classe2")</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>contains</td>
+                            <td>DOM</td>
+                            <td>Renvoi true si l'élément possède le nom de cette classe</td>
+                            <td>nom de la classe</td>    
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").contains("nomDeLaClasse")</td>                               
+                        </tr>                        
+
+                        <tr>
+                            <td>style.nomDuStyle</td>
+                            <td>DOM</td>
+                            <td>modifie le style d'un élément</td>
+                            <td>nom de l'Id</td>    
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").style.color="red"</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>setAttribute</td>
+                            <td>DOM</td>
+                            <td>change la valeur de l'attribut</td>
+                            <td>nom de l'attribut</td>    
+                            <td>Valeur</td>                             
+                            <td>document.getElementById("nomId").setAttribute("name","prenom")</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>gettAttribute</td>
+                            <td>DOM</td>
+                            <td>Renvoi la valeur de l'attribut</td>
+                            <td>nom de l'attribut</td>    
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").gettAttribute("value")</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>removeAttribute</td>
+                            <td>DOM</td>
+                            <td>supprime l'attribut</td>
+                            <td>nom de l'attribut</td>    
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").removeAttribute("disabled")</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>createElement</td>
+                            <td>DOM</td>
+                            <td>Créé un élément</td>
+                            <td>nom de l'élément</td>    
+                            <td>-</td>                             
+                            <td>document.createElement("div") </td>                               
+                        </tr>
+
+                        <tr>
+                            <td>appendChild</td>
+                            <td>DOM</td>
+                            <td>Ajoute l'élément qui a été créé</td>
+                            <td>nom de l'élément</td>    
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").appendChild("nomElementCréé")</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>removeChild</td>
+                            <td>DOM</td>
+                            <td>Supprime l'élément qui a été créé</td>
+                            <td>nom de l'élément</td>    
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").removeChild("nomElementCréé")</td>                               
+                        </tr>
+
+                       <tr>
+                            <td>replaceChild</td>
+                            <td>DOM</td>
+                            <td>Remplace un élément par un autre</td>
+                            <td>Nouvel élément</td>    
+                            <td>Ancien élément</td>                             
+                            <td>document.getElementById("nomId").replaceChild(nouvelElement, ancienElement)</td>                               
+                        </tr>
+
+                        <tr>
+                            <td>addEventListener</td>
+                            <td>DOM</td>
+                            <td>écouter un événement</td>
+                            <td>-</td>    
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").addEventListener('click',function() {...}) </td>                               
+                        </tr>
+
+                        <tr>
+                            <td>preventDefault</td>
+                            <td>DOM</td>
+                            <td>Supprime le comportement de base (ex la redirection avec un lien)</td>
+                            <td></td>    
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").addEventListener('click',function(e) {e.preventDefault()}) </td>                                    
+                        </tr>   
+                        
+                        <tr>
+                            <td>stopPropagation</td>
+                            <td>DOM</td>
+                            <td>Empêche la propagation jusqu'au parent</td>
+                            <td></td>    
+                            <td>-</td>                             
+                            <td>document.getElementById("nomId").addEventListener('click',function(e) {e.•	stopPropagation()}) </td>                                    
+                        </tr>            
+                       
+                        
+                    </tbody> 
+                </table>
+            </div>
+        </div>
+    </div>      
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>    
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>	
+    <script src="../../js/fonctionsJS.js"></script>
+
+        <script >
+            $(document).ready(function() {
+            var tableJS = $('#tableauFonction').DataTable( {
+                language: {
+                    url: "https://cdn.datatables.net/plug-ins/1.13.4/i18n/fr-FR.json"
+                },             
+                paging : true , //Menu déroulant avec le nombre d’éléments à afficher par page
+                searching:true, // Barre de recherche
+                ordering:true,
+                info : true , //Nombre d’éléments en bas à gauche du tableau qui s’affiche par page
+                pagingType: "numbers", //type de pagination        
+                pageLength: 50, //nombre d'éléménet par page de base           
+                lengthMenu : [5,10,25,50,100], //Menu déroulant pour afficher le nombre d'élément par page            
+                order : [[1,"desc"],[0,"desc"]], //Tri au chargement de la page. 0 pour la 1ère colonne. On peut trier sur plusieurs colonne
+                columnDefs : [
+                {
+                target:[0], //Numéro de la colonne
+                searchable:true, //Possibilité de chercher dans cette colonne
+                visible : true //Afficher la colonne
+                },
+                {
+                target:[2,5],
+                searchable:false,
+                visible : true,
+                sortable:false
+                },        
+                ],
+                "stateSave": true, //activer la sauvegarde
+                "stateDuration": 60, //durée de la sauvegarde en seconde 
+            });
+
+        $('input:button').click(function () {   
+        var tableJS = $('#tableauFonction').DataTable();
+        var identifiant = $(this).data("id");      
+        tableJS
+                .columns(1)
+                .search(identifiant)
+                .draw();
+            });
+        });
+
+        </script>   
+    </body>
+    
+</html>

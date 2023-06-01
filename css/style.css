@@ -16,8 +16,9 @@
 	font-style:italic;
 }
 
-.titleCenter {
-	text-align:center ;
+.titre {
+	text-align: center;
+	margin: 0 auto;
 }
 
 .texteRouge {
@@ -86,6 +87,78 @@
 	Font-size:12px;
 }
 
+.boutonFonction {
+    border-style: none;
+    border-radius : 12px ;   
+    padding:10px; 
+    cursor: pointer;      
+}
+
+.fonctionChaine {
+    background-color: springgreen;
+}
+
+.fonctionChaine:hover {
+    color: darkgreen;
+    background: white;
+    border: 1px solid springgreen;
+}
+
+.fonctionNombre {
+    background-color: dodgerblue;
+}
+
+.fonctionNombre:hover {
+    color: dodgerblue;
+    background: white;
+    border: 1px solid dodgerblue;
+}
+
+.fonctionTableau {
+    background-color: darkorange;
+}
+
+.fonctionTableau:hover {
+    color: darkorange;
+    background: white;
+    border: 1px solid darkorange;
+}
+
+.fonctionDOM {
+    background-color: darkblue;
+    color:#ffffff;
+}
+
+.fonctionDOM:hover {
+    color: darkblue;
+    background: white;
+    border: 1px solid darkblue;
+}
+
+.fonctionAll {
+    background-color: lightslategrey;
+}
+
+.fonctionAll:hover {
+    color: lightslategrey;
+    background: white;
+    border: 1px solid lightslategrey;
+}
+
+.dataTables_length {
+    padding-bottom:10px;
+}
+
+.dataTables_filter label input {
+    margin-left:5px;
+}
+
+#tab {
+    margin-top:20px;
+}
+
+
+/*
 .button2 {
 	background-color: darkblue;
 	color:#fff;	
@@ -94,18 +167,7 @@
 	padding:10px;
 	border:none;
 }
-
-.titre {
-	text-align: center;
-	margin: 0 auto;
-}
-
-.bouton {
-	background-color:#008000 ;
-	border-radius:25px;
-	border:none;
-	padding:10px;
-}
+*/
 
 .divDimension {
 	width:300px;
@@ -121,10 +183,16 @@ th {
     word-wrap: normal;
 }
 
+/*
 .tableBalise td, .tableBalise th {  
     border:1px solid #000  ;
     border-collapse: collapse;
     padding : 5px;    
+}
+*/
+
+.tableauFonction-JS, .tableauFonction-PHP {
+    margin-top:10px;
 }
 
 .backgroundGrey {
@@ -165,7 +233,7 @@ th {
 
 .divLightBlue3 {			
     background-color:lightblue ;    
-    width:200^x
+    width:200px;
     padding:10px;    
 }
 
@@ -174,62 +242,7 @@ th {
     margin-bottom: 25px;
 }
 
-.bouton {
-    border-style: none;
-    border-radius : 25px ;
-    Width :150px;
-    height: 35px;      
-    cursor: pointer;      
-}
 
-.chaine {
-    background-color: springgreen;
-}
 
-.chaine:hover {
-    color: darkgreen;
-    background: white;
-    border: 1px solid springgreen;
-}
 
-.nombre {
-    background-color: dodgerblue;
-}
-
-.nombre:hover {
-    color: dodgerblue;
-    background: white;
-    border: 1px solid dodgerblue;
-}
-
-.tableau {
-    background-color: darkorange;
-}
-
-.tableau:hover {
-    color: darkorange;
-    background: white;
-    border: 1px solid darkorange;
-}
-
-.DOM {
-    background-color: darkblue;
-    color:#ffffff;
-}
-
-.DOM:hover {
-    color: darkblue;
-    background: white;
-    border: 1px solid darkblue;
-}
-
-.all {
-    background-color: lightslategrey;
-}
-
-.all:hover {
-    color: lightslategrey;
-    background: white;
-    border: 1px solid lightslategrey;
-}
 /*fin recap fonctions javascript*/
