@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- On ouvre la fenêtre à la largeur de l'écran :width=device-width -->
+<title>Bootstrap - Les visionneuses</title>
+
+<!-- Bootstrap -->	
+<link href="bootstrap/bootstrap.min.css" rel="stylesheet">	
+<link href="bootstrap/bootstrap-select.min.css" rel="stylesheet">		
+<link href="bootstrap/bootstrap-3.3.7bootstrap-theme.min" rel="stylesheet">		
+</head>
+
+<body>
+		
+	<div class="container" style="margin-left:0;">
+		<div class="row">	
+			<div class="col-lg-12">					
+				<h3>Les visionneuses</h3>
+			</div>
+		</div>
+
+		<div class="row">	
+			<div class="col-lg-3">	
+				<h3>Visionneuse sans points de navigation</h3>				
+				<div id="carousel1"  class="carousel slide" data-ride="carousel" style="width:500px;">
+					<div class="carousel-inner">
+						<div class="item active"><img alt="" src="../../images/image1.png" style="width:500px">
+							<span class="carousel-caption" style="font-size:50px;font-weight:bold;color:#ff0000">Titre</span>
+						</div>
+						<div class="item"> 
+								<img alt="" src="../../images/image2.jpg" style="width:500px">
+						</div>
+						<div class="item"> 
+							<img alt="" src="../../images/image3.jpg" style="width:500px">			
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">	
+			<div class="col-lg-3">					
+				<h3>Visionneuse avec points de navigation</h3>
+				<div id="carousel2" class="carousel slide" data-ride="carousel" style="width:500px;">
+					<ol class="carousel-indicators">
+						<li data-target="#carousel" data-slide-to="0" class="active" ></li>
+						<li data-target="#carousel" data-slide-to="1"></li>
+						<li data-target="#carousel" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active"><img alt="" src="../../images/image1.png" style="width:500px"></div>
+						<div class="item "><img alt="" src="../../images/image2.jpg" style="width:500px"></div>
+						<div class="item"><img alt="" src="../../images/image3.jpg" style="width:500px"></div>
+					</div>
+				</div>				
+			</div>
+		</div>
+
+		<div class="row">	
+			<div class="col-lg-3">					
+				<h3>Visionneuse avec flèches de navigation</h3>
+				<div id="carousel3" class="carousel slide" data-ride="carousel" style="width:500px">
+					<div class="carousel-inner">
+						<div class="item active"> <img alt="" src="../../images/image1.png" style="width:500px"></div>
+						<div class="item"> <img alt="" src="../../images/image2.jpg" style="width:500px"></div>
+						<div class="item"> <img alt="" src="../../images/image3.jpg" style="width:500px"></div>
+					</div>
+					<a class="left carousel-control" href="#carousel" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a class="right carousel-control" href="#carousel" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+				</div>			
+			</div>
+		</div>
+
+		<div class="row">	
+			<div class="col-lg-3">									
+				<h3>Visionneuse avec gestion de la lecture</h3>
+				<div id="carousel5"  class="carousel slide" style="width:500px;">
+					<div class="carousel-inner">
+						<div class="item active"><img alt="" src="../../images/image1.png" style="width:500px">
+							<span class="carousel-caption" style="font-size:50px;font-weight:bold;color:#ff0000">Titre</span>
+						</div>
+						<div class="item"> <img alt="" src="../../images/image2.jpg" style="width:500px"></div>
+						<div class="item"> 
+							<img alt="" src="../../images/image3.jpg" style="width:500px">			
+						</div>
+					</div>
+					<br>	
+					
+					<button class="btn btn-primary" id="first"><span class="glyphicon glyphicon-fast-backward"></span></button> <!-- Pour accèder à la 1ère image -->
+					<button class="btn btn-primary" id="previous"><span class="glyphicon glyphicon-step-backward"></span></button> <!-- Pour accèder à l'image précédante -->
+					<button class="btn btn-primary" id="pause"><span class="glyphicon glyphicon-pause"></span></button> <!-- Pour stopper le diaporama -->
+					<button class="btn btn-primary" id="play"><span class="glyphicon glyphicon-play"></span></button> <!-- Pour reprendre le diaporama -->
+					<button class="btn btn-primary" id="next"><span class="glyphicon glyphicon-step-forward"></span></button> <!-- Pour accèder à l'image suivante -->
+					<button class="btn btn-primary" id="last"><span class="glyphicon glyphicon-fast-forward"></span></button> <!-- Pour accèder à la dernière image -->
+					<p><span class="label label-info"></span></p>
+						
+					
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<!-- fonctions javascript -->
+	<script src="../../jquery/jquery-3.1.1.min.js"></script>	
+	<script src="../../bootstrap/bootstrap.min.js"></script>		
+	<script src="../../bootstrap/bootstrap-select.min.js"></script>	
+	 
+
+	
+</body>
+</html>

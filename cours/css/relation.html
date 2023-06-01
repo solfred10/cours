@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<title>CSS 3 - Les relations</title>
+
+	<style type="text/css">
+		a {
+            color: blue;
+        }
+       
+        /* Liens internes avec valeurs exactes */
+        a[href="https://www.fred-sol.fr"] {
+            color: red;
+        }
+
+        /* Liens commençant par "https" */
+        a[href^="https"] {
+            color: purple;
+        }
+
+        /* Liens se terminant par ".html" */
+        a[href$=".html"] {
+            color: green;
+        }
+
+        /* Liens contenant la valeur */
+        a[href*="contact"] {
+            color: yellowgreen;
+        }
+
+        #pindiv p {
+            color: blue;
+        }
+
+        /* enfant direct */
+        div#enfantDirect > p {
+            color: blue;
+        }
+         /*sélectionne le premier élément <p> placé immédiatement après les éléments <div>*/
+            div.elementSuivant + p {
+                color: blue;
+        }
+
+        /*sélectionne tous les éléments <p> placé immédiatement après les éléments <div>*/
+        div.tousLesElementSuivants ~ p {
+            color: blue;
+        }        
+        
+	</style>
+
+</head>
+<body>
+		
+	<div class="container">
+		<div class="row MT20">	
+			<div class="col-xl-12 titre">				
+				<a href="accueil.html">	
+					<img src="images/iconeCSS.png">
+				</a>
+			</div>
+		</div>	
+		
+		<div class="row MT20">
+			<div class="col-xl-12 titre">	
+				<h1>LES RELATIONS</h1>
+			</div>
+		</div>
+
+		<div class="row MT40">
+			<div class="col-lg-12">	
+				<h3>Les attributs</h3>
+            </div>
+        </div>
+
+        <div class="row">
+			<div class="col-lg-4">	
+                <h5>Lien commençant par https</h5>
+                <i>a[href^="https"]</i>
+                <br>
+                <a href="https://www.irun.fr">https://www.irun.fr</a>
+                <br>
+                <a href="https://athleticbrunoyclub.fr/">https://athleticbrunoyclub.fr</a>
+            </div>
+
+            <div class="col-lg-4">	
+                <h5>Lien se terminant par html</h5>
+                <i> a[href^="https"]</i>
+                <br>
+                <a href="http://cours.fred-sol.fr/cours/html/accueil.html">http://cours.fred-sol.fr/cours/html/accueil.html</a>
+                <br>
+                <a href="http://cours.fred-sol.fr/cours/css/accueil.html">http://cours.fred-sol.fr/cours/css/accueil.html</a>
+            </div>
+
+            <div class="col-lg-4">	
+                <h5>Lien contenant contact</h5>
+                <i> a[href$="https"]</i>
+                <br>
+                <a href="http://www.free.fr/contact/accueil">http://www.free.fr/contact/accueil</a>
+                <br>
+                <a href="http://www.bouygues.fr/contact/home">http://www.bouygues.fr/contact/home</a>
+            </div>							
+        </div>    
+
+        <hr>
+
+        <div class="row MT20">   
+            <div class="col-lg-6">	
+				<h3>Les descendants directs</h3>
+                <h5>sélectionne tous les éléments p à l'intérieur des éléments div</h5>
+                <p>#id p</p>
+				<div id="pindiv" class="divLightBlue">
+                    <p>Paragraphe1 dans une div</p>
+                    <p>Paragraphe2 dans une div</p>
+                    <section><p>Paragraphe3 dans une balise section et dans une div</p></section>
+                </div>
+                <p>Paragraphe4 pas une div</p>
+                
+                <div id="pindiv" class="divLightBlue">
+                    <p>Paragraphe5 dans une div</p>
+                    <p>Paragraphe6 dans une div</p>
+                    <section><p>Paragraphe7 dans une balise section et dans une div</p></section>
+                </div>
+                <p>Paragraphe8 pas une div</p>         
+			</div>
+
+            <div class="col-lg-6">	
+				<h3>Les enfants directs</h3>
+                <h5>Sélectionne tous les elt p qui sont des enfants direct d'un elt div</h5>
+                <p>div#id > p </p>
+                <div id="enfantDirect" class="divLightBlue">
+                    <p>Paragraphe1 dans une div</p>
+                    <p>Paragraphe2 dans une div</p>
+                    <section>
+                      <!-- not Child but Descendant -->
+                      <p>Paragraphe3 dans une balise section et dans une div</p>
+                    </section>
+                    <p>Paragraphe4 dans une div</p>
+                </div>                  
+                <p>Paragraphe5 pas une div</p> 	
+                
+                <div id="enfantDirect" class="divLightBlue">
+                    <p>Paragraphe6 dans une div</p>                                        
+                    <p>Paragraphe7 dans une div</p>
+                </div>                  
+                <p>Paragraphe8 pas une div</p>
+                
+			</div>            
+        </div>
+
+        <hr>
+        
+        <div class="row MT20 MB50">    
+            <div class="col-lg-6">	
+				<h3>1er élément suivant</h3>
+                <h5>Sélectionne le 1er elt p placé immédiatement après les elt div</h5>
+                <p>div#id + p</p>
+				<div class="elementSuivant divLightBlue">
+                    <p>Paragraphe1 dans une div</p>
+                    <p>Paragraphe2 dans une div</p>
+                </div>
+                  
+                <p>Paragraphe3 après une div</p>
+                <p>Paragraphe4 après une div</p>
+                                
+                <div class="elementSuivant divLightBlue">
+                    <p>Paragraphe5 dans une div</p>
+                    <p>Paragraphe6 dans une div</p>
+                </div>
+                
+                <p>Paragraphe7 après une div</p>
+                <p>Paragraphe8 après une div</p>
+			</div>					
+        
+			<div class="col-lg-6">	
+				<h3>Tous les éléménts suivant</h3>
+                <h5>Sélectionne tous les elt p placés immédiatement après les elt div</h5>
+                <p><p>div#id ~ p</p></p>
+				<div class="tousLesElementSuivants divLightBlue">
+                    <p>Paragraphe1 dans une div</p>
+                    <p>Paragraphe2 dans une div</p>
+                </div>
+                  
+                <p>Paragraphe3 après une div</p>
+                <p>Paragraphe4 après une div</p>
+                
+                <div class="tousLesElementSuivants divLightBlue">
+                    <p>Paragraphe5 dans une div</p>
+                    <p>Paragraphe6 dans une div</p>
+                </div>
+                
+                <p>Paragraphe7 après une div</p>
+                <p>Paragraphe8 après une div</p>
+			</div>            
+        </div>         
+	</div>	
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

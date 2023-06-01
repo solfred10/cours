@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- On ouvre la fenêtre à la largeur de l'écran :width=device-width -->
+<title>Bootstrap - Les effets accordeons 2</title>
+
+<!-- Bootstrap -->	
+<link href="bootstrap/bootstrap.min.css" rel="stylesheet">	
+<link href="bootstrap/bootstrap-select.min.css" rel="stylesheet">		
+</head>
+
+<body>
+	<div class="container" style="margin-left:0;">
+
+		<div class="row">	
+			<div class="col-lg-12">	
+				<h3>LES EFFETS ACCORDEONS</h3>
+			</div>
+		</div>	
+
+		<div class="row">	
+			<div class="panel panel-default col-lg-4">
+				<h3>Effet accordéon sans espacement entre les item</h3>
+				<div class="panel-heading"> 
+					<a href="#item1" data-toggle="collapse">Accordéon</a> 
+				</div>
+				<div id="item1" class="panel-collapse collapse in"> <!-- in pour dire que par defaut c'est ouvert -->
+					<div class="panel-body">
+						Ce plugin permet de créer des effets "accordéon" totalement paramétrables
+					</div>
+				</div>
+
+				<div class="panel-heading"> 
+					<a href="#item2" data-toggle="collapse">Fenêtre modale </a> 
+				</div>
+				<div id="item2" class="panel-collapse collapse">
+					<div class="panel-body">
+						Ce plugin permet de créer des fenêtres modales élégantes avec une grande simplicité.
+					</div>
+				</div>
+			</div>
+
+			<div class="panel-group col-lg-4">
+				<h3>Effet accordéon avec un espacement entre les item</h3>
+				<div class="panel panel-default">
+					<div class="panel-heading">         
+					<a href="#item4" class="panel-title" data-toggle="collapse"> Accordéon 2</a>         
+					</div>
+					<div id="item4" class="panel-collapse collapse">
+						<div class="panel-body">
+							Ce plugin permet de créer des effets "accordéon" totalement paramétrables
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading"> 
+						<h3 class="panel-title">
+					  	<a href="#item5" data-toggle="collapse"> Fenêtre modale</a> 
+						</h3>
+					</div>
+					<div id="item5" class="panel-collapse collapse">
+						<div class="panel-body">
+							Ce plugin permet de créer des fenêtres modales élégantes avec une grande simplicité.
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading"> 
+						<h3 class="panel-title">
+					  	<a href="#item6" data-toggle="collapse"> Carousel </a> 
+						</h3>
+					</div>
+					<div id="item6" class="panel-collapse collapse">
+						<div class="panel-body">
+							Ce plugin permet de faire défiler des images ou des vidéo, ou tout autre élément média avec une mise en forme esthétique
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="monaccordeon" class="panel-group col-lg-4">
+				<h3>Effet accordéon et une seule ouverture</h3>
+				<div class="panel panel-info">
+					<div class="panel-heading">         
+						<a href="#item7" class="panel-title" data-parent="#monaccordeon" data-toggle="collapse"> Accordéon 2</a>         
+					</div>
+					<div id="item7" class="panel-collapse collapse">
+						<div class="panel-body">
+							Ce plugin permet de créer des effets "accordéon" totalement paramétrables
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-info">
+					<div class="panel-heading"> 
+						<h3 class="panel-title">
+						<a href="#item8" data-parent="#monaccordeon" data-toggle="collapse"> Fenêtre modale </a> 
+						</h3>
+					</div>
+
+					<div id="item8" class="panel-collapse collapse">
+						<div class="panel-body">
+							Ce plugin permet de créer des fenêtres modales élégantes avec une grande simplicité.
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-info">
+					<div class="panel-heading"> 
+						<h3 class="panel-title">
+						<a href="#item9" data-parent="#monaccordeon" data-toggle="collapse"> Carousel </a> 
+						</h3>
+					</div>
+					<div id="item9" class="panel-collapse collapse">
+						<div class="panel-body">
+							Ce plugin permet de faire défiler des images ou des vidéo, ou tout autre élément média avec une mise en forme esthétique
+						</div>
+					</div>
+				</div>
+			</div>		
+				
+			<div class="col-lg-2">
+				<h3>Effet accordéon sur les listes</h3>
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+						<span id="icone" class="glyphicon glyphicon-folder-close"></span> <a data-toggle="collapse" href="#menu">Contenu</a>
+						</h4>
+					</div>
+					<ul id="menu" class="list-group collapse">
+						<li class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span> 
+							<a href="#">Articles</a>
+						</li>
+						<li class="list-group-item"><span class="glyphicon glyphicon-tag text-primary"></span> 
+							<a href="#">Nouvelles</a>
+						</li>
+						<li class="list-group-item"><span class="glyphicon glyphicon-file text-primary"></span> 
+							<a href="#">Lettre d'information</a>
+						</li>
+						<li class="list-group-item"><span class="glyphicon glyphicon-comment text-success"></span> 
+							<a class="text-success" href="#">Commentaires</a><span class="badge">28</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+				
+			<div class="col-lg-4">
+				<h3>Effet accordéon avec du JS</h3>
+				<div class="btn-group btn-group-justified" data-toggle="buttons">
+					<label class="btn btn-primary active" id="show">
+					<input type="radio" name="options">Show
+					</label>
+					<label class="btn btn-primary" id="hide">
+					<input type="radio" name="options">Hide
+					</label>
+					<label class="btn btn-primary" id="toggle">
+					<input type="radio" name="options">Toggle
+					</label>
+				</div>  
+				<div id="panlJS" class="panel panel-info">
+					<div class="panel-heading"> 
+					<h3 class="panel-title"> Je suis le titre de l'accordéon</h3>
+				</div>
+				<div class="panel-body">
+					Je suis le contenu de l'accordéon
+				</div>
+				</div>
+			</div>
+
+	</div>
+
+</body>
+
+<!-- fonctions javascript -->
+<script src="jquery/jquery-3.1.1.min.js"></script>	
+<script src="bootstrap/bootstrap.min.js"></script>		
+<script src="bootstrap/bootstrap-select.min.js"></script>	
+
+</html>

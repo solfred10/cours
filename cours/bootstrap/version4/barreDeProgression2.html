@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- On ouvre la fenêtre à la largeur de l'écran :width=device-width -->
+<title>Bootstrap - La barre de progression</title>
+
+<!-- Bootstrap -->	
+<link href="../../bootstrap/bootstrap.min.css" rel="stylesheet">	
+<link href="../../bootstrap/bootstrap-select.min.css" rel="stylesheet">		
+</head>
+
+<body>
+		
+	<div class="container" style="margin-left:0;">
+		<div class="row">	
+			<div class="col-lg-12">					
+				<h3>La barre de progression</h3>
+			</div>
+		</div>
+
+		<div class="row">	
+			<div class="col-lg-3">					
+				<div class="progress progress-striped active">
+					<div class="progress-bar"></div>
+				</div>
+				<div id="pourcentage" class="pull-right"></div>
+				<input type="button" class="btn btn-primary" id="animer" value="Animer">
+			</div>
+		</div>		
+	</div>
+
+	<!-- fonctions javascript -->
+	<script src="../../jquery/jquery-3.1.1.min.js"></script>	
+	<script src="../../bootstrap/bootstrap.min.js"></script>		
+	<script src="../../bootstrap/bootstrap-select.min.js"></script>	
+	<script type="text/javascript">
+		function timer(n) {
+			$(".progress-bar").css("width", n + "%");
+
+			$("#pourcentage").text(n + "%");
+			if(n < 100) {
+				setTimeout(function() {
+				timer(n + 10);
+				}, 1000);
+			}
+		}
+		$(function (){
+			$("#animer").click(function() {
+			timer(0);
+			});
+		});
+	</script>
+
+	
+</body>
+</html>

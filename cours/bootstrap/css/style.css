@@ -1,0 +1,15 @@
+.MT20 {
+	margin-top:20px;
+}
+
+.bordureGrise {
+	border: 1px solid grey;
+}
+
+.titre {
+	text-align: center;
+}
+
+.boutonBordure {
+	font-size: 8px;
+}

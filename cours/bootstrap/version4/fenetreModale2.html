@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- On ouvre la fenêtre à la largeur de l'écran :width=device-width -->
+<title>Bootstrap - La pagination 2</title>
+
+<!-- Bootstrap -->	
+<link href="bootstrap/bootstrap.min.css" rel="stylesheet">	
+<link href="bootstrap/bootstrap-select.min.css" rel="stylesheet">		
+</head>
+
+<body>
+		
+	<div class="container" style="margin-left:0;">
+		<div class="row">	
+			<div class="col-lg-12">					
+				<h3>LA PAGINATION</h3>
+			</div>
+		</div>
+
+		<div class="row">	
+			<div class="col-lg-6">					
+				<h3>Fenêtre modal</h3>
+				<button data-toggle="modal" href="#infos1" data-backdrop="true" class="btn btn-primary">Fenêtre1</button>
+				<button data-toggle="modal" href="#infos2" data-backdrop="true" class="btn btn-primary">Fenêtre2</button>
+				<button data-toggle="modal" href="#infos3" data-backdrop="true" class="btn btn-primary">Fenêtre3</button>
+
+				<div class="modal fade" id="infos1">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">x</button>
+								<h4 class="modal-title">Plus d'informations</h4>
+							</div>
+							
+							<div class="modal-body">
+								1ère fenêtre modal
+							</div>
+							
+							<div class="modal-footer">
+								<button class="btn btn-info" data-dismiss="modal">Fermer</button>
+							</div>
+						</div>	
+					</div>
+				</div>
+
+				<div class="modal fade" id="infos2">
+					<div class="modal-dialog modal-sm">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">x</button>
+								<h4 class="modal-title">Plus d'informations 2</h4>
+							</div>
+							
+							<div class="modal-body">
+								2e fenêtre modal dans une petite fenêtre
+							</div>
+							
+							<div class="modal-footer">
+								<button class="btn btn-info" data-dismiss="modal">Fermer</button>
+							</div>
+						</div>	
+					</div>
+				</div>
+
+				<div class="modal fade" id="infos3">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">x</button>
+								<h4 class="modal-title">Plus d'informations 3</h4>
+							</div>
+							
+							<div class="modal-body">
+								3e fenêtre modal dans une grande fenêtre
+							</div>
+							
+							<div class="modal-footer">
+								<button class="btn btn-info" data-dismiss="modal">Fermer</button>
+							</div>
+						</div>	
+					</div>
+				</div>							
+			</div>				
+		</div>		
+
+		<div class="row">
+			<div class="col-lg-12">				
+				<div class="alert alert-warning alert-dismissable col-lg-4">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					Hello world
+				</div>				
+			</div>				
+		</div>
+
+		<div class="row">
+			<div class="col-lg-12">				
+				<h3>Fenêtre modal avec chargement d'une page HTML</h3>
+				<button data-toggle="modal" href="pagination2.html" data-target="#toto" class="btn btn-primary">informations</button>
+				<div class="modal"  id="toto">
+					<div class="modal-dialog">  
+						<div class="modal-content"></div>  		
+					</div>
+				</div>				
+			</div>				
+		</div>
+
+	</div>
+
+	<!-- fonctions javascript -->
+	<script src="jquery/jquery-3.1.1.min.js"></script>	
+	<script src="bootstrap/bootstrap.min.js"></script>		
+	<script src="bootstrap/bootstrap-select.min.js"></script>	
+</body>
+</html>

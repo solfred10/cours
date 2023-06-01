@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="../../css/style.css" rel="stylesheet">
+
+	<title>JQUERY - Dimensions</title>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="row MT20">	
+			<div class="col-xl-12 titre">
+                <a href="accueil.html">
+				<img src="../../images/icones/iconeJquery.png">
+                </a>
+			</div>
+		</div>		
+
+		<div class="row MT20">	
+			<div class="col-xl-12 titre">	
+				<h1>LES DIMENSIONS</h1>
+			</div>
+		</div>	
+		
+		<div class="row MT20">	
+			<div class="col-xl-4">	
+				<div class="borderGrey divDimension titre" id="divDimension">
+					Width: 300px<br />
+					Height:200px<br/>			
+					Padding:20px<br/><br/>
+					Dimensensions<br /> sans padding ni bordure
+				</div>				
+				<div class="titre">						
+					<button class="button" id="boutonDimension">Afficher</button>					
+				</div>
+				<div class="titre" id="divEcriture">						
+					
+				</div>
+			</div>
+
+			<div class="col-xl-4">	
+				<div class="borderGrey divDimension titre" id="divDimensionInner">
+					Width: 300px<br />
+					Height:200px<br/>			
+					Padding:20px<br/><br/>
+					Dimensensions<br /> avec padding mais sans bordures				
+				</div>
+				<div class="titre">						
+					<button class="button" id="boutonDimensionInner">Afficher</button>					
+				</div>
+				<div class="titre" id="divEcritureInner">						
+					
+				</div>
+			</div>
+
+			<div class="col-xl-4">	
+				<div class="borderGrey divDimension titre" id="divDimensionOuter" >					
+					Width: 300px<br />
+					Height:200px<br/>			
+					Padding:20px<br/><br/>
+					Dimensensions<br /> avec padding et bordures	
+				</div>
+				<div class="titre">						
+					<button class="button" id="boutonDimensionOuter">Afficher</button>					
+				</div>
+				<div class="titre" id="divEcritureOuter">						
+					
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+		<div class="row MT20">	
+			<div class="col-xl-6">	
+				<h3>Position : Décalage par rapport <br>à son élément parent</h3>
+				<div class="borderGrey divDimension titre" >	
+					<div style="background-color: aqua;margin:1px;position:absolute" id="divPosition">					
+						Width: 300px<br />
+						Height:200px<br/>			
+						Padding:20px<br/><br/>
+						Dimensensions<br /> avec padding et bordures	
+					</div>				
+				</div>
+				<div class="titre">						
+					<button class="button" id="boutonPosition">Afficher</button>					
+				</div>
+				<div class="titre" id="divEcriturePosition">						
+					
+				</div>
+			</div>	
+
+			<div class="col-xl-6">	
+				<h3>Offset : Décalage par rapport<br>aux document</h3>
+				<div class="borderGrey divDimension titre"  >	
+					<div style="background-color: aqua;margin:20px" id="divPositionOffset">					
+						Width: 300px<br />
+						Height:200px<br/>			
+						Padding:20px<br/><br/>
+						Dimensensions<br /> avec padding et bordures	
+					</div>				
+				</div>
+				<div class="titre">						
+					<button class="button" id="boutonPositionOffset">Afficher</button>					
+				</div>
+				<div class="titre" id="divEcriturePositionOffset">						
+					
+				</div>
+			</div>	
+		</div>
+		
+	</div>	
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../../js/fonctionsJS.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link href="../../css/style.css" rel="stylesheet">
+	<title>Bootstrap - Les tableaux</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row MT20">	
+			<div class="titre" >				
+				<a href="accueil.html">
+					<img src="images/iconeBoostrap.png">
+				</a>					
+			</div>
+		</div>
+
+		<div class="row MT20">
+			<div class="titre">	
+				<h1>LES TABLEAUX</h1>
+			</div>
+		</div>	
+
+        <div class="row MT40">
+			<div class="col-lg-12">	
+				<h3>Les couleurs</h3>
+			</div>
+		</div>	
+	
+		<div class="row MT20">		
+			<div class="col-lg-2">
+				<h5>Fond</h5>
+				<table class="table table-bordered table-success">
+					<thead>
+						<tr>							
+							<th>Colonne 1</th>
+							<th>Colonne 2</th>							
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>							
+							<td>Item 1.1</td>
+							<td>Item 1.2</td>							
+						</tr>
+						<tr>							
+							<td>Item 2.1</td>
+							<td>Item 2.2</td>
+						</tr>	
+                        <tr>							
+							<td>Item 3.1</td>
+							<td>Item 3.2</td>
+						</tr>	
+                        <tr>							
+							<td>Item 4.1</td>
+							<td>Item 4.2</td>
+						</tr>	
+                        <tr>							
+							<td>Item 5.1</td>
+							<td>Item 5.2</td>							
+						</tr>
+						<tr>						
+							<td>Item 6.1</td>
+							<td>Item 6.2</td>
+						</tr>	
+                        <tr>							
+							<td>Item 7.1</td>
+							<td>Item 7.2</td>
+						</tr>	
+                        <tr>							
+							<td>Item 8.1</td>
+							<td>Item 8.2</td>
+						</tr>	
+
+					</tbody>
+				</table>
+			</div>	
+
+            <div class="col-lg-2">
+				<h5>Alternance ligne</h5>
+				<table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>							
+                            <th>Colonne 1</th>
+                            <th scope="col">Colonne 2</th>							
+                        </tr>
+                    </thead>
+
+					<tbody>
+						<tr>							
+							<td>Item 1.1</td>
+							<td>Item 1.2</td>							
+						</tr>
+						<tr>							
+							<td>Item 2.1</td>
+							<td>Item 2.2</td>
+						</tr>						
+						<tr>							
+							<td>Item 3.1</td>
+							<td>Item 3.2</td>
+						</tr>	                        
+                        <tr>							
+							<td>Item 4.1</td>
+							<td>Item 4.2</td>
+						</tr>
+                        <tr>							
+							<td>Item 5.1</td>
+							<td>Item 5.2</td>
+						</tr>
+                        <tr>							
+							<td>Item 6.1</td>
+							<td>Item 6.2</td>
+						</tr>
+                        <tr>							
+							<td>Item 7.1</td>
+							<td>Item 7.2</td>
+						</tr>		
+                        <tr>							
+							<td>Item 8.1</td>
+							<td>Item 8.2</td>
+						</tr>				
+					</tbody>
+				</table>
+			</div>			 
+
+			<div class="col-lg-2">
+				<h5>Alternance colonne</h5>
+				<table class="table table-bordered table-striped-columns">
+					<thead>
+						<tr>							
+							<th>Colonne 1</th>
+							<th scope="col">Colonne 2</th>							
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>							
+							<td>Item 1.1</td>
+							<td>Item 1.2</td>							
+						</tr>
+						<tr>							
+							<td>Item 2.1</td>
+							<td>Item 2.2</td>
+						</tr>						
+						<tr>							
+							<td>Item 3.1</td>
+							<td>Item 3.2</td>
+						</tr>
+                        <tr>							
+							<td>Item 4.1</td>
+							<td>Item 4.2</td>
+						</tr>
+                        <tr>							
+							<td>Item 5.1</td>
+							<td>Item 5.2</td>
+						</tr>
+                        <tr>							
+							<td>Item 6.1</td>
+							<td>Item 6.2</td>
+						</tr>
+                        <tr>							
+							<td>Item 7.1</td>
+							<td>Item 7.2</td>
+						</tr>
+                        <tr>							
+							<td>Item 8.1</td>
+							<td>Item 8.2</td>
+						</tr>						
+					</tbody>
+				</table>
+			</div>
+
+			<div class="col-lg-2">
+				<h5>Lignes</h5>
+				<table class="table table-bordered">
+					<thead>
+						<tr>							
+							<th>Colonne 1</th>
+							<th>Colonne 2</th>                           
+						</tr>
+					</thead>
+
+					<tbody>
+                        <tr class="table-danger">							
+							<td colspan="3">Class table-danger</td>							                            
+						</tr>
+						<tr class="table-dark">							
+							<td colspan="3">Class table-dark</td>							                            
+						</tr>
+                        <tr class="table-info">							
+							<td colspan="3">Class table-info</td>							                            
+						</tr>
+                        <tr class="table-light">							
+							<td colspan="3">Class table-light</td>							                            
+						</tr>
+                        <tr class="table-primary">							
+							<td colspan="3">Class table-primary</td>							                            
+						</tr>
+                        <tr class="table-secondary">							
+							<td colspan="3">Class table-secondary</td>							                            
+						</tr>
+                        <tr class="table-success">							
+							<td colspan="3">Class table-success</td>							                            
+						</tr>                        
+                        <tr class="table-warning">							
+							<td colspan="3">Class table-warning</td>							                            
+						</tr>				
+					</tbody>
+				</table>
+			</div>
+
+			<div class="col-lg-4">
+				<h5>Cellules</h5>
+				<table class="table table-bordered">
+					<thead>
+						<tr>							
+							<th>Colonne 1</th>
+							<th>Colonne 2</th>							
+						</tr>
+					</thead>
+
+					<tbody>
+                        <tr>														
+							<th class="table-danger">Class table-danger</th>							
+                            <th class="table-dark">Class table-dark</th>
+						</tr>
+                        <tr>							
+							<td class="table-info">Class table-info</td>
+							<th class="table-light">Class table-light</th>							
+						</tr>
+						<tr>		
+							<td class="table-primary">Class table-primary</td>							
+                            <td class="table-secondary">Class table-secondary</td>							
+						</tr>
+						<tr>							
+							<td class="table-success">Class table-success</td>
+							<td class="table-warning">Class table-warning</td>
+						</tr>						
+					</tbody>
+				</table>
+			</div>
+		</div>	
+
+        <hr>
+
+        <div class="row MT20">	
+			<div class="col-lg-12">
+                <h3>Les bordures</h3>
+            </div>
+        </div>    
+
+		<div class="row MT20">	
+			<div class="col-lg-3">
+				<h5>Sans bordure</h5>
+				<table class="table table-borderless">
+				    <thead>
+						<tr>							
+							<th>Colonne 1</th>
+							<th>Colonne 2</th>							
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>							
+							<td>Item 1.1</td>
+							<td>Item 1.2</td>							
+						</tr>
+						<tr>							
+							<td>Item 2.1</td>
+							<td>Item 2.2</td>
+						</tr>						
+						<tr>							
+							<td>Item 3.1</td>
+							<td>Item 3.2</td>
+						</tr>						
+					</tbody>
+				</table>
+			</div>
+
+			<div class="col-lg-3">
+				<h5>Avec bordures</h5>
+				<table class="table table-bordered">
+				    <thead>
+						<tr>							
+							<th>Colonne 1</th>
+							<th scope="col">Colonne 2</th>							
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>							
+							<td>Item 1.1</td>
+							<td>Item 1.2</td>							
+						</tr>
+						<tr>							
+							<td>Item 2.1</td>
+							<td>Item 2.2</td>
+						</tr>						
+						<tr>							
+							<td>Item 3.1</td>
+							<td>Item 3.2</td>
+						</tr>						
+					</tbody>
+				</table>
+			</div>
+
+			<div class="col-lg-3">
+				<h5>Bordures colorées</h5>
+				<table class="table table-bordered border-danger">
+				    <thead>
+						<tr>							
+							<th>Colonne 1</th>
+							<th scope="col">Colonne 2</th>							
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>							
+							<td>Item 1.1</td>
+							<td>Item 1.2</td>							
+						</tr>
+						<tr>							
+							<td>Item 2.1</td>
+							<td>Item 2.2</td>
+						</tr>						
+						<tr>							
+							<td>Item 3.1</td>
+							<td>Item 3.2</td>
+						</tr>						
+					</tbody>
+				</table>
+			</div>
+
+			<div class="col-lg-3">
+				<h5>bordure d'entête</h5>
+				<table class="table">
+				    <thead>
+						<tr>							
+							<th>Colonne 1</th>
+							<th>Colonne 2</th>							
+						</tr>
+					</thead>
+
+					<tbody class="table-group-divider">
+						<tr>							
+							<td>Item 1.1</td>
+							<td>Item 1.2</td>							
+						</tr>
+						<tr>							
+							<td>Item 2.1</td>
+							<td>Item 2.2</td>
+						</tr>						
+						<tr>							
+							<td>Item 3.1</td>
+							<td>Item 3.2</td>
+						</tr>						
+					</tbody>
+				</table>
+			</div>
+		</div>	
+
+        <hr>
+
+		<div class="row MT20">		
+			<div class="col-lg-3">
+				<h5>Tableau petit</h5>
+				<table class="table table-bordered table-sm">
+				    <thead>
+				    	<tr>							
+							<th>Colonne 1</th>
+							<th scope="col">Colonne 2</th>							
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>							
+							<td>Item 1.1</td>
+							<td>Item 1.2</td>							
+						</tr>
+						<tr>							
+							<td>Item 2.1</td>
+							<td>Item 2.2</td>
+						</tr>						
+						<tr>							
+							<td>Item 3.1</td>
+							<td>Item 3.2</td>
+						</tr>						
+					</tbody>
+				</table>
+			</div>		
+
+            <div class="col-lg-3">
+				<h5>Tableau moyen</h5>
+				<table class="table table-bordered table-md">
+				    <thead>
+				    	<tr>							
+							<th>Colonne 1</th>
+							<th scope="col">Colonne 2</th>							
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>							
+							<td>Item 1.1</td>
+							<td>Item 1.2</td>							
+						</tr>
+						<tr>							
+							<td>Item 2.1</td>
+							<td>Item 2.2</td>
+						</tr>						
+						<tr>							
+							<td>Item 3.1</td>
+							<td>Item 3.2</td>
+						</tr>						
+					</tbody>
+				</table>
+			</div>		
+            
+            <div class="col-lg-3">
+				<h5>Tableau grand (n'existe pas)</h5>
+				<table class="table table-bordered table-lg">
+				    <thead>
+				    	<tr>							
+							<th>Colonne 1</th>
+							<th scope="col">Colonne 2</th>							
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>							
+							<td>Item 1.1</td>
+							<td>Item 1.2</td>							
+						</tr>
+						<tr>							
+							<td>Item 2.1</td>
+							<td>Item 2.2</td>
+						</tr>						
+						<tr>							
+							<td>Item 3.1</td>
+							<td>Item 3.2</td>
+						</tr>						
+					</tbody>
+				</table>
+			</div>	
+        </div>	  
+
+        <hr>
+
+        <div class="row MT20">	  
+            <div class="col-lg-3">
+				<h5>Table hover</h5>
+				<table class="table table-bordered table-hover">
+				    <thead>
+						<tr>							
+							<th>Colonne 1</th>
+							<th scope="col">Colonne 2</th>							
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>							
+							<td>Item 1.1</td>
+							<td>Item 1.2</td>							
+						</tr>
+						<tr>							
+							<td>Item 2.1</td>
+							<td>Item 2.2</td>
+						</tr>						
+						<tr>							
+							<td>Item 3.1</td>
+							<td>Item 3.2</td>
+						</tr>						
+					</tbody>
+				</table>
+			</div>
+
+			<div class="col-lg-3">
+				<h5>Légende en bas</h5>
+				<table class="table table-bordered caption-bottom">
+				<caption>Exemple de tableau</caption>					
+				    <thead>
+						<tr>							
+							<th>Colonne 1</th>
+							<th>Colonne 2</th>							
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>							
+							<td>Item 1.1</td>
+							<td>Item 1.2</td>							
+						</tr>
+						<tr>							
+							<td>Item 2.1</td>
+							<td>Item 2.2</td>
+						</tr>						
+						<tr>							
+							<td>Item 3.1</td>
+							<td>Item 3.2</td>
+						</tr>						
+					</tbody>					
+				</table>
+			</div>		
+
+			<div class="col-lg-3">
+				<h5>Légende en haut</h5>
+				<table class="table table-bordered caption-top">
+					<caption>Exemple de tableau</caption>					
+					<thead>
+						<tr>							
+							<th>Colonne 1</th>
+							<th>Colonne 2</th>							
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>							
+							<td>Item 1.1</td>
+							<td>Item 1.2</td>							
+						</tr>
+						<tr>							
+							<td>Item 2.1</td>
+							<td>Item 2.2</td>
+						</tr>						
+						<tr>							
+							<td>Item 3.1</td>
+							<td>Item 3.2</td>
+						</tr>						
+					</tbody>					
+				</table>
+			</div>
+
+            <div class="col-lg-3">
+				<h5>Alignement dans les cellules</h5>
+				<table class="table table-bordered">
+					<thead>
+						<tr>							
+							<th>Colonne 1</th>
+							<th>Colonne 2</th>							
+						</tr>
+					</thead> 
+					<tbody>
+						<tr class="align-top">							
+							<td>Item 1.1<br>Item 1.1<br>Item 1.1</td>
+							<td>Class align-top</td>							
+						</tr>
+						<tr class="align-middle">							
+							<td>Item 2.1<br>Item 2.1<br>Item 2.1</td>
+							<td>Class align-middle</td>
+						</tr>						
+						<tr class="align-bottom">							
+							<td>Item 3.1<br>Item 3.1<br>Item 3.1</td>
+							<td>Class align-bottom</td>
+						</tr>						
+					</tbody>					
+				</table>
+			</div>	
+		</div>	
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

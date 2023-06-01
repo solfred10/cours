@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<title>CSS 3 - Flexbox</title>
+
+	<style type="text/css">
+		#conteneur1 {
+			display:flex;
+			background-color:#666 ;
+			flex-direction:row; /*valeur de base*/
+			height:200px;
+		}
+
+		.element1 {
+			background-color:#04559F ;
+			color:#fff
+		}
+
+		.element2 {
+			background-color:#188AC1 ;
+		}
+
+		.element3 {
+			background-color:#3CA6CC ;
+		}
+
+		.element4 {
+			background-color:#04559F ;
+			color:#fff;
+			height:100px;
+		}
+
+		.element5 {
+			background-color:#188AC1 ;
+			height:100px;
+		}
+
+		.element6 {
+			background-color:#3CA6CC ;
+			height:100px;
+		}
+
+		.element7 {
+			background-color:#04559F ;
+			color:#fff;	
+		}
+
+		.element8 {
+			background-color:#188AC1 ;			
+		}
+
+		.element9 { 
+			background-color:#3CA6CC ;
+		}
+
+		#conteneur2 {
+			display:flex;
+			flex-direction:row-reverse;
+			background-color:#666 ;
+			height:200px;
+		}
+
+		#conteneur3 {
+			display:flex;
+			flex-direction:column;
+			background-color:#666 ;
+			height:200px;
+		}
+
+		#conteneur4 {
+			display:flex;
+			flex-direction:column-reverse;
+			background-color:#666 ;
+			height:200px;
+		}
+
+		#conteneur5 {
+			display:flex;
+			flex-direction:row;
+			flex-wrap:nowrap;
+			background-color:#666 ;
+			height:200px;
+		}
+
+		#conteneur6 {
+			display:flex;
+			flex-direction:row;
+			flex-wrap:wrap;
+			background-color:#666 ;
+			height:200px;
+		}
+
+		#conteneur7 {
+			display:flex;
+			flex-direction:row;
+			flex-wrap:wrap-reverse;
+			background-color:#666 ;
+			height:200px;
+		}
+
+		#conteneur8-1 {
+			display:flex;
+			justify-content:flex-start;
+			background-color:#666 ;
+			height:200px;
+		}
+
+        #conteneur8-2 {
+			display:flex;
+			justify-content:center;
+			background-color:#666 ;
+			height:200px;
+		}
+
+		#conteneur9 {
+			display:flex;
+			justify-content:flex-end;
+			background-color:#666 ;
+			height:200px;
+		}
+
+		#conteneur10 {
+			display:flex;
+			justify-content:space-between;
+			background-color:#666 ;
+			height:200px;
+		}
+
+		#conteneur11-1 {
+			display:flex;
+			justify-content:space-around;
+			background-color:#666 ;
+			height:200px;
+		}
+
+        #conteneur11-2 {
+			display:flex;
+			justify-content:space-evenly;
+			background-color:#666 ;
+			height:200px;
+		}
+
+		#conteneur12 {
+			display:flex;
+			justify-content:center;
+			align-items:flex-start ;
+			background-color:#666 ;
+			height:200px;
+		}
+
+		#conteneur13 {
+			display:flex;
+			justify-content:center;
+			align-items:center ;
+			background-color:#666 ;
+			height:200px;
+		}
+
+		#conteneur14 {
+			display:flex;
+			justify-content:center;
+			align-items:flex-end ;
+			background-color:#666 ;
+			height:200px;
+		}
+
+		#conteneur15 {
+			display:flex;
+			justify-content:center;
+			align-items:stretch ;
+			background-color:#666 ;
+			height:200px;
+		}
+
+		#conteneur16 {
+			display:flex;
+			justify-content:center;
+			align-items:baseline  ;
+			background-color:#666 ;
+			height:200px;
+		}
+	</style>
+
+</head>
+<body>
+		
+	<div class="container">
+		<div class="row MT20">	
+			<div class="col-xl-12 titre">	
+				<a href="accueil.html">				
+					<img src="images/iconeCSS.png">
+				</a>	
+			</div>
+		</div>		
+
+		<div class="row MT20">	
+			<div class="col-xl-12 titre">				
+				<h1>FLEX BOX</h1>
+			</div>
+		</div>		
+
+		<div class="row MT40">	
+			<h3>Flex-direction</h3>
+		</div>	
+
+		<div class="row">	
+			<div class="col-xl-3">
+				<h5>Row</h5>
+				<div id="conteneur1">	
+					<div class="element1 padding10">Elt1</div>
+					<div class="element2 padding10">Elt2</div>
+					<div class="element3 padding10">Elt3</div>
+				</div>
+			</div>
+
+			<div class="col-xl-3">
+				<h5>Row reverse</h5>		
+				<div id="conteneur2">	
+					<div class="element1 padding10">Elt1</div>
+					<div class="element2 padding10">Elt2</div>
+					<div class="element3 padding10">Elt3</div>
+				</div>							
+			</div>		
+		
+			<div class="col-xl-3">
+				<h5>Column</h5>		
+				<div id="conteneur3">	
+					<div class="element1 padding10">Elt1</div>
+					<div class="element2 padding10">Elt2</div>
+					<div class="element3 padding10">Elt3</div>
+				</div>
+			</div>
+		
+			<div class="col-xl-3">
+				<h5>Column reverse</h5>		
+				<div id="conteneur4">	
+					<div class="element1 padding10">Elt1</div>
+					<div class="element2 padding10">Elt2</div>
+					<div class="element3 padding10">Elt3</div>
+				</div>			
+			</div>
+		</div>
+
+        <hr>
+
+		<div class="row MT20">	
+			<h3>Flex-wrap</h3>
+		</div>	
+
+		<div class="row">
+			<div class="col-xl-3">	
+                <h5>Nowrap</h5>		
+                <div id="conteneur5">	
+                    <div class="element1 padding10">Elt1 Elt1 Elt1 Elt1 </div>
+                    <div class="element2 padding10">Elt2 Elt2 </div>
+                    <div class="element3 padding10">Elt3 Elt3 Elt3 Elt3</div>
+                </div>					
+		    </div>					
+	
+            <div class="col-xl-3">
+                <h5>Wrap</h5>
+                <div id="conteneur6">	
+                    <div class="element1 padding10">Elt1 Elt1 Elt1 Elt1</div>
+                    <div class="element2 padding10">Elt2 Elt2 </div>
+                    <div class="element3 padding10">Elt3 Elt3 Elt3 Elt3</div>
+                </div>
+            </div>
+            
+            <div class="col-xl-3">
+                <h5>Wrap-reverse</h5>
+                <div id="conteneur7">	
+                    <div class="element1 padding10">Elt1 Elt1 Elt1 Elt1</div>
+                    <div class="element2 padding10">Elt2 Elt2 </div>
+                    <div class="element3 padding10">Elt3 Elt3 Elt3 Elt3</div>
+                </div>			
+            </div>
+		</div>
+
+        <hr>
+
+		<div class="row MT20">	
+			<h3>Justify Content</h3>
+		</div>	
+
+        <div class="row">
+            <div class="col-xl-3">		
+                <h5>Flex-start</h5>		
+                <div id="conteneur8-1">	
+                    <div class="element4 padding10">Elt1</div>
+                    <div class="element5 padding10">Elt2</div>
+                    <div class="element6 padding10">Elt3</div>
+                </div>	
+            </div>    
+            
+            <div class="col-xl-3">
+                <h5>Center</h5>
+                <div id="conteneur8-2">	
+                    <div class="element4 padding10">Elt1</div>
+                    <div class="element5 padding10">Elt2</div>
+                    <div class="element6 padding10">Elt3</div>
+                </div>					
+            </div>					
+            
+            <div class="col-xl-3">
+                <h5>Flex-end</h5>
+                <div id="conteneur9">	
+                    <div class="element4 padding10">Elt1</div>
+                    <div class="element5 padding10">Elt2</div>
+                    <div class="element6 padding10">Elt3</div>
+                </div>
+            </div>	
+        </div>    
+
+        <div class="row MT20">		
+            <div class="col-xl-3">		
+                <h5>Space-between</h5>
+                <div id="conteneur10">	
+                    <div class="element4 padding10">Elt1</div>
+                    <div class="element5 padding10">Elt2</div>
+                    <div class="element6 padding10">Elt3</div>
+                </div>			
+            </div>
+
+            <div class="col-xl-3">		
+                <h5>Space-around</h5>
+                <div id="conteneur11-1">	
+                    <div class="element4 padding10">Elt1</div>
+                    <div class="element5 padding10">Elt2</div>
+                    <div class="element6 padding10">Elt3</div>
+                </div>	
+            </div>
+
+            <div class="col-xl-3">		
+                <h5>Space-evenly</h5>
+                <div id="conteneur11-2">	
+                    <div class="element4 padding10">Elt1</div>
+                    <div class="element5 padding10">Elt2</div>
+                    <div class="element6 padding10">Elt3</div>
+                </div>	
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row MT20">	
+            <h3>Align items</h3>
+        </div>	
+
+        <div class="row">
+            <div class="col-xl-3">
+                <h5>flex-start</h5>
+                <div id="conteneur12">	
+                    <div class="element7 padding10">Elt1</div>
+                    <div class="element8 padding10">Elt2</div>
+                    <div class="element9 padding10">Elt3</div>
+                </div>					
+            </div>					
+            
+            <div class="col-xl-3">	
+                <h5>center</h5>
+                <div id="conteneur13">	
+                    <div class="element7 padding10">Elt1</div>
+                    <div class="element8 padding10">Elt2</div>
+                    <div class="element9 padding10">Elt3</div>
+                </div>
+            </div>
+            
+            <div class="col-xl-3">
+                <h5>flex-end</h5>
+                <div id="conteneur14">	
+                    <div class="element7 padding10">Elt1</div>
+                    <div class="element8 padding10">Elt2</div>
+                    <div class="element9 padding10">Elt3</div>
+                </div>			
+            </div>
+        </div>
+            
+        <div class="row MT20 MB50">		
+            <div class="col-xl-3">
+                <h5>stretch</h5>		
+                <div id="conteneur15">	
+                    <div class="element7 padding10">Elt1</div>
+                    <div class="element8 padding10">Elt2</div>
+                    <div class="element9 padding10">Elt3</div>
+                </div>			
+            </div>
+            
+            <div class="col-xl-3">
+                <h5>baseline</h5>
+                <div id="conteneur16">	
+                    <div class="element7 padding10">Elt1 Elt1 Elt1 Elt1 Elt1 Elt1</div>
+                    <div class="element8 padding10">Elt2</div>
+                    <div class="element9 padding10">Elt3</div>
+                </div>			
+            </div>
+        </div>
+    </div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
