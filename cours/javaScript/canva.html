@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" href="jquery-ui-1-13-2/jquery-ui.min.css">
+	<link href="../../css/style.css" rel="stylesheet">
+	<title>CSS 3 - Canva</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row MT20">	
+			<div class="col-xl-12 titre">		
+				<a href="../index.php">
+					<img src="../../images/icones/iconeJavascript.png">
+				</a>	
+			</div>
+		</div>	
+
+		<div class="row MT40">
+			<div class="col-xl-12 titre">	
+				<h1>LES CANVAS</h1>
+			</div>
+		</div>	        
+		
+
+		<div class="row MT20">
+			<div class="col-xl-3">
+				<h4>Rectangle rempli</h4>		
+				<canvas id="rectangleRempli" class="titre">
+					
+				</canvas>
+        	</div>   
+
+			<div class="col-xl-3">
+				<h4>Rectangle avec bordure</h4>		
+				<canvas id="rectangleBordure" class="titre">
+					
+				</canvas>
+        	</div>   
+
+			<div class="col-xl-3">
+				<h4>Triangle rempli</h4>		
+				<canvas id="triangleRempli" class="titre">
+					
+				</canvas>
+        	</div>   
+
+			<div class="col-xl-3">
+				<h4>Triangle avec bordure</h4>		
+				<canvas id="triangleBordure" class="titre">
+					
+				</canvas>
+        	</div> 
+		</div>   
+
+		<div class="row">
+			<div class="col-xl-3">
+				<h4>Cercle rempli</h4>		
+				<canvas id="cercleRempli" class="titre">
+					
+				</canvas>
+        	</div>   
+
+			<div class="col-xl-3">
+				<h4>Cercle avec bordure</h4>		
+				<canvas id="cercleBordure" class="titre">
+					
+				</canvas>
+        	</div>   
+
+			<div class="col-xl-3">
+				<h4>Arc de cercle rempli</h4>		
+				<canvas id="arcDeCercleRempli" class="titre">
+					
+				</canvas>
+        	</div>   
+
+			<div class="col-xl-3">
+				<h4>Arc de cercle bordure</h4>		
+				<canvas id="arcDeCercleBordure" class="titre">
+					
+				</canvas>
+        	</div> 
+		</div>  
+
+		<div class="row">
+			<div class="col-xl-3">	
+				<h3>Agrandissement</h3>
+				<br />
+				<canvas id="agrandissement" width="400" >			
+				</canvas>
+			</div>	
+			
+			<div class="col-xl-3">	
+				<h3>Translation</h3>
+				<br />
+				<canvas id="translationManuel" width="400">			
+				</canvas>
+			</div>	
+			
+			<div class="col-xl-3">	
+				<h3>Rotation</h3>
+				<br />
+				<canvas id="rotation" width="400">			
+				</canvas>
+			</div>	
+		</div>
+
+		<div class="row">
+			<div class="col-xl-12 titre">	
+				<h3>Les animations</h3>
+			</div>
+		</div>			
+
+		<div class="row">
+			<div class="col-xl-3">	
+				<h3>Rotation</h3>
+				<br />
+				<canvas id="animationRotation">			
+				</canvas>
+			</div>	
+			
+			<div class="col-xl-3">	
+				<h3>Translation</h3>
+				<br />
+				<canvas id="animationTranslation">			
+				</canvas>
+			</div>	
+			
+		</div>
+
+	</div>	
+
+
+	<script src="jquery-ui-1-13-2/external/jquery/jquery.js"></script>
+	<script src="jquery-ui-1-13-2/jquery-ui.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<script>
+		var rectangleRempli = document.getElementById('rectangleRempli');    
+		var rectangleBordure = document.getElementById('rectangleBordure');    
+		var triangleRempli = document.getElementById('triangleRempli');    
+		var triangleBordure = document.getElementById('triangleBordure');    
+		var cercleRempli = document.getElementById('cercleRempli');    
+		var cercleBordure = document.getElementById('cercleBordure');   
+		var arcDeCercleRempli = document.getElementById('arcDeCercleRempli');   
+		var arcDeCercleBordure = document.getElementById('arcDeCercleBordure');   
+		var etoileleRempli = document.getElementById('etoileleRempli');    
+		var etoileleBordure = document.getElementById('etoileleBordure');  
+		
+		var agrandissement = document.getElementById('agrandissement');  
+		var translationManuel = document.getElementById('translationManuel');  
+		var rotation = document.getElementById('rotation');  
+
+		var animationRotation = document.getElementById('animationRotation');  
+		var animationTranslation = document.getElementById('animationTranslation');  
+		var doubleAnimation = document.getElementById('doubleAnimation');  
+		
+
+		/*
+		Les méthode FILLRECT et STROKERECT prend en paramètre 4 arguments : 
+		1er argument : Position en X
+		2e argument : Position en Y
+		3e argument : La longueur
+		4e argument : La hauteur
+		
+		La méthode ARC prend en paramètre 6 arguments : 
+		1er argument : Position en X
+		2e argument : Position en Y
+		3e argument : Rayon
+		4e argument : L'ange initiale
+		5e argument : Angle finale
+		6e argument : Horaire ou antihoraire (true ou false)
+		*/
+
+		if (rectangleRempli.getContext) {	
+			var context1 = rectangleRempli.getContext('2d');
+			context1.fillStyle = "#0000ff";
+			context1.fillRect(0,0,200,50);
+		}
+
+		if (rectangleBordure.getContext) {	
+			var context2 = rectangleBordure.getContext('2d');
+			context1.fillStyle = "#0000ff";
+			context2.strokeRect(1,1,200,50);
+		}
+
+		if (triangleRempli.getContext) {
+			var context3 = triangleRempli.getContext("2d");	
+			context3.fillStyle= "green" ; //couleur du trait
+			context3.lineWidth= 2 ; //épaisseur du trait
+			context3.beginPath(); //début du tracé
+			context3.moveTo(50,0); //position du position du point de départ
+			context3.lineTo(0,100); //Position du 2e point
+			context3.lineTo(100,100); //Position du 3e point
+			context3.closePath(); //fermeture du tracé   
+			context3.fill(); //On déssine le trajet
+		}
+
+		if (triangleBordure.getContext) {
+			var context4 = triangleBordure.getContext("2d");	
+			context4.strokeStyle= "red" ; //couleur du trait
+			context4.lineWidth= 3 ; //épaisseur du trait
+			context4.beginPath(); //début du tracé
+			context4.moveTo(50,0); //position du position du point de départ
+			context4.lineTo(0,100); //Position du 2e point
+			context4.lineTo(100,100); //Position du 3e point
+			context4.closePath(); //fermeture du tracé   
+			context4.stroke(); //On déssine le trajet
+		}
+
+		if (cercleRempli.getContext) {		
+			var context5 = cercleRempli.getContext("2d");	
+			context5.fillStyle="yellow" ;
+			context5.arc(66, 66, 50, 0, 2 * Math.PI, false);
+			context5.fill();	
+		}
+
+		if (cercleBordure.getContext) {		
+			var context6 = cercleBordure.getContext("2d");	
+			context6.strokeStyle="red" ;
+			context6.lineWidth= 3 ; //épaisseur du trait
+			context6.arc(100, 66, 50, 0, 2 * Math.PI, false);
+			context6.stroke();	
+		}
+
+		if (arcDeCercleRempli.getContext) {		
+			var context7 = arcDeCercleRempli.getContext("2d");	
+			context7.fillStyle="yellow" ;
+			context7.arc(66, 66, 50, 0,  Math.PI, false);
+			context7.fill();	
+		}
+
+		if (arcDeCercleBordure.getContext) {		
+			var context8 = arcDeCercleBordure.getContext("2d");	
+			context8.strokeStyle="blue" ;
+			context8.arc(66, 66, 50, 0,  Math.PI/2, false);
+			context8.stroke();	
+		}
+
+		if (agrandissement.getContext) {	
+			var context9 = agrandissement.getContext('2d');
+			context9.strokeStyle = "#000000";	
+			context9.strokeRect(0,0,100,50);
+			context9.scale(2,2);
+			context9.strokeRect(0,0,100,50); /* Ce rectangle fera 200px de long par 100px de haut */
+		}
+
+		if (translationManuel.getContext) {	
+			var context10 = translationManuel.getContext('2d');
+			context10.fillStyle = "#ff0000" ;
+			context10.fillRect(0,0,50,25);
+			context10.translate(55,30);
+			context10.fillRect(0,0,50,25);	
+		}
+
+		if (rotation.getContext) {	
+			var context11 = rotation.getContext('2d');
+			context11.fillStyle="#ff0000" ;
+			context11.fillRect(0,0,100,50) ;	
+			context11.fillStyle="#000fff" ;
+			//context11.save() ;
+			context11.translate(50,0); /* On déplace le point d'origine */
+			context11.rotate(45 * Math.PI/180);  /* On effectue une rotation de 45° */
+			context11.fillRect(0,0,100,50) ; /*On trace un rectangle depuis le nouveau point d'origine qui est en (50,0)*/
+			context11.restore() ;	
+			context11.restore() ;	
+		}
+
+		//Animation roatation
+		if (animationRotation.getContext){
+			var context12 = animationRotation.getContext('2d');
+			/* dessin */
+			context12.fillStyle = "green";
+			/* translation au centre */
+			context12.translate(animationRotation.width/2,animationRotation.height/2);
+			/* incrément */
+			var i = 0;
+			/* timer */
+			var intervalRotation = setInterval(doRotation, 100);    
+		} 		
+
+		function doRotation() {
+			context12.rotate(0.5);
+			/* dessin */
+			context12.fillRect(0, 0, 50, 5);
+			i++;
+			if(i>11) clearInterval(intervalRotation);
+		}
+
+		//Animation translation
+		if (animationTranslation.getContext) {
+			context13 = animationTranslation.getContext('2d');
+			context13.fillStyle="#000" ;
+			context13.fillRect(0,0,50,10) ;
+			var intervalTranslation = setInterval(doTranslation,500) ;
+			var j = 1 ;
+		}
+
+		function doTranslation() {
+			if(j>5) {
+				clearInterval(intervalTranslation);
+			}
+			else {
+				context13.clearRect(0,0,animationTranslation.width,animationTranslation.height) ; /*on efface le rectangle dessiné précédement*/
+				context13.translate(5,5) ; /*On effectue la translation du contexte. */		
+				context13.fillRect(0,0,50,10) ; /*On dessine le nouveau rectangle*/
+				j++;
+			}
+		}
+ 
+		
+	</script>
+
+
+</body>
+
+</html>
