@@ -1,269 +1,537 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
-	<title>CSS 3 - Les pseudos classes</title>
-
-	<style type="text/css">		       
-        input:checked {
-           height:30px;
-           width:30px;    
-        }
-
-        input[type="text"]:disabled {
-           background-color: lightgrey;                  
-        }
-
-        input[type="text"]:focus {
-           background-color: lightgreen;                  
-        }
-
-        .divFirstChild p:first-child {
-            background-color: yellow;
-        }
-
-        .divLastChild p:last-child {
-            background-color: lightcoral;
-        }
-
-        /*first-of-type correspond à chaque élément qui est le premier enfant, d'un type particulier, de son parent.*/
-        span.firstType:first-of-type {
-            background-color: red;
-        }
-
-         /*last-of-type correspond à chaque élément qui est le dernier enfant, d'un type particulier, de son parent.*/
-        span.lastType:last-of-type {
-            background-color: green;
-        }
-        
-        /*on sélectionne tous les paragraphe impaire */
-        div.nthChild p:nth-child(odd) {
-            background: lightblue;
-        }
-        
-        /*on sélectionne tous les paragraphes paires */
-        div.nthChild p:nth-child(even) {
-            background: darkblue;
-            color:white
-        }     
-
-        /*2e élément d'une liste*/
-        li:nth-child(2) {
-            background: lightgreen;
-        }
-
-        .nthChild, .onlyType, .onlyChild {
-            border:1px solid #000;
-            padding:5px;
-            margin-bottom:15px
-        }
-
-        /*
-        Si on a une seul balise p dans un div alors on appliquera le CSS, 
-        S’il y a 2 balises p dans une div alors on n’appliquera pas le CSS.
-        S’il y a 1 balises p et une balise span dans une div alors on appliquera le CSS
-        */
-        div.onlyType p:only-of-type {
-            background: #ff0000;
-        }
-
-        /*
-        Si on a une seul enfant dans un div alors on appliquera le CSS
-        S’il y a 2 balises p dans une div : alors on n’appliquera pas le CSS        
-        S’il y a une balise p et une balise span alors on n'appliquera pas le CSS
-        */
-        div.onlyChild p:only-child {
-            background: #ff0000;
-        }
-
-        input:out-of-range {
-            border: 2px solid red;
-        }
-	</style>
-
-</head>
-<body>
-		
-	<div class="container">
-		<div class="row MT20">	
-			<div class="col-xl-12 titre">				
-				<a href="accueil.html">	
-					<img src="images/iconeCSS.png">
-				</a>
-			</div>
-		</div>	
-		
-		<div class="row MT20">
-			<div class="col-xl-12 titre">	
-				<h1>LES PSEUDOS CLASSES</h1>
-			</div>
-		</div>		
-
-        <div class="row MT40">    
-            <div class="col-lg-4">
-                <h3>Checked</h3>
-                <i>input:checked</i>        
-                <br>
-                <input type="checkbox" name="valeur1" id="valeur1"/>valeur1       
-                <input type="checkbox" name="valeur2" id="valeur2" />valeur2       
-                <br>
-                <input type="radio" name="valeur3" id="valeur3" />valeur3       
-                <input type="radio" name="valeur3" id="valeur4" />valeur4
-            </div>
-            <div class="col-lg-4">
-                <h3>Disabled</h3>      
-                <i>input[type="text"]:disabled</i>   
-                <br>
-                Nom : <input type="text" name="nom" id="nom" disabled/>                       
-            </div>  
-
-            <div class="col-lg-4">
-                <h3>Focus</h3>         
-                <i>input[type="text"]:focus</i>
-                <br>
-                Nom : <input type="text" name="nom" id="nom"/>   
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="row MT20">    
-            <div class="col-lg-3 divLightBlue2 divFirstChild">
-                <h3>First child</h3>                 
-                <p>Ce paragraphe est le 1er paragraphe de la div avec le fond bleu mais pas le 1er enfant </p> <!-- n'appraitra pas en jaune car on a une balise h3 avant. S'il n'y avait pas eu la balise h3 alors on aurait eu le texte en jaune -->
-                <p>Ce paragraphe n'est pas le 1er paragraphe dans la div avec le fond bleu</p>
-                <div class="borderGrey">
-                    <p>Ce paragraphe est le 1er enfant de la div avec la bordure grise</p>
-                    <p>Ce paragraphe n'est pas le 1er paragraphe dans la div avec la bordure grise</p>
-                </div>
-            </div>   
-
-            <div class="col-lg-3 divLightBlue2 divLastChild">
-                <h3>Last child</h3>  
-                <div class="borderGrey">
-                    <p>Ce paragraphe n'est pas le dernier enfant de la div avec la bordure grise</p>
-                    <p>Ce paragraphe est le dernier enfant de la div avec la bordure grise</p>
-                </div>
-                <p>Ce paragraphe n'est pas le dernier enfant de la div avec le fond bleu</p>
-                <p>Ce paragraphe est le dernier enfant de la div avec le fond bleu</p>
-            </div>           
-
-            <div class="col-lg-3 divLightBlue2">
-                <h3>First type</h3>    
-                <span class="firstType">Le 1er span</span><br />
-                <span class="firstType">Le 2e span</span><br />
-                <span class="firstType">Le 3e span</span><br />
-                <span class="firstType">Le dernier span</span><br />
-                <div class="borderGrey">
-                    <span class="firstType">Le 1er span (dans une div)</span><br />
-                    <span class="firstType">Le dernier span (dans une div)</span><br />
-                </div>
-            </div>
-
-            <div class="col-lg-3 divLightBlue2">
-                <h3>First type</h3>    
-                <span class="lastType">Le 1er span</span><br />
-                <span class="lastType">Le 2e span</span><br />
-                <span class="lastType">Le 3e span</span><br />
-                <span class="lastType">Le dernier span</span><br />
-                <div class="borderGrey">
-                    <span class="lastType">Le 1er span (dans une div)</span><br />
-                    <span class="lastType">Le dernier (dans une div)</span><br />
-                </div>
-            </div>
-        </div>    
-
-        <hr>
-
-        <div class="row MT20">                 
-            <div class="col-lg-4">
-                <h3>nthChild</h3>        
-                <p>En bleu ciel les paragraphes impaires et en bleu foncé les paragraphes paires</p>                      
-                <div class="nthChild">
-                    <p>Paragraphe1</p>
-                    <p>Paragraphe2</p>
-                    <p>Paragraphe3</p>
-                </div>
-                <div class="nthChild">
-                    <p>Paragraphe1</p>
-                    <p>Paragraphe2</p>
-                    <p>Paragraphe3</p>
-                </div> 
-            </div>         
-            
-            <div class="col-lg-4">
-                <h3>nthChild</h3>        
-                <p>Le 2e élément d'une liste</p>                                      
-                <ul>
-                    <li>Elémént 1</li>
-                    <li>Elémént 2</li>
-                    <li>Elémént 3</li>
-                </ul>       
-            </div>      
-            
-            <div class="col-lg-4">
-                <h3>out-of-range</h3>         
-                En dehors de la plage (Entre 5 et 10) <input type="number" min="5" max="10" value="17">
-                <br>
-                Dans la plage (Entre 5 et 10) <input type="number" min="5" max="10" value="7">
-                
-            </div> 
-        </div>
-
-        <hr>
-        
-        <div class="row MT20">      
-            <div class="col-lg-6">
-                <h3>only-of-type</h3>
-                <div>
-                   Si on a une seul balise p dans un div alors on appliquera le CSS
-                   <br> 
-                   S’il y a 2 balises p dans une div alors on n’appliquera pas le CSS
-                   <br>
-                   S’il y a 1 balises p et une balise span dans une div alors on appliquera le CSS
-                   <br>
-                </div>                         
-                <div class="onlyType">
-                    <p>Paragraphe1</p>                    
-                </div>
-                <div class="onlyType">
-                    <p>Paragraphe1</p>
-                    <p>Paragraphe2</p>                    
-                </div>
-                <div class="onlyType">
-                    <p>Paragraphe1</p>
-                    <span>Paragraphe2</span>                    
-                </div>                  
-            </div>   
-            
-            <div class="col-lg-6">
-                <h3>only-child</h3>        
-                <div>
-                    Si on a une seul enfant dans un div alors on appliquera le CSS
-                    <br>
-                    S’il y a 2 balises p dans une div : alors on n’appliquera pas le CSS
-                    <br>
-                    S’il y a une balise p et une balise span alors on n'appliquera pas le CSS
-                </div>                 
-                <div class="onlyChild">
-                    <p>Paragraphe1</p>                    
-                </div>
-                <div class="onlyChild">
-                    <p>Paragraphe1</p>
-                    <p>Paragraphe2</p>                    
-                </div>
-                <div class="onlyChild">
-                    <p>Paragraphe1</p>
-                    <span>Paragraphe2</span>                    
-                </div>  
-            </div>               
-        </div>             
-        
-	</div>	
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-</body>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+	<title>CSS 3 - Les pseudos classes</title>
+
+
+
+	<style type="text/css">		       
+
+        input:checked {
+
+           height:30px;
+
+           width:30px;    
+
+        }
+
+
+
+        input[type="text"]:disabled {
+
+           background-color: lightgrey;                  
+
+        }
+
+
+
+        input[type="text"]:focus {
+
+           background-color: lightgreen;                  
+
+        }
+
+
+
+        .divFirstChild p:first-child {
+
+            background-color: yellow;
+
+        }
+
+
+
+        .divLastChild p:last-child {
+
+            background-color: lightcoral;
+
+        }
+
+
+
+        /*first-of-type correspond à chaque élément qui est le premier enfant, d'un type particulier, de son parent.*/
+
+        span.firstType:first-of-type {
+
+            background-color: red;
+
+        }
+
+
+
+         /*last-of-type correspond à chaque élément qui est le dernier enfant, d'un type particulier, de son parent.*/
+
+        span.lastType:last-of-type {
+
+            background-color: green;
+
+        }
+
+        
+
+        /*on sélectionne tous les paragraphe impaire */
+
+        div.nthChild p:nth-child(odd) {
+
+            background: lightblue;
+
+        }
+
+        
+
+        /*on sélectionne tous les paragraphes paires */
+
+        div.nthChild p:nth-child(even) {
+
+            background: darkblue;
+
+            color:white
+
+        }     
+
+
+
+        /*2e élément d'une liste*/
+
+        li:nth-child(2) {
+
+            background: lightgreen;
+
+        }
+
+
+
+        .nthChild, .onlyType, .onlyChild {
+
+            border:1px solid #000;
+
+            padding:5px;
+
+            margin-bottom:15px
+
+        }
+
+
+
+        /*
+
+        Si on a une seul balise p dans un div alors on appliquera le CSS, 
+
+        S’il y a 2 balises p dans une div alors on n’appliquera pas le CSS.
+
+        S’il y a 1 balises p et une balise span dans une div alors on appliquera le CSS
+
+        */
+
+        div.onlyType p:only-of-type {
+
+            background: #ff0000;
+
+        }
+
+
+
+        /*
+
+        Si on a une seul enfant dans un div alors on appliquera le CSS
+
+        S’il y a 2 balises p dans une div : alors on n’appliquera pas le CSS        
+
+        S’il y a une balise p et une balise span alors on n'appliquera pas le CSS
+
+        */
+
+        div.onlyChild p:only-child {
+
+            background: #ff0000;
+
+        }
+
+
+
+        input:out-of-range {
+
+            border: 2px solid red;
+
+        }
+
+	</style>
+
+
+
+</head>
+
+<body>
+
+		
+
+	<div class="container">
+
+		<div class="row MT20">	
+
+			<div class="col-xl-12 titre">				
+
+				<a href="accueil.html">	
+
+					<img src="../../images/icones/iconeCSS.png">
+
+				</a>
+
+			</div>
+
+		</div>	
+
+		
+
+		<div class="row MT20">
+
+			<div class="col-xl-12 titre">	
+
+				<h1>LES PSEUDOS CLASSES</h1>
+
+			</div>
+
+		</div>		
+
+
+
+        <div class="row MT40">    
+
+            <div class="col-lg-4">
+
+                <h3>Checked</h3>
+
+                <i>input:checked</i>        
+
+                <br>
+
+                <input type="checkbox" name="valeur1" id="valeur1"/>valeur1       
+
+                <input type="checkbox" name="valeur2" id="valeur2" />valeur2       
+
+                <br>
+
+                <input type="radio" name="valeur3" id="valeur3" />valeur3       
+
+                <input type="radio" name="valeur3" id="valeur4" />valeur4
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <h3>Disabled</h3>      
+
+                <i>input[type="text"]:disabled</i>   
+
+                <br>
+
+                Nom : <input type="text" name="nom" id="nom" disabled/>                       
+
+            </div>  
+
+
+
+            <div class="col-lg-4">
+
+                <h3>Focus</h3>         
+
+                <i>input[type="text"]:focus</i>
+
+                <br>
+
+                Nom : <input type="text" name="nom" id="nom"/>   
+
+            </div>
+
+        </div>
+
+
+
+        <hr>
+
+
+
+        <div class="row MT20">    
+
+            <div class="col-lg-3 divLightBlue2 divFirstChild">
+
+                <h3>First child</h3>                 
+
+                <p>Ce paragraphe est le 1er paragraphe de la div avec le fond bleu mais pas le 1er enfant </p> <!-- n'appraitra pas en jaune car on a une balise h3 avant. S'il n'y avait pas eu la balise h3 alors on aurait eu le texte en jaune -->
+
+                <p>Ce paragraphe n'est pas le 1er paragraphe dans la div avec le fond bleu</p>
+
+                <div class="borderGrey">
+
+                    <p>Ce paragraphe est le 1er enfant de la div avec la bordure grise</p>
+
+                    <p>Ce paragraphe n'est pas le 1er paragraphe dans la div avec la bordure grise</p>
+
+                </div>
+
+            </div>   
+
+
+
+            <div class="col-lg-3 divLightBlue2 divLastChild">
+
+                <h3>Last child</h3>  
+
+                <div class="borderGrey">
+
+                    <p>Ce paragraphe n'est pas le dernier enfant de la div avec la bordure grise</p>
+
+                    <p>Ce paragraphe est le dernier enfant de la div avec la bordure grise</p>
+
+                </div>
+
+                <p>Ce paragraphe n'est pas le dernier enfant de la div avec le fond bleu</p>
+
+                <p>Ce paragraphe est le dernier enfant de la div avec le fond bleu</p>
+
+            </div>           
+
+
+
+            <div class="col-lg-3 divLightBlue2">
+
+                <h3>First type</h3>    
+
+                <span class="firstType">Le 1er span</span><br />
+
+                <span class="firstType">Le 2e span</span><br />
+
+                <span class="firstType">Le 3e span</span><br />
+
+                <span class="firstType">Le dernier span</span><br />
+
+                <div class="borderGrey">
+
+                    <span class="firstType">Le 1er span (dans une div)</span><br />
+
+                    <span class="firstType">Le dernier span (dans une div)</span><br />
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 divLightBlue2">
+
+                <h3>First type</h3>    
+
+                <span class="lastType">Le 1er span</span><br />
+
+                <span class="lastType">Le 2e span</span><br />
+
+                <span class="lastType">Le 3e span</span><br />
+
+                <span class="lastType">Le dernier span</span><br />
+
+                <div class="borderGrey">
+
+                    <span class="lastType">Le 1er span (dans une div)</span><br />
+
+                    <span class="lastType">Le dernier (dans une div)</span><br />
+
+                </div>
+
+            </div>
+
+        </div>    
+
+
+
+        <hr>
+
+
+
+        <div class="row MT20">                 
+
+            <div class="col-lg-4">
+
+                <h3>nthChild</h3>        
+
+                <p>En bleu ciel les paragraphes impaires et en bleu foncé les paragraphes paires</p>                      
+
+                <div class="nthChild">
+
+                    <p>Paragraphe1</p>
+
+                    <p>Paragraphe2</p>
+
+                    <p>Paragraphe3</p>
+
+                </div>
+
+                <div class="nthChild">
+
+                    <p>Paragraphe1</p>
+
+                    <p>Paragraphe2</p>
+
+                    <p>Paragraphe3</p>
+
+                </div> 
+
+            </div>         
+
+            
+
+            <div class="col-lg-4">
+
+                <h3>nthChild</h3>        
+
+                <p>Le 2e élément d'une liste</p>                                      
+
+                <ul>
+
+                    <li>Elémént 1</li>
+
+                    <li>Elémént 2</li>
+
+                    <li>Elémént 3</li>
+
+                </ul>       
+
+            </div>      
+
+            
+
+            <div class="col-lg-4">
+
+                <h3>out-of-range</h3>         
+
+                En dehors de la plage (Entre 5 et 10) <input type="number" min="5" max="10" value="17">
+
+                <br>
+
+                Dans la plage (Entre 5 et 10) <input type="number" min="5" max="10" value="7">
+
+                
+
+            </div> 
+
+        </div>
+
+
+
+        <hr>
+
+        
+
+        <div class="row MT20">      
+
+            <div class="col-lg-6">
+
+                <h3>only-of-type</h3>
+
+                <div>
+
+                   Si on a une seul balise p dans un div alors on appliquera le CSS
+
+                   <br> 
+
+                   S’il y a 2 balises p dans une div alors on n’appliquera pas le CSS
+
+                   <br>
+
+                   S’il y a 1 balises p et une balise span dans une div alors on appliquera le CSS
+
+                   <br>
+
+                </div>                         
+
+                <div class="onlyType">
+
+                    <p>Paragraphe1</p>                    
+
+                </div>
+
+                <div class="onlyType">
+
+                    <p>Paragraphe1</p>
+
+                    <p>Paragraphe2</p>                    
+
+                </div>
+
+                <div class="onlyType">
+
+                    <p>Paragraphe1</p>
+
+                    <span>Paragraphe2</span>                    
+
+                </div>                  
+
+            </div>   
+
+            
+
+            <div class="col-lg-6">
+
+                <h3>only-child</h3>        
+
+                <div>
+
+                    Si on a une seul enfant dans un div alors on appliquera le CSS
+
+                    <br>
+
+                    S’il y a 2 balises p dans une div : alors on n’appliquera pas le CSS
+
+                    <br>
+
+                    S’il y a une balise p et une balise span alors on n'appliquera pas le CSS
+
+                </div>                 
+
+                <div class="onlyChild">
+
+                    <p>Paragraphe1</p>                    
+
+                </div>
+
+                <div class="onlyChild">
+
+                    <p>Paragraphe1</p>
+
+                    <p>Paragraphe2</p>                    
+
+                </div>
+
+                <div class="onlyChild">
+
+                    <p>Paragraphe1</p>
+
+                    <span>Paragraphe2</span>                    
+
+                </div>  
+
+            </div>               
+
+        </div>             
+
+        
+
+	</div>	
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+
 </html>

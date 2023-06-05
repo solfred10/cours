@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" href="jquery-ui-1-13-2/jquery-ui.min.css">
+	<title>CSS 3 - Menu déroulant</title>
+
+	<style type="text/css">
+		/*
+		1er menu horizontal
+		*/
+		#menuHorizontal1 ul {
+			margin:0;
+			padding:0;
+			list-style-type:none;
+			text-align:center;
+		}
+
+		#menuHorizontal1 li {
+			float:left;
+			margin:auto;
+			width:150px;
+			background-color:black;
+		}
+
+		#menuHorizontal1 li a {
+			display:block;
+			color:white;
+			text-decoration:none;
+			padding:5px;
+		}
+
+		#menuHorizontal1 li a:hover {
+			color:#FFD700;
+			background-color:red;
+		}
+			
+		#menuHorizontal1 ul li ul {
+			display:none;
+		}
+			
+		#menuHorizontal1 ul li:hover ul {
+			display:block;
+		}
+		
+		#menuHorizontal1 li:hover ul li {
+			float:none;
+		}
+
+		/*
+		2e menu vertical
+		*/
+		#menuHorizontal2, #menuHorizontal2 ul{
+			padding:0;
+			margin:0;
+			list-style:none;
+			text-align:center;
+		}
+
+		/*sous menu*/
+		#menuHorizontal2 ul{
+			position:absolute;
+			overflow:hidden;			
+			max-height:0;			
+			left: 0;
+			right: 0;						
+		}
+
+		#menuHorizontal2 li{
+			display:inline-block;
+			position:relative;
+			border-radius:8px 8px 0 0;
+		}
+		
+		/*Pour faire apparaitre le sous menu*/
+		#menuHorizontal2 li:hover ul{
+			max-height:15em;
+		}		
+
+		#menuHorizontal2 ul li{
+			display:inherit; /*pour garder la meme longueur que le menu principal*/			
+			border-radius:0;			
+		}
+		
+		/*Couleur de fond des onglets principaux*/
+		#menuHorizontal2 ul li:last-child{
+			border-radius:0 0 8px 8px;
+		}
+		
+		#menuHorizontal2 li:first-child{
+			background-color: #65537A;			
+		}
+
+		#menuHorizontal2 li:nth-child(2){
+			background-color: #729EBF;			
+		}
+
+		#menuHorizontal2 li:nth-child(3){
+			background-color: #F6AD1A;
+		}
+
+		/*Couleur de fond des sous menus*/
+			
+		#menuHorizontal2 li:first-child li{
+			background:#2A2333;
+		}
+		
+		#menuHorizontal2 li:nth-child(2) li{
+			background:#333A40;
+		}
+		
+		#menuHorizontal2 li:nth-child(3) li{
+			background:#9F391A;
+		}
+		
+		/*Couleur de fond au survol des sous menus et de son menu principal*/
+		#menuHorizontal2 li:first-child:hover, #menuHorizontal2 li:first-child li:hover{
+			background:#65537A;
+		}
+		
+		#menuHorizontal2 li:nth-child(2):hover, #menuHorizontal2 li:nth-child(2) li:hover{
+			background:#729EBF;
+		}
+
+		#menuHorizontal2 li:nth-child(3):hover, #menuHorizontal2 li:nth-child(3) li:hover{
+			background:#F6AD1A;
+		}		
+		
+		/* les a href */
+		#menuHorizontal2 a{
+			text-decoration:none;
+			display:block;
+			padding:8px 32px;
+			color:#fff;
+			font-family:arial;
+		}
+		
+		#menuHorizontal2 ul a{
+			padding:8px 0;
+		}
+		
+		#menuHorizontal2 li:hover li a{
+			color:#fff;			
+		}
+		
+		#menuHorizontal2 li:hover a, #menuHorizontal2 li li:hover a{
+			color:#000;
+		}
+
+			
+		/*1er menu vertical*/	
+		#menuVertical1 ul {			
+			margin-left:-30px; 			
+		}
+		
+		#menuVertical1 ul ul {
+			display: none; 
+			position: absolute; 
+			margin:0px; 
+			padding: 5px; 			
+		}
+
+		#menuVertical1 ul li{
+			display:inherit; /*pour garder la meme longueur que le menu principal*/						
+		}
+		
+		#menuVertical1 ul.niveau2menuVertical1 {
+			left: -5px; 
+			top: 25px;
+			padding: 5px; 	
+		}
+		
+		#menuVertical1 ul.niveau3menuVertical1 {
+			left: 134px; 
+			top: -5px;
+		}
+		
+        #menuVertical1 li {
+			list-style-type: none; 
+			position: relative; 
+			width: 140px; 
+			background:#333A40;
+			color:#fff;
+			padding: 5px; 
+			margin: 0px
+		}
+		
+        #menuVertical1 li:hover {
+			background:#65537A;	
+			padding: 5px; 		
+		}
+				
+        #menuVertical1 li a {
+			text-decoration:none;
+			color:#fff;			
+		}
+
+		#menuVertical1 li a:hover {
+			text-decoration:none;
+			color:#000;			
+		}
+		
+        #menuVertical1 li:hover ul.niveau2menuVertical1, #menuVertical1 li li:hover ul.niveau3menuVertical1{
+			display: block
+		}	
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row MT20">	
+			<div class="col-xl-12 titre">				
+				<a href="accueil.html">	
+					<img src="../../images/icones/iconeCSS.png">
+				</a>
+			</div>
+		</div>	
+
+		<div class="row MT20 MB50">
+			<div class="col-xl-12 titre">	
+				<h1>MENUS DÉROULANTS</h1>
+			</div>
+		</div>	      		
+
+		<div class="row">
+			<div class="col-xl-6">					
+				<div id="menuHorizontal1">
+					<ul>
+						<li><a href="#">Menu 1</a>
+							<ul>
+								<li><a href="#">Sous-menu 1.1</a></li>
+								<li><a href="#">Sous-menu 1.2</a></li>								
+							</ul>
+						</li>
+						<li><a href="#">Menu 2</a>
+							<ul>
+								<li><a href="#">Sous-menu 2.1</a></li>
+								<li><a href="#">Sous-menu 2.2</a></li>
+								<li><a href="#">Sous-menu 2.3</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Menu 3</a></li>
+					</ul>
+				</div>
+			</div>
+
+            <div class="col-xl-6">		
+				<ul id="menuHorizontal2">
+					<li><a href="#">Lien menu 1</a>
+						<ul>
+							<li><a href="#">lien sous menu 1</a></li>
+							<li><a href="#">lien sous menu 1</a></li>
+							<li><a href="#">lien sous menu 1</a></li>
+							<li><a href="#">lien sous menu 1</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Lien menu 2</a>
+						<ul>
+							<li><a href="#">Lien sous menu 2</a></li>
+							<li><a href="#">Lien sous menu 2</a></li>
+							<li><a href="#">Lien sous menu 2</a></li>
+							<li><a href="#">Lien sous menu 2</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Lien menu 3</a>
+						<ul>
+							<li><a href="#">lien sous menu 3</a></li>
+							<li><a href="#">lien sous menu 3</a></li>
+							<li><a href="#">lien sous menu 3</a></li>
+							<li><a href="#">lien sous menu 3</a></li>
+						</ul>
+					</li>					
+				</ul>
+			</div>			
+        </div>   
+
+		<div style="margin-top:100px">
+
+		</div>
+
+		<div class="row">			
+			<div class="col-xl-6">
+				<div id="menuVertical1">
+					<ul class="niveau1">
+						<li> Menu 1
+							<ul class="niveau2menuVertical1">
+								<li>
+									<a href= "">Sous menu 1</a>
+									<ul class="niveau3menuVertical1">
+										<li>
+											<a href= "">Sous sous menu 1</a>
+										</li>
+										<li>
+											<a href= "">Sous sous menu 2</a>
+										</li>
+									</ul>
+								</li>
+								
+								<li>
+									<a href="">Sous menu 2 </a>
+									<ul class="niveau3menuVertical1">
+										<li>
+											<a href= "">Sous sous menu 3</a>
+										</li>
+										<li>
+											<a href= "">Sous sous menu 4</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>			
+
+            <div class="col-xl-6">		
+
+			</div>
+        </div>   
+
+	</div>	
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<script src="jquery-ui-1-13-2/external/jquery/jquery.js"></script>
+	<script src="jquery-ui-1-13-2/jquery-ui.min.js"></script>
+
+</body>
+
+</html>

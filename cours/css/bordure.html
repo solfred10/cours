@@ -1,191 +1,381 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
-	<title>CSS 3 - Les bordures</title>
-
-	<style type="text/css">		
-        
-        .borderSolid {
-            border: 3px solid #000 ;            
-        }
-
-        .borderDotted {
-            border: 3px dotted  #000 ;            
-        }
-
-        .borderDashed {
-            border: 3px dashed #000 ;            
-        }
-
-        .borderDouble {
-            border: 10px double #000 ;            
-        }
-
-        .borderGroove {
-            border: 5px groove grey ;            
-        }
-
-        .borderRidge {
-            border: 5px ridge #000 ;            
-        }
-
-        .borderInset {
-            border: 5px inset #000 ;            
-        }
-
-        .borderOutset {
-            border: 5px outset #000 ;            
-        }
-
-        .borderOutline {
-            border: 3px solid #000 ;            
-            outline: 2px dotted red;
-            outline-offset: 8px ;
-        }
-
-        .borderRadius10px {
-            border: 1px solid #000 ;
-            height:100px;
-            width:200px;        
-            border-radius: 10px;    
-            padding:25px;
-            text-align:center   
-        }
-
-        .borderRadius50px20px {
-            border: 1px solid #000 ;
-            height:100px;
-            width:200px;        
-            border-radius: 50px 20px;    
-            padding:25px;
-            text-align:center   
-        }
-
-        .borderCircle {
-            border: 1px solid #000 ;
-            height:100px;
-            width:100px;        
-            border-radius: 100px;    
-            padding:25px;
-            text-align:center            
-        }     
-    </style>
-</head>
-
-<body>		
-	<div class="container">
-		<div class="row MT20">	
-			<div class="col-xl-12 titre">				
-				<a href="accueil.html">	
-					<img src="images/iconeCSS.png">
-				</a>
-			</div>
-		</div>	
-
-		<div class="row MT20 MB50">
-			<div class="col-xl-12 titre">	
-				<h1>LES BORDURES</h1>
-			</div>
-		</div>	        
-		
-		<div class="row MB50">
-			<div class="col-xl-4">		
-				<h3>solid</h3>
-				<div class="padding10 borderSolid">
-                    Lorem ipsum. 
-                </div>                
-			</div>
-            
-            <div class="col-xl-4">		
-				<h3>dotted (pointillés)</h3>
-				<div class="padding10 borderDotted">
-                    Lorem ipsum. 
-                </div>                
-			</div>	
-
-            <div class="col-xl-4">		
-				<h3>dashed (tirets)</h3>
-				<div class="padding10 borderDashed">
-                    Lorem ipsum. 
-                </div>                
-			</div>	
-        </div>   
-
-        <div class="row MB50">
-            <div class="col-xl-4">		
-				<h3>double (2 bordures)</h3>
-				<div class="padding10 borderDouble">
-                    Lorem ipsum. 
-                </div>                
-			</div>	
-
-            <div class="col-xl-4">		
-				<h3>groove (en relief)</h3>
-				<div class="padding10 borderGroove">
-                    Lorem ipsum. 
-                </div>                
-			</div>	  
-
-            <div class="col-xl-4">		
-				<h3>ridge (autre effet relief)</h3>
-				<div class="padding10 borderRidge">
-                    Lorem ipsum. 
-                </div>                
-			</div>	  
-		</div>	
-        
-		<div class="row MB50">          
-			<div class="col-xl-4">		
-				<h3>inset (effet 3D enfoncé)</h3>
-				<div class="padding10 borderInset">
-                    Lorem ipsum. 
-                </div>                
-			</div>
-            
-            <div class="col-xl-4">		
-				<h3>outset (effet 3D élevé)</h3>
-				<div class="padding10 borderOutset">
-                    Lorem ipsum. 
-                </div>                
-			</div>	
-
-            <div class="col-xl-4">		
-				<h3>2 bordures différentes</h3>
-				<div class="padding10 borderOutline">
-                    Lorem ipsum. 
-                </div>                
-			</div>	                        
-		</div>	
-
-        <div class="row MB50">          
-			<div class="col-xl-4">		
-				<h3>Arrondis 1</h3>
-				<div class="padding10 borderRadius10px">
-                    Lorem ipsum. 
-                </div>                
-			</div>
-            
-            <div class="col-xl-4">		
-				<h3>Arrondis 2</h3>
-				<div class="padding10 borderRadius50px20px">
-                    Lorem ipsum. 
-                </div>                
-			</div>	
-
-            <div class="col-xl-4">		
-				<h3>Arrondis 3</h3>
-				<div class="padding10 borderCircle">
-                    Lorem ipsum. 
-                </div>                
-			</div>	                        
-		</div>	
-	</div>	
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-</body>
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+	<title>CSS 3 - Les bordures</title>
+
+
+
+	<style type="text/css">		
+
+        
+
+        .borderSolid {
+
+            border: 3px solid #000 ;            
+
+        }
+
+
+
+        .borderDotted {
+
+            border: 3px dotted  #000 ;            
+
+        }
+
+
+
+        .borderDashed {
+
+            border: 3px dashed #000 ;            
+
+        }
+
+
+
+        .borderDouble {
+
+            border: 10px double #000 ;            
+
+        }
+
+
+
+        .borderGroove {
+
+            border: 5px groove grey ;            
+
+        }
+
+
+
+        .borderRidge {
+
+            border: 5px ridge #000 ;            
+
+        }
+
+
+
+        .borderInset {
+
+            border: 5px inset #000 ;            
+
+        }
+
+
+
+        .borderOutset {
+
+            border: 5px outset #000 ;            
+
+        }
+
+
+
+        .borderOutline {
+
+            border: 3px solid #000 ;            
+
+            outline: 2px dotted red;
+
+            outline-offset: 8px ;
+
+        }
+
+
+
+        .borderRadius10px {
+
+            border: 1px solid #000 ;
+
+            height:100px;
+
+            width:200px;        
+
+            border-radius: 10px;    
+
+            padding:25px;
+
+            text-align:center   
+
+        }
+
+
+
+        .borderRadius50px20px {
+
+            border: 1px solid #000 ;
+
+            height:100px;
+
+            width:200px;        
+
+            border-radius: 50px 20px;    
+
+            padding:25px;
+
+            text-align:center   
+
+        }
+
+
+
+        .borderCircle {
+
+            border: 1px solid #000 ;
+
+            height:100px;
+
+            width:100px;        
+
+            border-radius: 100px;    
+
+            padding:25px;
+
+            text-align:center            
+
+        }     
+
+    </style>
+
+</head>
+
+
+
+<body>		
+
+	<div class="container">
+
+		<div class="row MT20">	
+
+			<div class="col-xl-12 titre">				
+
+				<a href="accueil.html">	
+
+					<img src="../../images/icones/iconeCSS.png">
+
+				</a>
+
+			</div>
+
+		</div>	
+
+
+
+		<div class="row MT20 MB50">
+
+			<div class="col-xl-12 titre">	
+
+				<h1>LES BORDURES</h1>
+
+			</div>
+
+		</div>	        
+
+		
+
+		<div class="row MB50">
+
+			<div class="col-xl-4">		
+
+				<h3>solid</h3>
+
+				<div class="padding10 borderSolid">
+
+                    Lorem ipsum. 
+
+                </div>                
+
+			</div>
+
+            
+
+            <div class="col-xl-4">		
+
+				<h3>dotted (pointillés)</h3>
+
+				<div class="padding10 borderDotted">
+
+                    Lorem ipsum. 
+
+                </div>                
+
+			</div>	
+
+
+
+            <div class="col-xl-4">		
+
+				<h3>dashed (tirets)</h3>
+
+				<div class="padding10 borderDashed">
+
+                    Lorem ipsum. 
+
+                </div>                
+
+			</div>	
+
+        </div>   
+
+
+
+        <div class="row MB50">
+
+            <div class="col-xl-4">		
+
+				<h3>double (2 bordures)</h3>
+
+				<div class="padding10 borderDouble">
+
+                    Lorem ipsum. 
+
+                </div>                
+
+			</div>	
+
+
+
+            <div class="col-xl-4">		
+
+				<h3>groove (en relief)</h3>
+
+				<div class="padding10 borderGroove">
+
+                    Lorem ipsum. 
+
+                </div>                
+
+			</div>	  
+
+
+
+            <div class="col-xl-4">		
+
+				<h3>ridge (autre effet relief)</h3>
+
+				<div class="padding10 borderRidge">
+
+                    Lorem ipsum. 
+
+                </div>                
+
+			</div>	  
+
+		</div>	
+
+        
+
+		<div class="row MB50">          
+
+			<div class="col-xl-4">		
+
+				<h3>inset (effet 3D enfoncé)</h3>
+
+				<div class="padding10 borderInset">
+
+                    Lorem ipsum. 
+
+                </div>                
+
+			</div>
+
+            
+
+            <div class="col-xl-4">		
+
+				<h3>outset (effet 3D élevé)</h3>
+
+				<div class="padding10 borderOutset">
+
+                    Lorem ipsum. 
+
+                </div>                
+
+			</div>	
+
+
+
+            <div class="col-xl-4">		
+
+				<h3>2 bordures différentes</h3>
+
+				<div class="padding10 borderOutline">
+
+                    Lorem ipsum. 
+
+                </div>                
+
+			</div>	                        
+
+		</div>	
+
+
+
+        <div class="row MB50">          
+
+			<div class="col-xl-4">		
+
+				<h3>Arrondis 1</h3>
+
+				<div class="padding10 borderRadius10px">
+
+                    Lorem ipsum. 
+
+                </div>                
+
+			</div>
+
+            
+
+            <div class="col-xl-4">		
+
+				<h3>Arrondis 2</h3>
+
+				<div class="padding10 borderRadius50px20px">
+
+                    Lorem ipsum. 
+
+                </div>                
+
+			</div>	
+
+
+
+            <div class="col-xl-4">		
+
+				<h3>Arrondis 3</h3>
+
+				<div class="padding10 borderCircle">
+
+                    Lorem ipsum. 
+
+                </div>                
+
+			</div>	                        
+
+		</div>	
+
+	</div>	
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+
 </html>

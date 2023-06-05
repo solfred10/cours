@@ -1,88 +1,175 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">	
-	<title>CSS 3 - Les pseudos éléments</title>
-
-	<style type="text/css">	
-        span#avant::before {
-            content: "+";
-        }
-
-        span#apres::after {
-            content: "*";
-        }
-
-        /*cahngement de couleurs */
-        ::marker { 
-            color: red;        
-        }
-
-        /*les paragraphes qu'on va surligner sur une page web auront une couleur de fond jaune*/
-        p::selection {            
-            background-color: yellow;
-        }
-        
-	</style>
-
-</head>
-<body>
-		
-	<div class="container">
-		<div class="row MT20">	
-			<div class="col-xl-12 titre">				
-				<a href="accueil.html">	
-					<img src="images/iconeCSS.png">
-				</a>
-			</div>
-		</div>	
-		
-		<div class="row MT20">
-			<div class="col-xl-12 titre">	
-				<h1>LES PSEUDOS ELEMENTS</h1>
-			</div>
-		</div>		
-
-        <div class="row MT40">    
-            <div class="col-lg-6">
-                <h3>Pseudo élément before(::before)</h3>
-                <span id="avant"><b> Ajout d'un plus au début</b></span>
-            </div>
-
-            <div class="col-lg-6">
-                <h3>Pseudo élément after(::after)</h3>
-                <span id="apres"><b>Ajout du symbole * à la fin </b></span>
-            </div>
-        </div>    
-
-        <div class="row MT20">       
-            <div class="col-lg-6">
-                <h3>Pseudo élément maker(::maker)</h3>                
-                <ul>
-                    <li>élément1</li>
-                    <li>élément2</li>
-                    <li>élément3</li>
-                </ul>
-                
-                <ol>
-                    <li>élément1</li>
-                    <li>élément2</li>
-                    <li>élément3</li>
-                </ol>
-            </div>        
-                
-            <div class="col-lg-6">
-                <h3>Pseudo élément selection(::selection)</h3>
-                <p>Surligner ce paragraphe pour qu'il devienne jaune</p>
-            </div>
-        </div>        	
-        
-        
-	</div>	
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-</body>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">	
+
+	<title>CSS 3 - Les pseudos éléments</title>
+
+
+
+	<style type="text/css">	
+
+        span#avant::before {
+
+            content: "+";
+
+        }
+
+
+
+        span#apres::after {
+
+            content: "*";
+
+        }
+
+
+
+        /*cahngement de couleurs */
+
+        ::marker { 
+
+            color: red;        
+
+        }
+
+
+
+        /*les paragraphes qu'on va surligner sur une page web auront une couleur de fond jaune*/
+
+        p::selection {            
+
+            background-color: yellow;
+
+        }
+
+        
+
+	</style>
+
+
+
+</head>
+
+<body>
+
+		
+
+	<div class="container">
+
+		<div class="row MT20">	
+
+			<div class="col-xl-12 titre">				
+
+				<a href="accueil.html">	
+
+					<img src="../../images/icones/iconeCSS.png">
+
+				</a>
+
+			</div>
+
+		</div>	
+
+		
+
+		<div class="row MT20">
+
+			<div class="col-xl-12 titre">	
+
+				<h1>LES PSEUDOS ELEMENTS</h1>
+
+			</div>
+
+		</div>		
+
+
+
+        <div class="row MT40">    
+
+            <div class="col-lg-6">
+
+                <h3>Pseudo élément before(::before)</h3>
+
+                <span id="avant"><b> Ajout d'un plus au début</b></span>
+
+            </div>
+
+
+
+            <div class="col-lg-6">
+
+                <h3>Pseudo élément after(::after)</h3>
+
+                <span id="apres"><b>Ajout du symbole * à la fin </b></span>
+
+            </div>
+
+        </div>    
+
+
+
+        <div class="row MT20">       
+
+            <div class="col-lg-6">
+
+                <h3>Pseudo élément maker(::maker)</h3>                
+
+                <ul>
+
+                    <li>élément1</li>
+
+                    <li>élément2</li>
+
+                    <li>élément3</li>
+
+                </ul>
+
+                
+
+                <ol>
+
+                    <li>élément1</li>
+
+                    <li>élément2</li>
+
+                    <li>élément3</li>
+
+                </ol>
+
+            </div>        
+
+                
+
+            <div class="col-lg-6">
+
+                <h3>Pseudo élément selection(::selection)</h3>
+
+                <p>Surligner ce paragraphe pour qu'il devienne jaune</p>
+
+            </div>
+
+        </div>        	
+
+        
+
+        
+
+	</div>	
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+
 </html>

@@ -1,103 +1,205 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
-	<title>CSS 3 - Multicolonnes</title>
-
-	<style type="text/css">
-		#multiColonne1 {
-			column-count: 3;
-			border:1px solid #ff0000;	
-		}
-
-		#multiColonne2 {
-			column-width: 100px;	
-			border:1px solid #ff0000;	
-		}
-
-		#multiColonne3 {
-			column-width: 100px;	
-			column-gap: 100px;	
-			border:1px solid #ff0000;	
-		}
-
-		#multiColonne4 {
-			column-count: 5;	
-			column-rule: 1px solid #0000ff;	
-			column-fill : balance ;
-			border:1px solid #ff0000;		
-		}
-
-
-	</style>
-
-</head>
-<body>
-		
-	<div class="container">
-		<div class="row MT20">	
-			<div class="col-xl-12 titre">				
-				<a href="accueil.html">	
-					<img src="images/iconeCSS.png">
-				</a>
-			</div>
-		</div>	
-		
-		<div class="row MT20">
-			<div class="col-xl-12 titre">	
-				<h2>MULTI COLONNES</h2>
-			</div>
-		</div>
-
-		<div class="row MT40">
-			<div class="col-lg-4">	
-				<h3>3 colonnes</h3>
-				<div id="multiColonne1">	
-					<div class="divMultiColonne">
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-						Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui 
-					</div>			
-				</div>
-			</div>
-
-			<div class="col-lg-4">	
-				<h3>Largeur de 100px</h3>
-				<div id="multiColonne2">	
-					<div class="divMultiColonne">
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-						Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui 
-					</div>
-				</div>	
-			</div>			
-
-			<div class="col-lg-4">	
-				<h3>Espace de 100px</h3>
-				<div id="multiColonne3">	
-					<div class="divMultiColonne">
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</div>			
-				</div>
-			</div>
-		</div>	
-
-        <hr>
-
-		<div class="row MT20 MB50">			
-            <div class="col-lg-12">	
-				<h3>Bordure entre chaque colonne</h3>
-				<div id="multiColonne4">	
-					<div class="divMultiColonne">
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-						Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. 
-					</div>
-				</div>
-			</div>				
-		</div>		
-	</div>	
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-</body>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+	<title>CSS 3 - Multicolonnes</title>
+
+
+
+	<style type="text/css">
+
+		#multiColonne1 {
+
+			column-count: 3;
+
+			border:1px solid #ff0000;	
+
+		}
+
+
+
+		#multiColonne2 {
+
+			column-width: 100px;	
+
+			border:1px solid #ff0000;	
+
+		}
+
+
+
+		#multiColonne3 {
+
+			column-width: 100px;	
+
+			column-gap: 100px;	
+
+			border:1px solid #ff0000;	
+
+		}
+
+
+
+		#multiColonne4 {
+
+			column-count: 5;	
+
+			column-rule: 1px solid #0000ff;	
+
+			column-fill : balance ;
+
+			border:1px solid #ff0000;		
+
+		}
+
+
+
+
+
+	</style>
+
+
+
+</head>
+
+<body>
+
+		
+
+	<div class="container">
+
+		<div class="row MT20">	
+
+			<div class="col-xl-12 titre">				
+
+				<a href="accueil.html">	
+
+					<img src="../../images/icones/iconeCSS.png">
+
+				</a>
+
+			</div>
+
+		</div>	
+
+		
+
+		<div class="row MT20">
+
+			<div class="col-xl-12 titre">	
+
+				<h2>MULTI COLONNES</h2>
+
+			</div>
+
+		</div>
+
+
+
+		<div class="row MT40">
+
+			<div class="col-lg-4">	
+
+				<h3>3 colonnes</h3>
+
+				<div id="multiColonne1">	
+
+					<div class="divMultiColonne">
+
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+						Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui 
+
+					</div>			
+
+				</div>
+
+			</div>
+
+
+
+			<div class="col-lg-4">	
+
+				<h3>Largeur de 100px</h3>
+
+				<div id="multiColonne2">	
+
+					<div class="divMultiColonne">
+
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+						Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui 
+
+					</div>
+
+				</div>	
+
+			</div>			
+
+
+
+			<div class="col-lg-4">	
+
+				<h3>Espace de 100px</h3>
+
+				<div id="multiColonne3">	
+
+					<div class="divMultiColonne">
+
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+					</div>			
+
+				</div>
+
+			</div>
+
+		</div>	
+
+
+
+        <hr>
+
+
+
+		<div class="row MT20 MB50">			
+
+            <div class="col-lg-12">	
+
+				<h3>Bordure entre chaque colonne</h3>
+
+				<div id="multiColonne4">	
+
+					<div class="divMultiColonne">
+
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+						Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. 
+
+					</div>
+
+				</div>
+
+			</div>				
+
+		</div>		
+
+	</div>	
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+
 </html>
