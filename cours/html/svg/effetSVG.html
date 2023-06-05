@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link href="../../../css/style.css" rel="stylesheet">
+	<title>HTML5 - SVG : les formes de bases</title>
+</head>
+
+<!--
+Tous les filtres SVG sont définis dans un élément <defs>.
+    
+    L'élément <feGaussianBlur> est utilisé pour créer des effets de flou :
+    L'attribut id de l'élément <filter> définit un nom unique pour le filtre
+    L'effet de flou est défini avec l'élément <feGaussianBlur>
+    La partie in="SourceGraphic" définit que l'effet est créé pour l'élément entier
+    L'attribut stdDeviation définit la quantité de flou
+    L'attribut filter de l'élément <rect> relie l'élément au filtre "f1"
+
+    L'élément <feOffset> est utilisé pour créer des effets d'ombre portée. L'idée est de prendre un graphique SVG (image ou élément) et de le déplacer un peu dans le plan xy.
+
+
+-->
+
+<body>
+	<div class="container">		
+        <div class="row MT20">	
+			<div class="col-lg-12 titre">				
+				<a href="../accueil.html">
+					<img src="../../../images/icones/iconeHTML.png">
+				</a>					
+			</div>
+		</div>
+
+        <div class="row MT20">            
+            <div class="titre">	
+                <h1>SVG : Les effets</h1>	
+            </div>
+        </div>	        
+
+        <div class="row MT20">	
+            <div class="col-lg-3">	   
+                <h3>Flou</h3>
+                <svg height="110" width="110">
+                    <defs>
+                        <filter id="f1" x="0" y="0">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+                        </filter>
+                    </defs>
+                    <rect width="90" height="90" stroke="red" stroke-width="5" fill="yellow" filter="url(#f1)" />
+                </svg>
+            </div>
+
+            <div class="col-lg-3">	
+                <h3>Ombres portées</h3>   
+                <svg height="140" width="140">
+                    <defs>
+                        <filter id="f3" x="0" y="0" width="200%" height="200%">
+                            <feOffset result="offOut" in="SourceAlpha" dx="20" dy="20" /> <!-- SourceAlpha pour avoirune ombre noire -->
+                            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+                            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+                        </filter>
+                    </defs>
+                    <rect width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f3)" />
+                </svg>
+            </div>
+
+            <div class="col-lg-3">	
+                <h3>Ombres portées</h3>   
+                <svg height="140" width="140">
+                    <defs>
+                        <filter id="f4" x="0" y="0" width="200%" height="200%">
+                            <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" /> <!-- SourceGraphic pour garder la même couleur de fond que le rectangle -->
+                            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+                            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+                        </filter>
+                    </defs>
+                    <rect width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f4)" />
+                </svg>
+            </div>
+        </div>  
+
+        <!--  
+        L'élément <linearGradient> doit être imbriqué dans une balise <defs>    
+            Des dégradés horizontaux sont créés lorsque y1 et y2 sont égaux et x1 et x2 diffèrent
+            Des dégradés verticaux sont créés lorsque x1 et x2 sont égaux et que y1 et y2 diffèrent
+            Des dégradés angulaires sont créés lorsque x1 et x2 diffèrent et que y1 et y2 diffèrent
+        -->
+       
+        <div class="row MT20">	
+            <div class="col-lg-12 titre">	 
+                Gradients linéaires
+            </div>    
+        </div>    
+       
+        <div class="row MT20">	
+            <div class="col-lg-3">	 
+                <h3>Lineaire vertical</h3>  
+                <svg height="150" width="400">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                    </linearGradient>
+                </defs>                
+                <rect width="200" height="90" fill="url(#grad1)" />
+                </svg>
+            </div>
+
+            <div class="col-lg-3">	 
+                <h3>Lineaire vertical</h3>  
+                <svg height="150" width="400">
+                <defs>
+                    <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <rect width="200" height="90" fill="url(#grad2)" />
+                </svg>
+            </div>
+
+            <div class="col-lg-3">	 
+                <h3>Lineaire diagonal</h3>  
+                <svg height="150" width="400">
+                    <defs>
+                        <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="200" height="90" fill="url(#grad3)" />
+                    <text fill="#000" font-size="15" font-family="Verdana" x="50" y="50">SVG</text>
+                </svg>
+            </div>
+
+            <div class="col-lg-3">	  
+                <h3>Radial</h3> 
+                <!--
+                Les attributs cx, cy et r définissent le cercle le plus à l'extérieur et fx et fy définissent le cercle le plus à l'intérieur
+                La gamme de couleurs d'un dégradé peut être composée de deux couleurs ou plus. Chaque couleur est spécifiée avec une balise <stop>. 
+                L'attribut offset est utilisé pour définir où la couleur du dégradé commence et se termine
+                L'attribut fill relie l'élément ellipse au dégradé
+                -->
+                <svg height="150" width="500">
+                    <defs>
+                        <radialGradient id="grad4" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                            <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1" />
+                        </radialGradient>
+                    </defs>
+                    <rect width="200" height="90" fill="url(#grad4)" />
+                </svg>
+            </div>
+        </div>  
+
+
+        
+        <div class="row MT20">	
+            
+
+            <div class="col-lg-3">	   
+            </div>
+
+            <div class="col-lg-3">	   
+            </div>
+        </div>  
+
+	</div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../../js/fonctionsJS2.js"></script>
+
+</body>
+
+</html>

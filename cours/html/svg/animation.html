@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link href="../../../css/style.css" rel="stylesheet">
+	<title>HTML5 - SVG : Les animations</title>
+</head>
+
+<!--
+xlink:href : l'id de l'élément sur lequel l'animation s'éxécute
+attributeName :  On lui donne comme valeur le nom de l'attribut ou de la propriété CSS dont on veut changer la valeur faire changer la valeur (Ex : x pour une translation horizontal)
+attributeType :  Comme valeur, on met CSS si la valeur de attributeName est une propriété CSS ou XML si c'est un attribut d'une balise SVG
+from : point de départ
+to : point d'arrivé
+begin : ??s L'animation se chargera au bout de ?? secondes après le chargement de la page 
+dur : ??s L'animation va durée ?? seconde
+fill="freeze" pour que l'animation ne s'éxécute qu'une fois
+repeatCount : nombre de fois où l'animation va se répéter (indefinite pour que l'animation s'éxécute en continu)
+
+restart=always (valeur par défaut) : l'animation peut être recommencée à tout moment 
+restart=never : l'animation ne peut jamais être recommencée (ex quand on clique)
+restart=whenNotActive : l'animation ne peut être recommencée que lorsqu'elle est terminée
+-->
+
+<body>
+	<div class="container">		
+        <div class="row MT20">	
+			<div class="col-lg-12 titre">				
+				<a href="../accueil.html">
+					<img src="../../../images/icones/iconeHTML.png">
+				</a>					
+			</div>
+		</div>
+
+        <div class="row MT20">            
+            <div class="titre">	
+                <h1>SVG : Les animations</h1>	
+            </div>
+        </div>	        
+
+        <div class="row MT20">	
+            <div class="col-lg-4">	
+                <h3>Une seule éxécution</h3>   
+                <svg>
+                    <defs>
+                        <animate id="animation1" xlink:href="#rectangleQuiBouge" attributeName="x" attributeType="XML" from="10" to="100" begin="0s" dur="3s" fill="freeze" repeatCount="1"/>
+                    </defs>
+                    <rect id="rectangleQuiBouge" x="10" y="10" width="100" height="50" style="fill:#0B24BE;stroke: #18C20B;" />
+                </svg>                
+            </div>
+
+            <div class="col-lg-4">	 
+                <h3>Après la 1ère animation</h3>   
+                <svg>
+                    <defs>
+                        <!--La 2e animation se lancera à la fin de l'animation1  -->
+                        <animate id="animation2" xlink:href="#rectangleQuiBouge2" attributeName="x" attributeType="XML" from="10" to="100" begin="animation1.end" dur="3s" repeatCount="1" />
+                    </defs>
+                    <rect id="rectangleQuiBouge2" x="10" y="10" width="100" height="50" style="fill:#ff0000;" />
+                </svg>
+            </div>
+
+            <div class="col-lg-4">	
+                <h3>2s après la 2e animation</h3>   
+                <svg>
+                    <defs>
+                        <!--La 3e animation se lancera 2s après la fin de l'animation2  -->
+                        <animate id="animation3" xlink:href="#rectangleQuiBouge3" attributeName="x" attributeType="XML" from="10" to="100" begin="animation2.end+2s" dur="3s"  />
+                    </defs>
+                    <rect id="rectangleQuiBouge3" x="10" y="10" width="100" height="50" style="fill:#000000;" />
+                </svg>
+            </div>
+
+            
+        </div>    
+        
+        <div class="row">	
+            <div class="col-lg-4">
+                <h3>Au clic</h3>
+                <svg>
+                    <defs>
+                        <!--La 4e animation se lancera au clic sur le rectangle  -->
+                        <animate id="animation4" xlink:href="#rectangleQuiBouge4" attributeName="y" attributeType="XML" from="0" to="50" begin="rectangleQuiBouge4.click" dur="3s"  />
+                    </defs>
+                    <rect id="rectangleQuiBouge4"  width="100" height="50" style="fill:yellow;" />
+                </svg>
+            </div>
+
+            <div class="col-lg-4">	                              
+                <h3>Au survol</h3>
+                <svg>
+                    <defs>
+                        <!--La 5e animation se lancera au survole sur le rectangle  -->
+                        <animate id="animation5" xlink:href="#rectangleQuiBouge5" attributeName="y" attributeType="XML" from="0" to="100" begin="rectangleQuiBouge5.mouseover" dur="3s"  />
+                    </defs>
+                    <rect id="rectangleQuiBouge5"  width="100" height="50" style="fill:#666666;" />
+                </svg>
+            </div>
+
+            <div class="col-lg-4">	                              
+                <h3>Opacité</h3>
+                <svg>
+                    <defs>
+                        <!-- Changement d'opacité-->
+                        <animate id="animation6" xlink:href="#opacite" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" />
+                    </defs>
+                    <rect id="opacite"  width="100" height="50" style="fill:#000;" />
+                </svg>
+            </div>        
+            
+        </div>    
+
+        <div class="row">	
+            <div class="col-lg-4">
+                <h3>Agrandissement</h3>
+                <svg>
+                    <defs>                        
+                        <animate attributeName="width" xlink:href="#agrandissement" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="250" /> 
+                    </defs>
+                    <rect id="agrandissement"  width="100" height="50" style="fill:yellow;" />
+                </svg>
+            </div>
+
+            <div class="col-lg-4">	                                              
+                <h3>Changement de couleur</h3>
+                <svg>
+                    <defs>                                                
+                        <animate attributeName="fill" attributeType="CSS" xlink:href="#changementCouleur" from="lime" to="red" begin="0s" dur="3s" repeatCount="2"/>
+                    </defs>
+                    <rect id="changementCouleur"  width="100" height="50" style="fill:lime;" />
+                </svg>
+            </div>
+
+            <div class="col-lg-4">	                              
+                <h3>Changment de couleur et de taille</h3>
+                <svg>
+                    <defs>                        
+                        <animate attributeName="width" xlink:href="#changementCouleurTaille" attributeType="XML" begin="0s" dur="3s" fill="freeze" from="100" to="250" /> 
+                        <animate attributeName="fill" attributeType="CSS" xlink:href="#changementCouleurTaille" from="lime" to="red" begin="0s" dur="3s" fill="freeze"/>
+                    </defs>
+                    <rect id="changementCouleurTaille"  width="100" height="50" style="fill:lime;" />
+                </svg>
+            </div>        
+            
+        </div>   
+
+        <div class="row">	
+            <div class="col-lg-4">
+                <h3>Rotation</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="64" width="64">
+                    <g transform="translate(16.5,32.5)">
+                        <line id="line" x1="0" y1="0" x2="32" y2="0" stroke="red" stroke-linecap="round" stoke-width="1">
+                            <animateTransform attributeName="transform" type="rotate" dur=".5s" values="0 16 0;360 16 0;" repeatCount="indefinite"/>
+                            <!-- Return by adding ";0 16 0;"-->
+                        </line>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="col-lg-4">
+                <h3>Rotation</h3>
+                <svg width="120" height="120">
+                    <polygon points="60,30 90,90 30,90">
+                        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 60 70" to="360 60 70" dur="10s" repeatCount="indefinite"/>
+                    </polygon>
+                </svg>
+             </div>
+
+             <div class="col-lg-4">
+                <h3>Rotation</h3>
+                <svg width="200" height="120">
+                    <polygon points="50,30 150,30 150,90 50,90">
+                        <!--
+                            From : 
+                                1er nombre l'angle de roation du début
+                                2e et 3e nombre : coordonnées du pt de l'axe de rotation 
+                            To : 
+                                1er nombre l'angle de roation de fin
+                                2e et 3e nombre : coordonnées du pt de l'axe de rotation     
+                            
+                        -->
+                        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 100 60" to="360 100 60" dur="5s" repeatCount="indefinite"/>
+                    </polygon>
+                </svg>
+             </div>
+        </div>    
+
+
+        <div class="row">	
+            <div class="col-lg-4">	                              
+                <h3>Translation de texte</h3>
+                <svg width="500" height="500">
+                    <g transform="translate(100,100)">
+                        <text id="TextElement" x="0" y="0" style="font-family:Verdana;font-size:24"> It's SVG!
+                            <animateMotion path="M 0 0 L 100 100" dur="5s" fill="freeze" />
+                        </text>
+                    </g>                    
+                </svg>                  
+            </div>  
+            
+            <div class="col-lg-4">	
+                <h3>Translation de texte</h3>
+                <svg width="600" height="600">
+                    <g transform="translate(50,50)"> 
+                        <text id="TextElement" x="0" y="0" style="font-family:Verdana;font-size:24; visibility:hidden"> It's SVG!
+                        <set attributeName="visibility" attributeType="CSS" to="visible" begin="0s" dur="5s" fill="freeze" />
+                        <animateMotion path="M 0 0 L 50 50" begin="1s" dur="5s" fill="freeze" />
+                        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="-30" to="0" begin="1s" dur="5s" fill="freeze" /> 
+                        <animateTransform attributeName="transform" attributeType="XML" type="scale" from="1" to="2" additive="sum" begin="1s" dur="5s" fill="freeze" /> 
+                        </text> 
+                    </g>                     
+                </svg>
+            </div>
+
+            <div class="col-lg-4">	
+                <h3>Translation de texte</h3>
+                <svg width="600" height="600">
+                    <rect id="rec" x="300" y="100" width="150" height="50" style="fill:lime"> 
+                        <animate attributeName="x" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="150" to="50" /> 
+                        <animate attributeName="y" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="50" to="50" /> 
+                        <animate attributeName="width" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="150" to="250" /> 
+                        <animate attributeName="height" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="50" to="100" /> 
+                        <animate attributeName="fill" attributeType="CSS" from="lime" to="red" begin="2s" dur="4s" fill="freeze" />
+                    </rect>
+                    <g transform="translate(50,50)"> 
+                        <text id="TextElement" x="0" y="0" style="font-family:Verdana;font-size:24; visibility:hidden"> It's SVG!
+                            <set attributeName="visibility" attributeType="CSS" to="visible" begin="1s" dur="5s" fill="freeze" />
+                            <animateMotion path="M 0 0 L 20 70" begin="1s" dur="5s" fill="freeze" />
+                            <animate attributeName="fill" attributeType="CSS" from="red" to="blue" begin="1s" dur="5s" fill="freeze" /> 
+                            <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="-30" to="0" begin="1s" dur="5s" fill="freeze" /> 
+                            <animateTransform attributeName="transform" attributeType="XML" type="scale" from="1" to="2" additive="sum" begin="1s" dur="5s" fill="freeze" /> 
+                        </text> 
+                    </g>                
+                </svg>
+            </div>
+            
+        </div>
+
+	</div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../js/fonctionsJS.js"></script>
+
+</body>
+
+</html>
