@@ -1,80 +1,3 @@
-/*
-$(document).ready(function(){
-	$("#header").on("click",function(){
-		$(location).attr("href","index.php");
-	})
-})
-
-
-$("#bouton3").click(function() {
-	$("#exemple p").css("color","#00ff00");
-}) ;
-
-$("#bouton4").on("mouseenter",function() {
-	$("#exemple2 p").css("color","#ff0000");
-}) ;
-
-$("#bouton5").on({"mouseenter":function() {
-	$("#exemple2 p").css("color","#ff0000");
-}}) ;
-
-$("#bouton6").mouseenter(function() {
-	$("#exemple2 p").css("color","#ff0000");
-}) ;
-
-$("#bouton4").on("mouseleave",function() {
-	$("#exemple2 p").css("color","#0000ff");
-}) ;
-
-$("#bouton5").on({"mouseleave":function() {
-	$("#exemple2 p").css("color","#0000ff");
-}}) ;
-
-$("#bouton6").mouseleave(function() {
-	$("#exemple2 p").css("color","#0000ff");
-}) ;
-
-$("#bouton7").dblclick(function() {
-	$("#exemple3 p").css("color","#0000ff");
-}) ;
-
-$("#bouton8").mousedown(function() {
-	$("#exemple3 p").css("color","#0000ff");
-}) ;
-
-$("#bouton8").mouseup(function() {
-	$("#exemple3 p").css("color","#ff0000");
-}) ;
-
-$("#bouton9").hover(function() {
-	$("#exemple3 p").css("color","#ff0000");
-}) ;
-
-$("#champ1").focus(function() {
-$("#compteur").html("0");
-}) ;
-
-$("#champ1").keydown(function() {	
-	$("#exemple4 p").css("color","#ff0000");
-}) ;
-
-$("#champ1").keyup(function() {	
-	$("#exemple4 p").css("color","#0000ff");
-}) ;
-
-$("#champ1").keypress(function() {	
-	$("#exemple4 p").css("color","#ff0000");
-}) ;
-*/
-
-/*
-function selectionnerTousDescendant() {	
-	console.log("sélectionner tous les descendants");
-	var descendant = $("#tousDescendant") ;		
-	descendant.css("color","#0000ff");	
-}
-*/
-
 $(function(){		
 	$("#tousDescendant").on("click",function(){
 		var tousDescendant = $("#tousDescendant p") ;	
@@ -85,7 +8,6 @@ $(function(){
 	$("#descendantDirect").click(function(){
 		var descendantDirect = $("#descendantDirect > p") ;	
 		console.log("Sélectionner les descendants p DIRECT de la div 'descendantDirect'");
-		//descendantDirect.css("backgroundColor","#0000ff").css("color","#fff");		
 		descendantDirect.css("color","#0000ff");		
 	}) ;
 
@@ -799,7 +721,43 @@ $(function(){
 		$(this).css("backgroundColor","lightblue")
 	});
 
+	/****************************************
+	*	COMPTEURS DE CARACTERE ET DE MOTS	*
+	*****************************************/
 
+	function limiteNbCaractere(idCompteur,nbCaractereMax,idAfficheNbCaractere) {
+		var nbCaractereSaisi = $("#"+idCompteur).val().length ;
+		var pluriel = "" ;
+		if(nbCaractereSaisi>1) {
+			var pluriel = "s" ;
+		}            
+		var style = "<span style='color:#000'>" ;
+
+		if(nbCaractereSaisi >= nbCaractereMax) {
+			style = "<span style='color:#ff0000'>" ;
+		}
+		$("#"+idAfficheNbCaractere).html(style+nbCaractereSaisi+"/50 caractère"+pluriel+"</span>") ;		
+	}
+
+	function limiteNbMot(idCompteur,nbMotMax,idAfficheNbMot) {
+		var caractereSaisi = $("#"+idCompteur).val() ;
+		var tableauMot = caractereSaisi.split(" ");
+		var nbMotSaisi =  tableauMot.length ;
+		
+		var pluriel = "" ;
+		if(nbMotSaisi>1) {
+			var pluriel = "s" ;
+		}            
+		var style = "<span style='color:#000'>" ;
+
+		if(nbMotSaisi > nbMotMax) {
+			style = "<span style='color:#ff0000'>" ;
+			$("#"+idCompteur).attr("maxlength",caractereSaisi.length);   
+			nbMotSaisi = nbMotMax ;                 
+		}
+		$("#"+idAfficheNbMot).html(style+nbMotSaisi+"/"+nbMotMax+" mot"+pluriel+"</span>") ;
+		console.log(caractereSaisi.length);
+	}
 
 	
  
