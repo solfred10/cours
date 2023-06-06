@@ -759,7 +759,37 @@ $(function(){
 		console.log(caractereSaisi.length);
 	}
 
-	
+	/************************
+	*	UPLOAD DE PHOTOS	*
+	*************************/
+
+	function uploadVisuel(divId) 
+	{   
+		var file_data = $('#' + divId).prop('files')[0];
+		if (!file_data)
+		{
+			alert('Merci de choisir un fichier');
+			return;
+		}
+
+		var form_data = new FormData();
+		form_data.append('file', file_data);
+		   
+		$.ajax({
+			url: 'savePhoto.php',
+			dataType: 'json',
+			cache: false,
+			contentType: false,
+			processData: false,
+			data: form_data,
+			type: 'post'
+		})
+		.done(function (msg)
+		{		
+			//$("#idImage").attr("src","exos/exosUtilitaire/images/visuelRedim/"+msg.fichierRedim);		
+			$("#idImage").attr("src","upload/"+msg.fichierRedim);					
+		});
+	}
  
  
 	

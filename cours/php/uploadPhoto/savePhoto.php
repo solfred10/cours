@@ -1,21 +1,20 @@
 <?php
 $message = '';
 $statut = '';
-
 $fichier = '';
 $fichierSource = basename($_FILES['file']['name']);
 $extension = strrchr($fichierSource, '.');
-
-$cheminRedim= 'images/visuelRedim/';
+$cheminRedim= 'upload/visuelRedim/';
 $autoriser = array('.png', '.jpg', '.jpeg');
+$fichierRedim = "fichierRedim" ;
 
 if (in_array(strtolower($extension), $autoriser)) {
 	
     $tmp = substr($fichierSource, 0, strrpos($fichierSource, '.'));
-    $tmp = preg_replace('/[^A-Za-z1-9]/', '', $tmp);
+    $tmp = preg_replace('/[ ]/', '-', $tmp);
 
     $fichier =  $tmp . $extension;
-    $path = 'images/';
+    $path = 'upload/';
     $dest = $path . $fichier;
    
 
@@ -31,8 +30,11 @@ if (in_array(strtolower($extension), $autoriser)) {
 		
 		$fichierSansExtension=substr($fichier,0,strrpos($fichier,'.'));
 		$fichierRedim=$fichierSansExtension.".jpg";
-		
+		/*
 		$image = new Imagick();
+		
+
+		
 		$image->setResolution( 72, 72 );
 
 		$image->readimage($dest);
@@ -55,21 +57,18 @@ if (in_array(strtolower($extension), $autoriser)) {
 		if ($height >= $width && $height>$taille)
 		{
 			$image->resizeImage(0,$taille,imagick::FILTER_LANCZOS,1,0);
-		}
-
-		
-		
+		}		
 		$image->writeImage($cheminRedim.$fichierRedim);
-	 
+			*/ 
     } 
 	catch (Exception $e) {        
         $statut = 'erreur';
-        $message = ($_SESSION['J2Clangue'] == 'fr') ? "Réessayer" : 'Try again. ';
+        $message = "RÃ©essayer";
     }
 } 
 else {
     $statut = 'erreur';
-    $message = ($_SESSION['J2Clangue'] == 'fr') ? "Image uniquement aux formats jpeg, png." : 'Picture only in format jpeg, png. ';
+    $message = "Image uniquement aux formats jpeg, png.";
 }
 
 echo json_encode(array('statut' => $statut, 'fichierRedim' => $fichierRedim, 'fichierSource' => $fichierSource, 'message' => $message));
