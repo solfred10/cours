@@ -759,12 +759,20 @@ $(function(){
 		console.log(caractereSaisi.length);
 	}
 
-	/************************
+	
+ 
+ 
+	
+})
+
+
+/************************
 	*	UPLOAD DE PHOTOS	*
 	*************************/
 
-	function uploadVisuel(divId) 
+	function uploadPhoto(divId) 
 	{   
+		console.log("upload en cours") ;
 		var file_data = $('#' + divId).prop('files')[0];
 		if (!file_data)
 		{
@@ -785,14 +793,8 @@ $(function(){
 			type: 'post'
 		})
 		.done(function (msg)
-		{		
+		{				
 			//$("#idImage").attr("src","exos/exosUtilitaire/images/visuelRedim/"+msg.fichierRedim);		
-			$("#idImage").attr("src","upload/"+msg.fichierRedim);					
+			$("#idImage").attr("src","upload/"+msg.fichierSource).attr("width","250px");					
 		});
 	}
- 
- 
-	
-})
-
-

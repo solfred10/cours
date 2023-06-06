@@ -24,15 +24,19 @@ if (in_array(strtolower($extension), $autoriser)) {
 		$fichierUpload = $_FILES['file']['tmp_name'];
         move_uploaded_file($_FILES['file']['tmp_name'], $dest);
         $statut = 'ok';
+
+		/*
+		
 		
 		//redimensionnement du fichier
 		$taille=150;
 		
 		$fichierSansExtension=substr($fichier,0,strrpos($fichier,'.'));
 		$fichierRedim=$fichierSansExtension.".jpg";
-		/*
-		$image = new Imagick();
 		
+		
+		
+		$image = new Imagick();
 
 		
 		$image->setResolution( 72, 72 );
@@ -59,7 +63,7 @@ if (in_array(strtolower($extension), $autoriser)) {
 			$image->resizeImage(0,$taille,imagick::FILTER_LANCZOS,1,0);
 		}		
 		$image->writeImage($cheminRedim.$fichierRedim);
-			*/ 
+			 */
     } 
 	catch (Exception $e) {        
         $statut = 'erreur';
@@ -71,5 +75,5 @@ else {
     $message = "Image uniquement aux formats jpeg, png.";
 }
 
-echo json_encode(array('statut' => $statut, 'fichierRedim' => $fichierRedim, 'fichierSource' => $fichierSource, 'message' => $message));
+echo json_encode(array('statut' => $statut, 'fichierRedim' => $fichierRedim, 'fichierSource' => $fichier, 'message' => $message));
 ?>
