@@ -12,7 +12,7 @@
 	<div class="container">		 
 		<div class="row MT20">	
 			<div class="col-xl-12 titre">
-				<a href="../accueil.html">						
+				<a href="accueil.html">						
 					<img src="../../images/icones/iconePHP.png">				
 				</a>
 			</div>
@@ -22,21 +22,32 @@
 			<div class="col-xl-12 titre">
 				<h1>Liste des dossiers et fichier</h1>						
 				<?php
-				$zip = new ZipArchive();
-				$dateFile=date('Ymd-Hi');
-				$file ="../../images/icones/icones.zip";				
-				$zip->open($file, ZipArchive::OVERWRITE);
+				$dir    = '../../images/icones/'; // mettre le bon dossier                                
+                $files = scandir($dir);
+                $dateZip = date("d-m-Y_G-i");
+                $zip = new ZipArchive();
+                $zipName = "icones-".$dateZip.".zip"; 
                 
-                $dir = "../../images/icones/" ;           
-                $listeFichier = scandir($dir) ;                
-                           
-                foreach ($listeFichier as $fichier) {
-                    //$zip->addFile("../../images/icones/".$fichier, $fichier);                   
-                    $zip->addFile("../../images/icones/".$fichier);                   
+                if ($zip->open($zipName, ZipArchive::CREATE)!==TRUE) {
+                    exit("Impossible d'ouvrir le fichier <$zipName>\n");
                 }
-				$zip->close();
-				echo "icone.zip";
+                
+                foreach ($files as $file) {
+                    // on filtre "." et ".." parce que ce ne sont pas des fichiers 
+                    if ($file != '.' && $file != '..' ) {
+                        if ($zip->addFile($dir.$file,$file)) {
+                            echo "Fichier : ".$file." ajouté !<br>";
+                        } 
+                        else 
+                        {
+                            echo "Problème sur l'ajout du fichier ".$file."<br>"; 
+                        }
+                    }
+                }                
+                echo "Nombre de fichiers dans le zip : " . $zip->numFiles . "\n";                
+                $zip->close();
 				?>
+				<a href="http://cours.fred-sol.fr/cours/php/".<?=$zipName?> target="_blank" >http://cours.fred-sol.fr/cours/php/<?=$zipName?></a>
 			</div>
 		</div>
 	</div>
@@ -48,33 +59,3 @@
 	</body>
 
 </html>
-
-
-
-
-
-
-<?php
-
-$zip = new ZipArchive();
-$dateFile=date('Ymd-Hi');
-$file = $_SERVER['DOCUMENT_ROOT']."\\..\\..\\icones.zip";
-
-$zip->open($file, ZipArchive::OVERWRITE);
-
-try
-{
-	while($tab = sqlsrv_fetch_array($rs))
-	{
-		if(file_exists($_SERVER['DOCUMENT_ROOT'].'\\upload\\equipauto_photo\\'.$tab['fichier']))
-			$zip->addFile($_SERVER['DOCUMENT_ROOT'].'\\upload\\equipauto_photo\\'.$tab['fichier'], $tab['fichier']);
-	}
-	
-}
-catch(Exception $e)
-{
-	echo($e->getMessage());
-}
-
-
-?>

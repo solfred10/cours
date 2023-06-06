@@ -12,7 +12,7 @@
 	<div class="container">		 
 		<div class="row MT20">	
 			<div class="col-xl-12 titre">
-				<a href="../accueil.html">						
+				<a href="accueil.html">						
 					<img src="../../images/icones/iconePHP.png">				
 				</a>
 			</div>
@@ -23,11 +23,13 @@
 				<h1>Liste des dossiers et fichier</h1>						
 				<?php
                 
-                $dir = "../bootstrap" ;           
-                $listeFichier = scandir($dir) ;                
+                $dir    = '../../images/'; 
+                $files = scandir($dir);               
                            
-                foreach ($listeFichier as $fichier) {
-                    echo $fichier."<br>";                    
+                foreach ($files as $file) {
+                    if ($file != '.' && $file != '..' ) {
+                        echo $file."<br>";                                                       
+                    }
                 }
 				?>
 			</div>
